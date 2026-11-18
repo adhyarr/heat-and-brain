@@ -34,6 +34,11 @@ h2{margin:0 0 6px;font-size:19.5px;color:#2b2f42}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
 .cta{display:inline-block;background:#6a4c93;color:#fff;text-decoration:none;padding:9px 16px;border-radius:9px;font-size:13.5px;font-weight:600}
 .cta.sec{background:#1982c4}
+table.eval{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+table.eval th{text-align:left;padding:10px 10px;background:#f7f8fc;border-bottom:2px solid #e2e6f2;font-size:12px;text-transform:uppercase;color:#5b6075;letter-spacing:.3px}
+table.eval td{padding:10px 10px;border-bottom:1px solid #eef0f6;vertical-align:top}
+.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:11.5px;font-weight:700;white-space:nowrap}
+.b-hi{background:#e1f3e4;color:#236b32} .b-med{background:#fff4d6;color:#946200} .b-hard{background:#fdecea;color:#b82518}
 footer{color:#8a8fa3;font-size:12.5px;padding:6px 0 40px}
 @media(max-width:800px){.grid2{grid-template-columns:1fr}}
 </style>
@@ -139,6 +144,78 @@ footer{color:#8a8fa3;font-size:12.5px;padding:6px 0 40px}
         </ul>
       </div>
     </div>
+  </div>
+
+  <div class="panel">
+    <h2>5. Impact vs. Implementation Difficulty</h2>
+    <p class="sub">Qualitative project assessment comparing potential risk-reduction weight against real-world implementation difficulty (ordered from quickest wins to systemic reforms).</p>
+    <table class="eval">
+      <thead>
+        <tr>
+          <th>Intervention</th>
+          <th>Potential Impact (Weight)</th>
+          <th>Difficulty</th>
+          <th>Primary Lead &amp; Key Bottleneck</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Pre-summer medication review &amp; spring checklists</b></td>
+          <td><span class="badge b-hi">High</span></td>
+          <td><span class="badge b-hi">Low</span></td>
+          <td>Clinics &amp; patients — uses existing spring visits; requires clinician awareness.</td>
+        </tr>
+        <tr>
+          <td><b>Pharmacy heat-safety labeling at pickup</b></td>
+          <td><span class="badge b-hi">High</span></td>
+          <td><span class="badge b-hi">Low</span></td>
+          <td>Local pharmacies — low cost; reaches neurologist-desert towns directly.</td>
+        </tr>
+        <tr>
+          <td><b>Volunteer fire &amp; church micro-cooling hubs (2-1-1)</b></td>
+          <td><span class="badge b-med">Medium–High</span></td>
+          <td><span class="badge b-hi">Low–Medium</span></td>
+          <td>Counties &amp; nonprofits — uses existing AC buildings; needs volunteer staffing.</td>
+        </tr>
+        <tr>
+          <td><b>Caregiver &amp; Meals on Wheels check-in registries</b></td>
+          <td><span class="badge b-hi">High</span></td>
+          <td><span class="badge b-med">Medium</span></td>
+          <td>County EMS &amp; aging agencies — requires opt-in privacy coordination.</td>
+        </tr>
+        <tr>
+          <td><b>HeatRisk + care-access targeted alerts</b></td>
+          <td><span class="badge b-med">Medium–High</span></td>
+          <td><span class="badge b-med">Medium</span></td>
+          <td>State / NWS / county OEM — data integration is straightforward; outreach takes coordination.</td>
+        </tr>
+        <tr>
+          <td><b>Free 2-1-1 cooling transit for car-free seniors</b></td>
+          <td><span class="badge b-hi">High</span></td>
+          <td><span class="badge b-med">Medium</span></td>
+          <td>Rural transit districts — needs dedicated seasonal funding and driver availability.</td>
+        </tr>
+        <tr>
+          <td><b>Heat-triggered utility shutoff moratoriums</b></td>
+          <td><span class="badge b-hi">High</span></td>
+          <td><span class="badge b-hard">Medium–High</span></td>
+          <td>State regulators &amp; electric co-ops — strong protection, but requires policy/tariff rules.</td>
+        </tr>
+        <tr>
+          <td><b>Routine outpatient tele-neurology expansion</b></td>
+          <td><span class="badge b-hi">High</span></td>
+          <td><span class="badge b-hard">Medium–High</span></td>
+          <td>HRSA &amp; regional health systems — needs broadband, reimbursement, and specialist capacity.</td>
+        </tr>
+        <tr>
+          <td><b>Pre-hospital EMS stroke bypass &amp; air coordination</b></td>
+          <td><span class="badge b-hi">High</span></td>
+          <td><span class="badge b-hard">High</span></td>
+          <td>Regional trauma councils &amp; EMS — life-saving for acute stroke, but requires training and protocols.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="sub" style="margin:12px 0 0;font-size:12.5px"><i>Note: Impact and difficulty ratings are qualitative estimates based on cost, existing infrastructure, and county-level barriers rather than clinical trial effect sizes.</i></p>
   </div>
 
   <footer>Sources: TDHCA CEAP, 2-1-1 Texas, TX DSHS Stroke System, Heat.gov / NIHHIS, CDC HeatRisk, HRSA TNGP, and our 24-county dataset. <b>Informational only — not medical advice.</b></footer>
