@@ -2,8 +2,10 @@
 
 Usage: python3 build_report_expanded.py
 """
+import collections
 import csv
 import html
+import json
 import os
 
 import score
@@ -158,6 +160,73 @@ def heatmap():
     return "".join(h)
 
 
+def trend_chart():
+    b_heat = json.load(open(os.path.join(HERE, "data", "stage_b_heat.json")))
+    a_cnty = json.load(open(os.path.join(HERE, "data", "stage_a_counties.json")))
+    st_to_c = {}
+    for fips, info in b_heat.items():
+        if info:
+            st_to_c.setdefault(info["station"], []).append(a_cnty[fips]["county"])
+    obs = collections.defaultdict(lambda: collections.defaultdict(int))
+    hot = collections.defaultdict(lambda: collections.defaultdict(int))
+    for r in csv.DictReader(open(os.path.join(HERE, "data", "noaa_tmax_expanded.csv"))):
+        sid = r["STATION"]
+        if sid not in st_to_c:
+            continue
+        y = r["DATE"][:4]
+        obs[sid][y] += 1
+        if float(r["TMAX_F"]) >= 100:
+            hot[sid][y] += 1
+    years = [str(y) for y in range(2015, 2025)]
+    by_y = {y: [] for y in years}
+    series = {}
+    for fips, info in b_heat.items():
+        if not info:
+            continue
+        sid, c = info["station"], a_cnty[fips]["county"]
+        vals = []
+        for y in years:
+            req = 0.90 * (366 if int(y) % 4 == 0 else 365)
+            if obs[sid][y] >= req:
+                vals.append(hot[sid][y])
+                by_y[y].append(hot[sid][y])
+            else:
+                vals.append(None)
+        if c in ("Hood", "Hill", "Dallas"):
+            series[c] = vals
+    series["24-County Avg"] = [round(sum(by_y[y]) / len(by_y[y]), 1) for y in years]
+
+    W, H, L, B, T, R = 980, 290, 48, 36, 20, 140
+    ymax = 70
+    px = lambda i: L + (W - L - R) * i / (len(years) - 1)
+    py = lambda v: H - B - (H - B - T) * v / ymax
+    out = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="10-year extreme heat trend 2015 to 2024">']
+    for t in range(0, ymax + 1, 15):
+        out.append(f'<line x1="{L}" y1="{py(t):.1f}" x2="{W-R}" y2="{py(t):.1f}" stroke="#eef0f6"/>')
+        out.append(f'<text x="{L-8}" y="{py(t)+4:.1f}" font-size="11" fill="#8a8fa3" text-anchor="end">{t}</text>')
+    for i, y in enumerate(years):
+        out.append(f'<text x="{px(i):.1f}" y="{H-12}" font-size="11" fill="#5b6075" text-anchor="middle">{y}</text>')
+
+    styles = [
+        ("Hood", "#e4572e", "2.2", ""),
+        ("Hill", "#f29e4c", "2.2", ""),
+        ("Dallas", "#6a4c93", "2.2", "5,3"),
+        ("24-County Avg", "#2b2f42", "3.2", ""),
+    ]
+    for idx, (label, col, sw, dash) in enumerate(styles):
+        pts = [(px(i), py(v)) for i, v in enumerate(series[label]) if v is not None]
+        d = "M " + " L ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
+        da = f' stroke-dasharray="{dash}"' if dash else ""
+        out.append(f'<path d="{d}" fill="none" stroke="{col}" stroke-width="{sw}"{da}/>')
+        for x, y in pts:
+            out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.2" fill="{col}"/>')
+        ly = T + 18 + idx * 24
+        out.append(f'<line x1="{W-R+16}" y1="{ly}" x2="{W-R+36}" y2="{ly}" stroke="{col}" stroke-width="{sw}"{da}/>')
+        out.append(f'<text x="{W-R+42}" y="{ly+4}" font-size="12" font-weight="600" fill="#2b2f42">{label}</text>')
+    out.append(f'<text transform="translate(14 {(T+H-B)/2}) rotate(-90)" font-size="11" fill="#5b6075" text-anchor="middle">Days ≥100°F</text></svg>')
+    return "".join(out)
+
+
 top = results[0]
 rural_rows = [r for r in rows if r["type"] == "rural"]
 urban_rows = [r for r in rows if r["type"] == "urban"]
@@ -237,6 +306,19 @@ footer{{color:#8a8fa3;font-size:12px;padding:10px 0 40px}}
 </div>
 <div class="warn"><b>Method notes.</b> Association only, not causation. One weather station represents each county; Limestone was excluded because its nearest stations lacked 95% 10-year coverage. Stroke centers use the official Texas DSHS Comprehensive (Level I) and Advanced (Level II) Stroke Facilities list.</div>
 </section>
+
+<section><h2>10-year heat trend (2015–2024)</h2>
+<p class="sub">Extreme-heat days surged across all 24 counties in 2022 (39.3-day average) and 2023 (43.1-day average)—nearly four times the 2015–2016 baseline.</p>
+<div class="card">{trend_chart()}<p class="note">Only years with ≥90% daily station observations are plotted (Hood 2024 omitted for missing days). In 2023, Hood reached 62 days and Hill reached 55 days ≥100°F.</p></div>
+</section>
+
+<section><h2>Spotlight: highest-risk rural case studies</h2>
+<p class="sub">Three rural counties illustrate distinct heat-and-access gaps.</p>
+<div class="grid" style="grid-template-columns:repeat(3,1fr)">
+<div class="card"><h3>Hill County (#1 overall · 19.89/24)</h3><p class="note" style="color:#2b2f42;margin-top:6px">High risk across every dimension: <b>19.4 days ≥100°F/yr</b> (55 in 2023), <b>20.3% age 65+</b>, <b>6.2% no vehicle</b>, and <b>0 neurologists</b>. Most residents use Hill Regional Hospital in Hillsboro (avg ER drive 22.3 min), but <b>100% live &gt;60 min</b> from a DSHS Level I–II stroke center (avg 80.9 min).</p></div>
+<div class="card"><h3>Hood County (#4 overall · 15.78/24)</h3><p class="note" style="color:#2b2f42;margin-top:6px">Both the <b>hottest</b> (34.2 days ≥100°F/yr; 62 in 2023) and <b>oldest</b> (25.4% age 65+) county in the study. While Lake Granbury Medical Center (Level III Primary Stroke) is 19.7 min away on average, residents average <b>55.7 min</b> to a Level I–II comprehensive/advanced stroke center.</p></div>
+<div class="card"><h3>Van Zandt County (#8 overall · 14.00/24)</h3><p class="note" style="color:#2b2f42;margin-top:6px">Longest emergency drive in the study: <b>42.3 min (28.0 mi)</b> average to the nearest ER, with <b>100% of residents &gt;15 min</b> away. With no in-county CMS ER hospital, tracts route out-of-county to Kaufman, Quitman, or Athens, plus <b>0 neurologists</b> and 20.2% age 65+.</p></div>
+</div></section>
 
 <section><h2>Project files</h2>
 <div class="links">{''.join(f'<a href="{h}"><b>{esc(t)}</b><span>{esc(d)}</span></a>' for h, t, d in links)}</div>
