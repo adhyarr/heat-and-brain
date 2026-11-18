@@ -27,7 +27,7 @@ EXPANDED_MEASURES = {
     "stroke_rate": ("Vulnerability", True),
     "neurologists_per_100k": ("Access gap", False),
     "er_drive_min_popw": ("Access gap", True),
-    "neuro_hub_drive_min_popw": ("Access gap", True),
+    "stroke_l1_l2_min_popw": ("Access gap", True),
 }
 
 GROUPS = ["Heat", "Vulnerability", "Access gap"]
@@ -49,7 +49,7 @@ def rank(values, higher_is_risk):
 
 def select_measures(rows):
     """Pick expanded or basic measure set based on columns present in the CSV."""
-    if rows and "er_drive_min_popw" in rows[0] and "neuro_hub_drive_min_popw" in rows[0]:
+    if rows and "er_drive_min_popw" in rows[0] and "stroke_l1_l2_min_popw" in rows[0]:
         return EXPANDED_MEASURES
     return MEASURES
 

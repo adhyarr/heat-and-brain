@@ -1,0 +1,1491 @@
+{
+ "all_count": 200,
+ "located": [
+  {
+   "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - GRAPEVINE",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "GRAPEVINE",
+   "zip": "76051",
+   "expires": "12/1/2028",
+   "pt": [
+    32.9338752,
+    -97.0940581
+   ]
+  },
+  {
+   "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - PLANO",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "PLANO",
+   "zip": "75093",
+   "expires": "12/1/2029",
+   "pt": [
+    33.014302020631,
+    -96.791507110552
+   ]
+  },
+  {
+   "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - TEMPLE",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "L",
+   "city": "TEMPLE",
+   "zip": "76508",
+   "expires": "10/1/2027",
+   "pt": [
+    31.078683889338,
+    -97.365899898738
+   ]
+  },
+  {
+   "name": "BAYLOR UNIVERSITY MEDICAL CENTER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "DALLAS",
+   "zip": "75246",
+   "expires": "1/1/2028",
+   "pt": [
+    32.790471386554,
+    -96.780903601446
+   ]
+  },
+  {
+   "name": "CHI ST LUKES HEALTH BAYLOR COLLEGE OF MEDICINE MEDICAL CENTER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "HOUSTON",
+   "zip": "77030",
+   "expires": "5/1/2028",
+   "pt": [
+    29.708569811682,
+    -95.399138877233
+   ]
+  },
+  {
+   "name": "CHRISTUS MOTHER FRANCES HOSPITAL - TYLER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "G",
+   "city": "TYLER",
+   "zip": "75701",
+   "expires": "6/1/2027",
+   "pt": [
+    32.342288248679,
+    -95.292637814188
+   ]
+  },
+  {
+   "name": "CHRISTUS SANTA ROSA HOSPITAL - WESTOVER HILLS",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "P",
+   "city": "SAN ANTONIO",
+   "zip": "78251",
+   "expires": "2/1/2030",
+   "pt": [
+    29.5128348,
+    -98.5902387
+   ]
+  },
+  {
+   "name": "CHRISTUS SPOHN HOSPITAL CORPUS CHRISTI SHORELINE",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "U",
+   "city": "CORPUS CHRISTI",
+   "zip": "78404",
+   "expires": "3/1/2029",
+   "pt": [
+    27.7778793,
+    -97.3950902
+   ]
+  },
+  {
+   "name": "COVENANT MEDICAL CENTER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "B",
+   "city": "LUBBOCK",
+   "zip": "79410",
+   "expires": "1/1/2029",
+   "pt": [
+    33.57775471673,
+    -101.892188715623
+   ]
+  },
+  {
+   "name": "DELL SETON MEDICAL CENTER AT THE UNIVERSITY OF TEXAS",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "O",
+   "city": "AUSTIN",
+   "zip": "78701",
+   "expires": "8/1/2029",
+   "pt": [
+    30.2764054,
+    -97.7340459
+   ]
+  },
+  {
+   "name": "DOCTORS HOSPITAL AT RENAISSANCE",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "V",
+   "city": "EDINBURG",
+   "zip": "78539",
+   "expires": "7/1/2028",
+   "pt": [
+    26.252734623771,
+    -98.204163266588
+   ]
+  },
+  {
+   "name": "HARRIS HEALTH BEN TAUB HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "HOUSTON",
+   "zip": "77030",
+   "expires": "1/1/2030",
+   "pt": [
+    29.712578916721,
+    -95.393750521299
+   ]
+  },
+  {
+   "name": "HCA HOUSTON HEALTHCARE CLEAR LAKE",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "WEBSTER",
+   "zip": "77598",
+   "expires": "8/1/2029",
+   "pt": [
+    29.5410145,
+    -95.1278911
+   ]
+  },
+  {
+   "name": "HCA HOUSTON HEALTHCARE CONROE",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "CONROE",
+   "zip": "77304",
+   "expires": "2/1/2028",
+   "pt": [
+    30.284524183012,
+    -95.466241624246
+   ]
+  },
+  {
+   "name": "HCA HOUSTON HEALTHCARE KINGWOOD",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "KINGWOOD",
+   "zip": "77339",
+   "expires": "12/1/2028",
+   "pt": [
+    30.0495205,
+    -95.2549232
+   ]
+  },
+  {
+   "name": "HCA HOUSTON HEALTHCARE NORTH CYPRESS",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "CYPRESS",
+   "zip": "77429",
+   "expires": "3/1/2029",
+   "pt": [
+    29.9621086,
+    -95.6825207
+   ]
+  },
+  {
+   "name": "HCA HOUSTON HEALTHCARE NORTHWEST",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "HOUSTON",
+   "zip": "77090",
+   "expires": "4/1/2027",
+   "approx_zip": true,
+   "pt": [
+    29.7589382,
+    -95.3676974
+   ]
+  },
+  {
+   "name": "HOUSTON METHODIST HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "HOUSTON",
+   "zip": "77030",
+   "expires": "5/1/2028",
+   "pt": [
+    29.711314009215,
+    -95.399530276451
+   ]
+  },
+  {
+   "name": "HOUSTON METHODIST SUGAR LAND HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "SUGAR LAND",
+   "zip": "77479",
+   "expires": "2/1/2027",
+   "pt": [
+    29.566585323192,
+    -95.687656336925
+   ]
+  },
+  {
+   "name": "HOUSTON METHODIST THE WOODLANDS HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "THE WOODLANDS",
+   "zip": "77385",
+   "expires": "5/1/2027",
+   "pt": [
+    30.2055971,
+    -95.452096
+   ]
+  },
+  {
+   "name": "HOUSTON METHODIST WILLOWBROOK HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "HOUSTON",
+   "zip": "77070",
+   "expires": "3/1/2030",
+   "pt": [
+    29.9671381,
+    -95.55113
+   ]
+  },
+  {
+   "name": "JOHN PETER SMITH HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "FORT WORTH",
+   "zip": "76104",
+   "expires": "3/1/2029",
+   "pt": [
+    32.7270451,
+    -97.3279671
+   ]
+  },
+  {
+   "name": "MEDICAL CITY ARLINGTON",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "ARLINGTON",
+   "zip": "76015",
+   "expires": "8/1/2027",
+   "pt": [
+    32.692705534812,
+    -97.114720018561
+   ]
+  },
+  {
+   "name": "MEDICAL CITY DALLAS HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "DALLAS",
+   "zip": "75230",
+   "expires": "6/1/2027",
+   "pt": [
+    32.909511874931,
+    -96.77215182227
+   ]
+  },
+  {
+   "name": "MEDICAL CITY FORT WORTH",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "FORT WORTH",
+   "zip": "76104",
+   "expires": "2/1/2029",
+   "pt": [
+    32.735532227109,
+    -97.343741818877
+   ]
+  },
+  {
+   "name": "MEDICAL CITY PLANO",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "PLANO",
+   "zip": "75075",
+   "expires": "2/1/2029",
+   "pt": [
+    33.019439918561,
+    -96.765761634768
+   ]
+  },
+  {
+   "name": "MEMORIAL HERMANN - TEXAS MEDICAL CENTER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "HOUSTON",
+   "zip": "77030",
+   "expires": "11/1/2027",
+   "pt": [
+    29.71509482743,
+    -95.396526728592
+   ]
+  },
+  {
+   "name": "MEMORIAL HERMANN MEMORIAL CITY MEDICAL CENTER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "HOUSTON",
+   "zip": "77024",
+   "expires": "11/1/2029",
+   "pt": [
+    29.780120490088,
+    -95.544550256667
+   ]
+  },
+  {
+   "name": "MEMORIAL HERMANN SOUTHWEST HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "HOUSTON",
+   "zip": "77074",
+   "expires": "11/1/2027",
+   "pt": [
+    29.6938503,
+    -95.5221634
+   ]
+  },
+  {
+   "name": "MEMORIAL HERMANN THE WOODLANDS MEDICAL CENTER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "SHENANDOAH",
+   "zip": "77380",
+   "expires": "11/1/2029",
+   "pt": [
+    30.1748286,
+    -95.45406
+   ]
+  },
+  {
+   "name": "METHODIST DALLAS MEDICAL CENTER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "DALLAS",
+   "zip": "75203",
+   "expires": "12/1/2027",
+   "pt": [
+    32.761267216358,
+    -96.823003425122
+   ]
+  },
+  {
+   "name": "METHODIST HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "P",
+   "city": "SAN ANTONIO",
+   "zip": "78229",
+   "expires": "4/1/2029",
+   "pt": [
+    29.507373474258,
+    -98.573449257102
+   ]
+  },
+  {
+   "name": "METHODIST RICHARDSON MEDICAL CENTER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "RICHARDSON",
+   "zip": "75082",
+   "expires": "1/1/2029",
+   "pt": [
+    32.995271628904,
+    -96.668508949189
+   ]
+  },
+  {
+   "name": "MICHAEL E DEBAKEY VA MEDICAL CENTER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "HOUSTON",
+   "zip": "77030",
+   "expires": "10/1/2027",
+   "pt": [
+    29.71509482743,
+    -95.396526728592
+   ]
+  },
+  {
+   "name": "PARKLAND MEMORIAL HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "DALLAS",
+   "zip": "75235",
+   "expires": "7/1/2027",
+   "pt": [
+    32.811585784755,
+    -96.836791663022
+   ]
+  },
+  {
+   "name": "SOUTH TEXAS HEALTH SYSTEM MCALLEN",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "V",
+   "city": "MCALLEN",
+   "zip": "78503",
+   "expires": "3/1/2029",
+   "pt": [
+    26.185949881435,
+    -98.223774949184
+   ]
+  },
+  {
+   "name": "ST DAVIDS MEDICAL CENTER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "O",
+   "city": "AUSTIN",
+   "zip": "78705",
+   "expires": "7/1/2028",
+   "pt": [
+    30.290795703294,
+    -97.726748144738
+   ]
+  },
+  {
+   "name": "ST LUKES BAPTIST HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "P",
+   "city": "SAN ANTONIO",
+   "zip": "78229",
+   "expires": "9/1/2027",
+   "pt": [
+    29.507373474258,
+    -98.573449257102
+   ]
+  },
+  {
+   "name": "ST LUKES THE WOODLANDS HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "CONROE",
+   "zip": "77384",
+   "expires": "9/1/2029",
+   "pt": [
+    30.204839513046,
+    -95.459683402794
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH HARRIS METHODIST HOSPITAL FORT WORTH",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "FORT WORTH",
+   "zip": "76104",
+   "expires": "1/1/2028",
+   "pt": [
+    32.738430419663,
+    -97.338808230785
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL DALLAS",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "DALLAS",
+   "zip": "75231",
+   "expires": "7/1/2029",
+   "pt": [
+    32.883201653359,
+    -96.76226802055
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL PLANO",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "PLANO",
+   "zip": "75093",
+   "expires": "1/1/2030",
+   "pt": [
+    33.045078724335,
+    -96.83587384628
+   ]
+  },
+  {
+   "name": "THE HOSPITALS OF PROVIDENCE SIERRA CAMPUS",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "I",
+   "city": "EL PASO",
+   "zip": "79902",
+   "expires": "12/1/2027",
+   "pt": [
+    31.771311437765,
+    -106.499570438158
+   ]
+  },
+  {
+   "name": "UNIVERSITY HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "P",
+   "city": "SAN ANTONIO",
+   "zip": "78229",
+   "expires": "5/1/2027",
+   "pt": [
+    29.509014391269,
+    -98.574033613545
+   ]
+  },
+  {
+   "name": "UNIVERSITY MEDICAL CENTER OF EL PASO",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "I",
+   "city": "EL PASO",
+   "zip": "79905",
+   "expires": "5/1/2027",
+   "pt": [
+    31.77073358236,
+    -106.434348417828
+   ]
+  },
+  {
+   "name": "UNIVERSITY OF TEXAS MEDICAL BRANCH",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "R",
+   "city": "GALVESTON",
+   "zip": "77555",
+   "expires": "12/1/2027",
+   "pt": [
+    29.310374542715,
+    -94.774535017524
+   ]
+  },
+  {
+   "name": "UNIVERSITY OF TEXAS MEDICAL BRANCH - CLEAR LAKE CAMPUS",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "Q",
+   "city": "WEBSTER",
+   "zip": "77598",
+   "expires": "12/1/2027",
+   "approx_zip": true,
+   "pt": [
+    29.5351724,
+    -95.1161564
+   ]
+  },
+  {
+   "name": "UT HEALTH EAST TEXAS TYLER REGIONAL HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "G",
+   "city": "TYLER",
+   "zip": "75701",
+   "expires": "1/1/2029",
+   "pt": [
+    32.338681868619,
+    -95.291829143979
+   ]
+  },
+  {
+   "name": "VALLEY BAPTIST MEDICAL CENTER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "V",
+   "city": "HARLINGEN",
+   "zip": "78550",
+   "expires": "12/1/2028",
+   "pt": [
+    26.1575127,
+    -97.6752878
+   ]
+  },
+  {
+   "name": "VALLEY REGIONAL MEDICAL CENTER",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "V",
+   "city": "BROWNSVILLE",
+   "zip": "78526",
+   "expires": "2/1/2030",
+   "pt": [
+    25.978979465599,
+    -97.516099677108
+   ]
+  },
+  {
+   "name": "WILLIAM P CLEMENTS UNIVERSITY HOSPITAL",
+   "level": "Level I - Comprehensive",
+   "level_num": 1,
+   "tsa": "E",
+   "city": "DALLAS",
+   "zip": "75390",
+   "expires": "10/1/2027",
+   "pt": [
+    32.819792821696,
+    -96.847232679976
+   ]
+  },
+  {
+   "name": "ASCENSION SETON MEDICAL CENTER AUSTIN",
+   "level": "Level II - Advanced",
+   "level_num": 2,
+   "tsa": "O",
+   "city": "AUSTIN",
+   "zip": "78705",
+   "expires": "7/1/2028",
+   "pt": [
+    30.305991183863,
+    -97.74498764669
+   ]
+  },
+  {
+   "name": "ASCENSION SETON WILLIAMSON",
+   "level": "Level II - Advanced",
+   "level_num": 2,
+   "tsa": "O",
+   "city": "ROUND ROCK",
+   "zip": "78665",
+   "expires": "5/1/2029",
+   "approx_zip": true,
+   "pt": [
+    30.5085915,
+    -97.6788056
+   ]
+  },
+  {
+   "name": "BSA HOSPITAL LLC",
+   "level": "Level II - Advanced",
+   "level_num": 2,
+   "tsa": "A",
+   "city": "AMARILLO",
+   "zip": "79106",
+   "expires": "10/1/2029",
+   "pt": [
+    35.194930058385,
+    -101.919819997233
+   ]
+  },
+  {
+   "name": "HENDRICK MEDICAL CENTER",
+   "level": "Level II - Advanced",
+   "level_num": 2,
+   "tsa": "D",
+   "city": "ABILENE",
+   "zip": "79601",
+   "expires": "1/1/2029",
+   "pt": [
+    32.471641068462,
+    -99.731187212822
+   ]
+  },
+  {
+   "name": "NORTHEAST BAPTIST HOSPITAL",
+   "level": "Level II - Advanced",
+   "level_num": 2,
+   "tsa": "P",
+   "city": "SAN ANTONIO",
+   "zip": "78217",
+   "expires": "3/1/2029",
+   "pt": [
+    29.5197538,
+    -98.4288571
+   ]
+  },
+  {
+   "name": "ADVENTHEALTH CENTRAL TEXAS",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "L",
+   "city": "KILLEEN",
+   "zip": "76549",
+   "expires": "6/1/2027",
+   "approx_zip": true,
+   "pt": [
+    31.1171441,
+    -97.727796
+   ]
+  },
+  {
+   "name": "ASCENSION PROVIDENCE",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "M",
+   "city": "WACO",
+   "zip": "76712",
+   "expires": "7/1/2028",
+   "pt": [
+    31.514610676212,
+    -97.197997135281
+   ]
+  },
+  {
+   "name": "BAYLOR SCOTT & WHITE ALL SAINTS MEDICAL CENTER - FORT WORTH",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "FORT WORTH",
+   "zip": "76104",
+   "expires": "12/1/2027",
+   "pt": [
+    32.729621329384,
+    -97.34377312841
+   ]
+  },
+  {
+   "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - CENTENNIAL",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "FRISCO",
+   "zip": "75035",
+   "expires": "11/1/2027",
+   "pt": [
+    33.115838264839,
+    -96.771581872265
+   ]
+  },
+  {
+   "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - FRISCO AT PGA PARKWAY",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "FRISCO",
+   "zip": "75033",
+   "expires": "11/1/2028",
+   "pt": [
+    33.180351549031,
+    -96.838899542315
+   ]
+  },
+  {
+   "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - HILLCREST",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "M",
+   "city": "WACO",
+   "zip": "76712",
+   "expires": "4/1/2028",
+   "pt": [
+    31.488905,
+    -97.157075
+   ]
+  },
+  {
+   "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - IRVING",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "IRVING",
+   "zip": "75061",
+   "expires": "6/1/2028",
+   "pt": [
+    32.834911,
+    -96.9610187
+   ]
+  },
+  {
+   "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - LAKE POINTE",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "ROWLETT",
+   "zip": "75088",
+   "expires": "6/1/2028",
+   "pt": [
+    32.923220874629,
+    -96.509327764279
+   ]
+  },
+  {
+   "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - MCKINNEY",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "MCKINNEY",
+   "zip": "75071",
+   "expires": "1/1/2028",
+   "pt": [
+    33.218447312786,
+    -96.680681565565
+   ]
+  },
+  {
+   "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - SUNNYVALE",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "SUNNYVALE",
+   "zip": "75182",
+   "expires": "12/1/2027",
+   "pt": [
+    32.79762240922,
+    -96.561228549753
+   ]
+  },
+  {
+   "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - WAXAHACHIE",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "WAXAHACHIE",
+   "zip": "75165",
+   "expires": "4/1/2028",
+   "pt": [
+    32.4273249,
+    -96.8580221
+   ]
+  },
+  {
+   "name": "CARROLLTON REGIONAL MEDICAL CENTER",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "CARROLLTON",
+   "zip": "75010",
+   "expires": "11/1/2028",
+   "pt": [
+    33.028269965314,
+    -96.884444676174
+   ]
+  },
+  {
+   "name": "CHRISTUS GOOD SHEPHERD MEDICAL CENTER - LONGVIEW",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "G",
+   "city": "LONGVIEW",
+   "zip": "75601",
+   "expires": "11/1/2028",
+   "pt": [
+    32.501458959026,
+    -94.731366823301
+   ]
+  },
+  {
+   "name": "CHRISTUS HEALTH - MOUNT PLEASANT",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "F",
+   "city": "MOUNT PLEASANT",
+   "zip": "75455",
+   "expires": "8/1/2028",
+   "pt": [
+    33.1756496,
+    -94.9713506
+   ]
+  },
+  {
+   "name": "CHRISTUS MOTHER FRANCES HOSPITAL - SULPHUR SPRINGS",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "F",
+   "city": "SULPHUR SPRINGS",
+   "zip": "75482",
+   "expires": "5/1/2028",
+   "pt": [
+    33.156160221936,
+    -95.599269622225
+   ]
+  },
+  {
+   "name": "CHRISTUS ST MICHAEL HEALTH SYSTEM",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "F",
+   "city": "TEXARKANA",
+   "zip": "75503",
+   "expires": "5/1/2027",
+   "pt": [
+    33.461995397658,
+    -94.076104670981
+   ]
+  },
+  {
+   "name": "DALLAS REGIONAL MEDICAL CENTER",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "MESQUITE",
+   "zip": "75149",
+   "expires": "4/1/2028",
+   "pt": [
+    32.778328021583,
+    -96.600011680928
+   ]
+  },
+  {
+   "name": "HENDRICK MEDICAL CENTER BROWNWOOD",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "D",
+   "city": "BROWNWOOD",
+   "zip": "76801",
+   "expires": "1/1/2030",
+   "pt": [
+    31.680334638752,
+    -98.9883018944
+   ]
+  },
+  {
+   "name": "HENDRICK MEDICAL CENTER SOUTH",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "D",
+   "city": "ABILENE",
+   "zip": "79606",
+   "expires": "1/1/2029",
+   "pt": [
+    32.374679,
+    -99.7436365
+   ]
+  },
+  {
+   "name": "HUNT REGIONAL MEDICAL CENTER",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "GREENVILLE",
+   "zip": "75401",
+   "expires": "11/1/2028",
+   "pt": [
+    33.122963341348,
+    -96.122090772753
+   ]
+  },
+  {
+   "name": "LAKE GRANBURY MEDICAL CENTER",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "GRANBURY",
+   "zip": "76048",
+   "expires": "10/1/2027",
+   "pt": [
+    32.413661003552,
+    -97.801692624275
+   ]
+  },
+  {
+   "name": "LONGVIEW REGIONAL MEDICAL CENTER",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "G",
+   "city": "LONGVIEW",
+   "zip": "75605",
+   "expires": "2/1/2028",
+   "pt": [
+    32.532095607562,
+    -94.728868820689
+   ]
+  },
+  {
+   "name": "MEDICAL CITY ALLIANCE",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "FORT WORTH",
+   "zip": "76177",
+   "expires": "10/1/2028",
+   "pt": [
+    32.898257202923,
+    -97.312849728846
+   ]
+  },
+  {
+   "name": "MEDICAL CITY DECATUR, A CAMPUS OF MEDICAL CITY DENTON",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "DECATUR",
+   "zip": "76234",
+   "expires": "10/1/2029",
+   "pt": [
+    33.218500503899,
+    -97.594511587399
+   ]
+  },
+  {
+   "name": "MEDICAL CITY DENTON",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "DENTON",
+   "zip": "76210",
+   "expires": "7/1/2028",
+   "pt": [
+    33.175765690151,
+    -97.092384019556
+   ]
+  },
+  {
+   "name": "MEDICAL CITY LAS COLINAS",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "IRVING",
+   "zip": "75039",
+   "expires": "8/1/2028",
+   "pt": [
+    32.902009668062,
+    -96.958610739364
+   ]
+  },
+  {
+   "name": "MEDICAL CITY LEWISVILLE",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "LEWISVILLE",
+   "zip": "75057",
+   "expires": "12/1/2027",
+   "pt": [
+    33.046263036749,
+    -97.004238726859
+   ]
+  },
+  {
+   "name": "MEDICAL CITY MCKINNEY",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "MCKINNEY",
+   "zip": "75069",
+   "expires": "10/1/2027",
+   "pt": [
+    33.161488887789,
+    -96.635522125223
+   ]
+  },
+  {
+   "name": "MEDICAL CITY NORTH HILLS",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "NORTH RICHLAND HILLS",
+   "zip": "76180",
+   "expires": "10/1/2028",
+   "pt": [
+    32.829102915739,
+    -97.212281424845
+   ]
+  },
+  {
+   "name": "MEDICAL CITY WEATHERFORD",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "WEATHERFORD",
+   "zip": "76086",
+   "expires": "2/1/2028",
+   "pt": [
+    32.747556847867,
+    -97.787140541697
+   ]
+  },
+  {
+   "name": "METHODIST MANSFIELD MEDICAL CENTER",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "MANSFIELD",
+   "zip": "76063",
+   "expires": "11/1/2028",
+   "pt": [
+    32.568415300682,
+    -97.097065360308
+   ]
+  },
+  {
+   "name": "METHODIST MIDLOTHIAN MEDICAL CENTER",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "MIDLOTHIAN",
+   "zip": "76065",
+   "expires": "3/1/2028",
+   "pt": [
+    32.4689565,
+    -96.9820021
+   ]
+  },
+  {
+   "name": "METHODIST SOUTHWEST MEDICAL CENTER",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "DALLAS",
+   "zip": "75237",
+   "expires": "9/1/2027",
+   "pt": [
+    32.647399730123,
+    -96.876339094062
+   ]
+  },
+  {
+   "name": "PARIS REGIONAL MEDICAL CENTER NORTH CAMPUS",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "F",
+   "city": "PARIS",
+   "zip": "75460",
+   "expires": "1/1/2028",
+   "pt": [
+    33.686103545301,
+    -95.545804132735
+   ]
+  },
+  {
+   "name": "SETON MEDICAL CENTER HARKER HEIGHTS",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "L",
+   "city": "HARKER HEIGHTS",
+   "zip": "76548",
+   "expires": "12/1/2028",
+   "pt": [
+    31.0725556,
+    -97.6826383
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH ARLINGTON MEMORIAL HOSPITAL",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "ARLINGTON",
+   "zip": "76012",
+   "expires": "3/1/2027",
+   "pt": [
+    32.750080167023,
+    -97.116112535337
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH HARRIS METHODIST HOSPITAL ALLIANCE",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "FORT WORTH",
+   "zip": "76244",
+   "expires": "10/1/2028",
+   "pt": [
+    32.931340356157,
+    -97.309206625095
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH HARRIS METHODIST HOSPITAL HURST-EULESS-BEDFORD",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "BEDFORD",
+   "zip": "76022",
+   "expires": "8/1/2028",
+   "pt": [
+    32.832812803426,
+    -97.125216466928
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH HARRIS METHODIST HOSPITAL SOUTHWEST FORT WORTH",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "FORT WORTH",
+   "zip": "76132",
+   "expires": "9/1/2028",
+   "pt": [
+    32.659969341993,
+    -97.420318145176
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH HOSPITAL FRISCO",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "FRISCO",
+   "zip": "75033",
+   "expires": "11/1/2028",
+   "pt": [
+    33.180351549031,
+    -96.838899542315
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH HOSPITAL MANSFIELD",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "MANSFIELD",
+   "zip": "76063",
+   "expires": "3/1/2028",
+   "pt": [
+    32.5374606,
+    -97.0995592
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH HUGULEY HOSPITAL",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "BURLESON",
+   "zip": "76028",
+   "expires": "12/1/2026",
+   "pt": [
+    32.576387351188,
+    -97.32122121348
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL ALLEN",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "ALLEN",
+   "zip": "75013",
+   "expires": "9/1/2027",
+   "pt": [
+    33.080609173738,
+    -96.683857619388
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL DENTON",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "DENTON",
+   "zip": "76201",
+   "expires": "6/1/2028",
+   "pt": [
+    33.2173795,
+    -97.1654195
+   ]
+  },
+  {
+   "name": "TEXOMA MEDICAL CENTER",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "E",
+   "city": "DENISON",
+   "zip": "75020",
+   "expires": "2/1/2029",
+   "pt": [
+    33.7102953,
+    -96.5854489
+   ]
+  },
+  {
+   "name": "UNITED REGIONAL HEALTH CARE SYSTEM",
+   "level": "Level III - Primary",
+   "level_num": 3,
+   "tsa": "C",
+   "city": "WICHITA FALLS",
+   "zip": "76301",
+   "expires": "4/1/2028",
+   "pt": [
+    33.902962827316,
+    -98.500423942087
+   ]
+  },
+  {
+   "name": "CHRISTUS MOTHER FRANCES HOSPITAL - JACKSONVILLE",
+   "level": "Level IV - Acute Stroke Ready",
+   "level_num": 4,
+   "tsa": "G",
+   "city": "JACKSONVILLE",
+   "zip": "75766",
+   "expires": "10/1/2028",
+   "pt": [
+    31.937407090994,
+    -95.248896386934
+   ]
+  },
+  {
+   "name": "CHRISTUS ST MICHAEL HOSPITAL - ATLANTA",
+   "level": "Level IV - Acute Stroke Ready",
+   "level_num": 4,
+   "tsa": "F",
+   "city": "ATLANTA",
+   "zip": "75551",
+   "expires": "5/1/2027",
+   "pt": [
+    33.1054706,
+    -94.1636612
+   ]
+  },
+  {
+   "name": "COLEMAN COUNTY MEDICAL CENTER COMPANY",
+   "level": "Level IV - Acute Stroke Ready",
+   "level_num": 4,
+   "tsa": "D",
+   "city": "COLEMAN",
+   "zip": "76834",
+   "expires": "12/1/2027",
+   "pt": [
+    31.829035692405,
+    -99.42526896552
+   ]
+  },
+  {
+   "name": "NORTH TEXAS MEDICAL CENTER",
+   "level": "Level IV - Acute Stroke Ready",
+   "level_num": 4,
+   "tsa": "E",
+   "city": "GAINESVILLE",
+   "zip": "76240",
+   "expires": "10/1/2029",
+   "pt": [
+    33.6446834,
+    -97.1625482
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH HARRIS METHODIST HOSPITAL STEPHENVILLE",
+   "level": "Level IV - Acute Stroke Ready",
+   "level_num": 4,
+   "tsa": "E",
+   "city": "STEPHENVILLE",
+   "zip": "76401",
+   "expires": "6/1/2027",
+   "pt": [
+    32.222254533392,
+    -98.204160179433
+   ]
+  },
+  {
+   "name": "TEXAS HEALTH HOSPITAL ROCKWALL",
+   "level": "Level IV - Acute Stroke Ready",
+   "level_num": 4,
+   "tsa": "E",
+   "city": "ROCKWALL",
+   "zip": "75032",
+   "expires": "8/1/2029",
+   "pt": [
+    32.886369756075,
+    -96.465202435495
+   ]
+  },
+  {
+   "name": "UT HEALTH EAST TEXAS ATHENS HOSPITAL",
+   "level": "Level IV - Acute Stroke Ready",
+   "level_num": 4,
+   "tsa": "G",
+   "city": "ATHENS",
+   "zip": "75751",
+   "expires": "12/1/2029",
+   "pt": [
+    32.171330782304,
+    -95.844035051436
+   ]
+  },
+  {
+   "name": "UT HEALTH EAST TEXAS CARTHAGE HOSPITAL",
+   "level": "Level IV - Acute Stroke Ready",
+   "level_num": 4,
+   "tsa": "G",
+   "city": "CARTHAGE",
+   "zip": "75633",
+   "expires": "4/1/2028",
+   "pt": [
+    32.167029987996,
+    -94.346000007628
+   ]
+  },
+  {
+   "name": "UT HEALTH EAST TEXAS HENDERSON HOSPITAL",
+   "level": "Level IV - Acute Stroke Ready",
+   "level_num": 4,
+   "tsa": "G",
+   "city": "HENDERSON",
+   "zip": "75652",
+   "expires": "8/1/2029",
+   "pt": [
+    32.16156415839,
+    -94.796358397142
+   ]
+  },
+  {
+   "name": "UT HEALTH EAST TEXAS JACKSONVILLE HOSPITAL",
+   "level": "Level IV - Acute Stroke Ready",
+   "level_num": 4,
+   "tsa": "G",
+   "city": "JACKSONVILLE",
+   "zip": "75766",
+   "expires": "5/1/2027",
+   "pt": [
+    31.961367398922,
+    -95.270580350415
+   ]
+  },
+  {
+   "name": "UT HEALTH EAST TEXAS PITTSBURG HOSPITAL",
+   "level": "Level IV - Acute Stroke Ready",
+   "level_num": 4,
+   "tsa": "G",
+   "city": "PITTSBURG",
+   "zip": "75686",
+   "expires": "6/1/2029",
+   "pt": [
+    33.031257428662,
+    -94.961901939445
+   ]
+  },
+  {
+   "name": "UT HEALTH EAST TEXAS QUITMAN HOSPITAL",
+   "level": "Level IV - Acute Stroke Ready",
+   "level_num": 4,
+   "tsa": "G",
+   "city": "QUITMAN",
+   "zip": "75783",
+   "expires": "10/1/2029",
+   "pt": [
+    32.797556355329,
+    -95.443996459669
+   ]
+  }
+ ]
+}

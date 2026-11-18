@@ -9,6 +9,7 @@ DATA = os.path.join(ROOT, "data")
 a = json.load(open(os.path.join(DATA, "stage_a_counties.json")))
 b = json.load(open(os.path.join(DATA, "stage_b_heat.json")))
 d = json.load(open(os.path.join(DATA, "stage_d_access.json")))
+s = json.load(open(os.path.join(DATA, "stage_d_stroke.json")))
 
 URBAN_CORE = {"Dallas", "Tarrant", "Collin", "Denton"}  # DFW 4 core counties (>900k pop)
 
@@ -18,6 +19,7 @@ cols = [
     "neurologists", "neurologists_per_100k",
     "er_drive_min_popw", "er_drive_mi_popw", "pct_pop_er_over_15min",
     "neuro_hub_drive_min_popw", "neuro_hub_drive_mi_popw", "pct_pop_hub_over_30min", "pct_pop_hub_over_45min",
+    "stroke_l1_l2_min_popw", "stroke_l1_l2_mi_popw", "pct_pop_stroke_l1_l2_over_45min", "pct_pop_stroke_l1_l2_over_60min", "stroke_l1_l3_min_popw",
     "source_notes",
 ]
 
@@ -26,8 +28,9 @@ skipped = []
 for fips, ca in sorted(a.items(), key=lambda kv: kv[1]["county"]):
     hb = b.get(fips)
     ad = d.get(fips)
-    if not hb or not ad:
-        skipped.append((ca["county"], bool(hb), bool(ad)))
+    sd = s.get(fips)
+    if not hb or not ad or not sd:
+        skipped.append((ca["county"], bool(hb), bool(ad), bool(sd)))
         continue
     pop = ca["population"]
     neuro_rate = round(100000.0 * ca["neurologists"] / pop, 1)
@@ -37,7 +40,7 @@ for fips, ca in sorted(a.items(), key=lambda kv: kv[1]["county"]):
         f"{hb['completeness']*100:.1f}% complete, {hb['years_counted']} yrs); "
         f"65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES {ca['stroke_year']}; "
         f"neuro: HRSA AHRF 2023 ({ca['neurologists']} / {pop}); "
-        f"drive: OSRM tract pop-weighted ({ad['tracts_used']} tracts, hub>=10 neuro)"
+        f"drive: OSRM tract pop-weighted ({ad['tracts_used']} tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)"
     )
     rows.append([
         fips, ca["county"], ctype, pop,
@@ -45,6 +48,7 @@ for fips, ca in sorted(a.items(), key=lambda kv: kv[1]["county"]):
         ca["neurologists"], neuro_rate,
         ad["er_drive_min_popw"], ad["er_drive_mi_popw"], ad["pct_pop_er_over_15min"],
         ad["neuro_hub_drive_min_popw"], ad["neuro_hub_drive_mi_popw"], ad["pct_pop_hub_over_30min"], ad["pct_pop_hub_over_45min"],
+        sd["stroke_l1_l2_min_popw"], sd["stroke_l1_l2_mi_popw"], sd["pct_pop_stroke_l1_l2_over_45min"], sd["pct_pop_stroke_l1_l2_over_60min"], sd["stroke_l1_l3_min_popw"],
         notes,
     ])
 

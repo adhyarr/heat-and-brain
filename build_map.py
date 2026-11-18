@@ -51,15 +51,23 @@ for t in csv.DictReader(open(os.path.join(DATA, "tract_access.csv"))):
             t["er_name"], t["hub_name"],
         ])
 
-# Hospitals in or near the 24-county bounding box
+# Official Texas DSHS Stroke Centers (Level I-II) + CMS ERs in or near the 24-county bounding box
+dshs_l1_l2 = []
+for s in json.load(open(os.path.join(DATA, "tx_dshs_stroke_centers.json")))["located"]:
+    if s["level_num"] <= 2:
+        lat, lon = s["pt"]
+        if 31.3 <= lat <= 34.2 and -98.6 <= lon <= -94.8:
+            dshs_l1_l2.append({"name": s["name"], "county": f"{s['city']} ({s['level']})", "lat": round(lat, 4), "lon": round(lon, 4), "hub": True, "neuro": s["level"]})
+
 hosp = []
 for h in json.load(open(os.path.join(DATA, "hospitals_geocoded.json"))):
     lat, lon = h["pt"]
     if 31.3 <= lat <= 34.0 and -98.6 <= lon <= -94.9:
         hosp.append({
-            "name": h["name"], "county": h["county"], "lat": round(lat, 4), "lon": round(lon, 4),
-            "hub": (h.get("county_neurologists") or 0) >= 10, "neuro": h.get("county_neurologists") or 0,
+            "name": h["name"], "county": h["county"] + " County", "lat": round(lat, 4), "lon": round(lon, 4),
+            "hub": False, "neuro": 0,
         })
+hosp.extend(dshs_l1_l2)
 
 html_out = f"""<!doctype html>
 <html lang="en">
@@ -110,7 +118,8 @@ select{{width:100%;padding:8px 10px;border-radius:8px;border:1px solid #cfd4e4;f
       <select id="metric">
         <option value="score_total">Combined Risk Score (1–24)</option>
         <option value="days_over_100F">Extreme Heat Days (≥100°F / yr)</option>
-        <option value="neuro_hub_drive_min_popw">Neurology Hub Drive Time (min, pop-weighted)</option>
+        <option value="stroke_l1_l2_min_popw">DSHS Level I–II Stroke Center Drive (min, pop-w)</option>
+        <option value="stroke_l1_l3_min_popw">DSHS Level I–III Stroke Center Drive (min, pop-w)</option>
         <option value="er_drive_min_popw">Nearest ER Drive Time (min, pop-weighted)</option>
         <option value="pct_age_65_plus">% Residents Age 65+</option>
         <option value="pct_no_vehicle">% Households with No Vehicle</option>
@@ -122,7 +131,7 @@ select{{width:100%;padding:8px 10px;border-radius:8px;border:1px solid #cfd4e4;f
     <div class="checks">
       <div class="lbl">Map layers</div>
       <label><input type="checkbox" id="chk-tracts"> Show 1,885 Census tracts (colored by neuro hub drive)</label>
-      <label><input type="checkbox" id="chk-hosp" checked> Show ER hospitals &amp; neurology hubs (blue = hub)</label>
+      <label><input type="checkbox" id="chk-hosp" checked> Show ER hospitals &amp; DSHS Level I–II Stroke Centers (blue = stroke center)</label>
     </div>
     <div class="panel" id="info">
       <div class="lbl">County details</div>
@@ -139,7 +148,8 @@ const HOSP = {json.dumps(hosp)};
 const METRICS = {{
   score_total: {{label: "Risk Score", unit: " / 24", inv: false}},
   days_over_100F: {{label: "Days ≥100°F", unit: " days/yr", inv: false}},
-  neuro_hub_drive_min_popw: {{label: "Neuro Hub Drive", unit: " min", inv: false}},
+  stroke_l1_l2_min_popw: {{label: "DSHS L1–L2 Stroke Drive", unit: " min", inv: false}},
+  stroke_l1_l3_min_popw: {{label: "DSHS L1–L3 Stroke Drive", unit: " min", inv: false}},
   er_drive_min_popw: {{label: "ER Drive", unit: " min", inv: false}},
   pct_age_65_plus: {{label: "Age 65+", unit: "%", inv: false}},
   pct_no_vehicle: {{label: "No Vehicle", unit: "%", inv: false}},
@@ -193,8 +203,9 @@ function showInfo(p) {{
       <span>Neurologists (HRSA 2023)</span><b>${{Math.round(p.neurologists)}} (${{p.neurologists_per_100k}}/100k)</b>
       <span>ER drive (pop-weighted)</span><b>${{p.er_drive_min_popw}} min (${{p.er_drive_mi_popw}} mi)</b>
       <span>Pop >15 min from ER</span><b>${{p.pct_pop_er_over_15min}}%</b>
-      <span>Neuro hub drive (pop-w)</span><b>${{p.neuro_hub_drive_min_popw}} min (${{p.neuro_hub_drive_mi_popw}} mi)</b>
-      <span>Pop >45 min from hub</span><b>${{p.pct_pop_hub_over_45min}}%</b>
+      <span>DSHS Stroke L1–L2 drive</span><b>${{p.stroke_l1_l2_min_popw}} min (${{p.stroke_l1_l2_mi_popw}} mi)</b>
+      <span>Pop &gt;60 min from L1–L2</span><b>${{p.pct_pop_stroke_l1_l2_over_60min}}%</b>
+      <span>DSHS Stroke L1–L3 drive</span><b>${{p.stroke_l1_l3_min_popw}} min</b>
     </div>
     <div class="note">${{p.source_notes}}</div>`;
 }}
@@ -232,7 +243,7 @@ HOSP.forEach(h => {{
     radius: h.hub ? 5.5 : 4,
     color: "#fff", weight: 1.5,
     fillColor: h.hub ? "#1982c4" : "#2b2f42", fillOpacity: 0.92
-  }}).bindTooltip(`<b>${{h.name}}</b><br>${{h.county}} County (${{h.hub ? "Neurology Hub: " + h.neuro + " neuro" : "Local ER"}})`)
+  }}).bindTooltip(`<b>${{h.name}}</b><br>${{h.county}} (${{h.hub ? "TX DSHS Stroke Center" : "Local ER"}})`)
     .addTo(hospLayer);
 }});
 hospLayer.addTo(map);

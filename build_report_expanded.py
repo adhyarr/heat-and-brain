@@ -64,11 +64,11 @@ def bar_chart_heat():
 def scatter_access():
     W, H, L, B, T, R = 580, 420, 56, 46, 20, 24
     xs = [r["er_drive_min_popw"] for r in rows]
-    ys = [r["neuro_hub_drive_min_popw"] for r in rows]
+    ys = [r["stroke_l1_l2_min_popw"] for r in rows]
     xmax, ymax = max(xs) * 1.12, max(ys) * 1.12
     px = lambda v: L + (W - L - R) * v / xmax
     py = lambda v: H - B - (H - B - T) * v / ymax
-    out = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Population-weighted ER vs neurology hub drive time">']
+    out = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Population-weighted ER vs DSHS Stroke Center drive time">']
     for t in range(0, int(xmax) + 1, 10):
         out.append(f'<line x1="{px(t):.1f}" y1="{T}" x2="{px(t):.1f}" y2="{H-B}" stroke="#eef0f6"/>')
         out.append(f'<text x="{px(t):.1f}" y="{H-B+16}" font-size="11" fill="#8a8fa3" text-anchor="middle">{t}</text>')
@@ -76,16 +76,16 @@ def scatter_access():
         out.append(f'<line x1="{L}" y1="{py(t):.1f}" x2="{W-R}" y2="{py(t):.1f}" stroke="#eef0f6"/>')
         out.append(f'<text x="{L-8}" y="{py(t)+4:.1f}" font-size="11" fill="#8a8fa3" text-anchor="end">{t}</text>')
     out.append(f'<text x="{(L+W-R)/2}" y="{H-8}" font-size="11.5" fill="#5b6075" text-anchor="middle">Pop-weighted drive to nearest ER (min)</text>')
-    out.append(f'<text transform="translate(14 {(T+H-B)/2}) rotate(-90)" font-size="11.5" fill="#5b6075" text-anchor="middle">Pop-weighted drive to neurology hub (min)</text>')
-    # highlight >15 min ER and >45 min neuro hub
+    out.append(f'<text transform="translate(14 {(T+H-B)/2}) rotate(-90)" font-size="11.5" fill="#5b6075" text-anchor="middle">Pop-weighted drive to DSHS Level I–II Stroke Center (min)</text>')
+    # highlight >15 min ER and >45 min stroke center
     out.append(f'<rect x="{px(15):.1f}" y="{T}" width="{W-R-px(15):.1f}" height="{py(45)-T:.1f}" fill="{ACCESS}" opacity="0.07"/>')
-    out.append(f'<text x="{W-R-6}" y="{T+14}" font-size="10.5" fill="{ACCESS}" text-anchor="end">&gt;15m ER + &gt;45m neuro hub</text>')
+    out.append(f'<text x="{W-R-6}" y="{T+14}" font-size="10.5" fill="{ACCESS}" text-anchor="end">&gt;15m ER + &gt;45m Level I–II Stroke Center</text>')
     for r in rows:
-        x, y = px(r["er_drive_min_popw"]), py(r["neuro_hub_drive_min_popw"])
+        x, y = px(r["er_drive_min_popw"]), py(r["stroke_l1_l2_min_popw"])
         rad = 4 + r["pct_age_65_plus"] * 0.45
         col = VULN if r["type"] == "urban" else HEAT
-        out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{rad:.1f}" fill="{col}" opacity="0.58" stroke="{col}" stroke-width="1.3"><title>{esc(r["county"])}: ER {r["er_drive_min_popw"]}m, Neuro {r["neuro_hub_drive_min_popw"]}m</title></circle>')
-        if r["county"] in ("Hill", "Erath", "Freestone", "Van Zandt", "Rains", "Navarro", "Hood", "Dallas", "Wise", "Henderson", "Hopkins"):
+        out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{rad:.1f}" fill="{col}" opacity="0.58" stroke="{col}" stroke-width="1.3"><title>{esc(r["county"])}: ER {r["er_drive_min_popw"]}m, Stroke L1-L2 {r["stroke_l1_l2_min_popw"]}m</title></circle>')
+        if r["county"] in ("Hill", "Erath", "Freestone", "Van Zandt", "Rains", "Navarro", "Hood", "Dallas", "Wise", "Henderson", "Hopkins", "Cooke"):
             out.append(f'<text x="{x+rad+4:.1f}" y="{y+3:.1f}" font-size="10.5" fill="#2b2f42">{esc(r["county"])}</text>')
     out.append("</svg>")
     return "".join(out)
@@ -138,7 +138,7 @@ LABELS = {
     "stroke_rate": "Stroke %",
     "neurologists_per_100k": "Neuro /100k",
     "er_drive_min_popw": "ER min (pop-w)",
-    "neuro_hub_drive_min_popw": "Neuro hub min",
+    "stroke_l1_l2_min_popw": "DSHS Stroke L1-L2 min",
 }
 
 
@@ -163,8 +163,8 @@ rural_rows = [r for r in rows if r["type"] == "rural"]
 urban_rows = [r for r in rows if r["type"] == "urban"]
 avg_rural_er = sum(r["er_drive_min_popw"] for r in rural_rows) / len(rural_rows)
 avg_urban_er = sum(r["er_drive_min_popw"] for r in urban_rows) / len(urban_rows)
-avg_rural_hub = sum(r["neuro_hub_drive_min_popw"] for r in rural_rows) / len(rural_rows)
-avg_urban_hub = sum(r["neuro_hub_drive_min_popw"] for r in urban_rows) / len(urban_rows)
+avg_rural_hub = sum(r["stroke_l1_l2_min_popw"] for r in rural_rows) / len(rural_rows)
+avg_urban_hub = sum(r["stroke_l1_l2_min_popw"] for r in urban_rows) / len(urban_rows)
 
 links = [
     ("map.html", "Interactive Map (24 counties + 1,885 tracts)", "Explore risk scores, drive times, and hospital hubs"),
@@ -217,7 +217,7 @@ footer{{color:#8a8fa3;font-size:12px;padding:10px 0 40px}}
 <div class="kpis">
 <div class="kpi"><b>{esc(top['county'])}</b><span>highest risk score ({top['total']:.2f} of {N})</span></div>
 <div class="kpi"><b>{avg_rural_er:.1f} vs {avg_urban_er:.1f} min</b><span>avg pop-weighted ER drive (rural vs urban core)</span></div>
-<div class="kpi"><b>{avg_rural_hub:.1f} vs {avg_urban_hub:.1f} min</b><span>avg pop-weighted drive to neurology hub (≥10 neurologists)</span></div>
+<div class="kpi"><b>{avg_rural_hub:.1f} vs {avg_urban_hub:.1f} min</b><span>avg pop-weighted drive to DSHS Level I–II Stroke Center</span></div>
 <div class="kpi"><b>12 of 20</b><span>rural counties have 0 neurologists on record</span></div>
 </div>
 
@@ -225,17 +225,17 @@ footer{{color:#8a8fa3;font-size:12px;padding:10px 0 40px}}
 <p class="sub">Tract-level routing measures where residents actually live, rather than a single county center point.</p>
 <div class="grid">
 <div class="card"><h3>Extreme heat days (2015–2024)</h3>{bar_chart_heat()}<p class="note">Nearest NOAA station within 50 km with ≥95% completeness. Limestone was excluded (no qualifying station).</p></div>
-<div class="card"><h3>ER drive vs. neurology hub drive</h3>{scatter_access()}<p class="note">Bubble size = % age 65+. Rural counties cluster in longer ER and neurology-hub drives; all 4 urban core counties sit near (9m, 9m).</p></div>
+<div class="card"><h3>ER drive vs. DSHS Level I–II Stroke Center drive</h3>{scatter_access()}<p class="note">Bubble size = % age 65+. Official Texas DSHS Comprehensive &amp; Advanced Stroke Centers; all 4 urban core counties sit near 13–24 min.</p></div>
 </div></section>
 
 <section><h2>Combined risk score (1 to {N})</h2>
-<p class="sub">Equal weights across Heat, Vulnerability (% 65+, % no vehicle, stroke rate), and Access gap (neurologists/100k, pop-weighted ER drive, pop-weighted neurology-hub drive).</p>
+<p class="sub">Equal weights across Heat, Vulnerability (% 65+, % no vehicle, stroke rate), and Access gap (neurologists/100k, pop-weighted ER drive, pop-weighted DSHS Level I–II Stroke Center drive).</p>
 <div class="grid">
 <div class="card"><h3>Total score by county</h3>{stacked_chart()}<p class="note">Hill County leads across all three groups (20.0 Heat, 20.0 Vulnerability, 19.7 Access gap).</p></div>
 <div class="card"><h3>All 24 counties at a glance</h3>{heatmap()}
 <div class="legend"><span>lower risk</span><div class="grad"></div><span>higher risk</span></div></div>
 </div>
-<div class="warn"><b>Method notes.</b> Association only, not causation. One weather station represents each county; Limestone was excluded because its nearest stations lacked 95% 10-year coverage. Neurology hubs are approximated as ER hospitals located in counties with ≥10 neurologists (HRSA AHRF 2023).</div>
+<div class="warn"><b>Method notes.</b> Association only, not causation. One weather station represents each county; Limestone was excluded because its nearest stations lacked 95% 10-year coverage. Stroke centers use the official Texas DSHS Comprehensive (Level I) and Advanced (Level II) Stroke Facilities list.</div>
 </section>
 
 <section><h2>Project files</h2>

@@ -1,0 +1,227 @@
+{
+ "48001": {
+  "county": "Anderson",
+  "stroke_l1_l2_min_popw": 69.6,
+  "stroke_l1_l2_mi_popw": 52.9,
+  "pct_pop_stroke_l1_l2_over_45min": 92.0,
+  "pct_pop_stroke_l1_l2_over_60min": 70.5,
+  "stroke_l1_l3_min_popw": 69.6,
+  "stroke_l1_l3_mi_popw": 52.9
+ },
+ "48085": {
+  "county": "Collin",
+  "stroke_l1_l2_min_popw": 18.0,
+  "stroke_l1_l2_mi_popw": 11.0,
+  "pct_pop_stroke_l1_l2_over_45min": 0.7,
+  "pct_pop_stroke_l1_l2_over_60min": 0.0,
+  "stroke_l1_l3_min_popw": 9.7,
+  "stroke_l1_l3_mi_popw": 5.0
+ },
+ "48097": {
+  "county": "Cooke",
+  "stroke_l1_l2_min_popw": 73.6,
+  "stroke_l1_l2_mi_popw": 57.5,
+  "pct_pop_stroke_l1_l2_over_45min": 100.0,
+  "pct_pop_stroke_l1_l2_over_60min": 100.0,
+  "stroke_l1_l3_min_popw": 40.3,
+  "stroke_l1_l3_mi_popw": 32.2
+ },
+ "48113": {
+  "county": "Dallas",
+  "stroke_l1_l2_min_popw": 13.4,
+  "stroke_l1_l2_mi_popw": 7.9,
+  "pct_pop_stroke_l1_l2_over_45min": 0.0,
+  "pct_pop_stroke_l1_l2_over_60min": 0.0,
+  "stroke_l1_l3_min_popw": 9.8,
+  "stroke_l1_l3_mi_popw": 4.9
+ },
+ "48121": {
+  "county": "Denton",
+  "stroke_l1_l2_min_popw": 23.5,
+  "stroke_l1_l2_mi_popw": 15.5,
+  "pct_pop_stroke_l1_l2_over_45min": 3.6,
+  "pct_pop_stroke_l1_l2_over_60min": 0.0,
+  "stroke_l1_l3_min_popw": 10.8,
+  "stroke_l1_l3_mi_popw": 5.5
+ },
+ "48139": {
+  "county": "Ellis",
+  "stroke_l1_l2_min_popw": 38.7,
+  "stroke_l1_l2_mi_popw": 28.2,
+  "pct_pop_stroke_l1_l2_over_45min": 24.1,
+  "pct_pop_stroke_l1_l2_over_60min": 1.1,
+  "stroke_l1_l3_min_popw": 17.6,
+  "stroke_l1_l3_mi_popw": 9.4
+ },
+ "48143": {
+  "county": "Erath",
+  "stroke_l1_l2_min_popw": 90.6,
+  "stroke_l1_l2_mi_popw": 70.7,
+  "pct_pop_stroke_l1_l2_over_45min": 100.0,
+  "pct_pop_stroke_l1_l2_over_60min": 100.0,
+  "stroke_l1_l3_min_popw": 50.0,
+  "stroke_l1_l3_mi_popw": 34.9
+ },
+ "48147": {
+  "county": "Fannin",
+  "stroke_l1_l2_min_popw": 71.8,
+  "stroke_l1_l2_mi_popw": 59.0,
+  "pct_pop_stroke_l1_l2_over_45min": 100.0,
+  "pct_pop_stroke_l1_l2_over_60min": 88.4,
+  "stroke_l1_l3_min_popw": 37.8,
+  "stroke_l1_l3_mi_popw": 29.6
+ },
+ "48161": {
+  "county": "Freestone",
+  "stroke_l1_l2_min_popw": 112.3,
+  "stroke_l1_l2_mi_popw": 86.7,
+  "pct_pop_stroke_l1_l2_over_45min": 100.0,
+  "pct_pop_stroke_l1_l2_over_60min": 100.0,
+  "stroke_l1_l3_min_popw": 93.3,
+  "stroke_l1_l3_mi_popw": 65.3
+ },
+ "48181": {
+  "county": "Grayson",
+  "stroke_l1_l2_min_popw": 63.1,
+  "stroke_l1_l2_mi_popw": 51.5,
+  "pct_pop_stroke_l1_l2_over_45min": 94.5,
+  "pct_pop_stroke_l1_l2_over_60min": 52.9,
+  "stroke_l1_l3_min_popw": 19.0,
+  "stroke_l1_l3_mi_popw": 12.2
+ },
+ "48213": {
+  "county": "Henderson",
+  "stroke_l1_l2_min_popw": 53.2,
+  "stroke_l1_l2_mi_popw": 41.2,
+  "pct_pop_stroke_l1_l2_over_45min": 74.5,
+  "pct_pop_stroke_l1_l2_over_60min": 37.2,
+  "stroke_l1_l3_min_popw": 53.1,
+  "stroke_l1_l3_mi_popw": 39.9
+ },
+ "48217": {
+  "county": "Hill",
+  "stroke_l1_l2_min_popw": 80.9,
+  "stroke_l1_l2_mi_popw": 67.2,
+  "pct_pop_stroke_l1_l2_over_45min": 100.0,
+  "pct_pop_stroke_l1_l2_over_60min": 100.0,
+  "stroke_l1_l3_min_popw": 54.7,
+  "stroke_l1_l3_mi_popw": 41.5
+ },
+ "48221": {
+  "county": "Hood",
+  "stroke_l1_l2_min_popw": 55.7,
+  "stroke_l1_l2_mi_popw": 38.8,
+  "pct_pop_stroke_l1_l2_over_45min": 100.0,
+  "pct_pop_stroke_l1_l2_over_60min": 22.8,
+  "stroke_l1_l3_min_popw": 19.7,
+  "stroke_l1_l3_mi_popw": 8.5
+ },
+ "48223": {
+  "county": "Hopkins",
+  "stroke_l1_l2_min_popw": 90.9,
+  "stroke_l1_l2_mi_popw": 64.9,
+  "pct_pop_stroke_l1_l2_over_45min": 100.0,
+  "pct_pop_stroke_l1_l2_over_60min": 100.0,
+  "stroke_l1_l3_min_popw": 13.7,
+  "stroke_l1_l3_mi_popw": 8.3
+ },
+ "48231": {
+  "county": "Hunt",
+  "stroke_l1_l2_min_popw": 60.5,
+  "stroke_l1_l2_mi_popw": 48.7,
+  "pct_pop_stroke_l1_l2_over_45min": 100.0,
+  "pct_pop_stroke_l1_l2_over_60min": 37.6,
+  "stroke_l1_l3_min_popw": 19.1,
+  "stroke_l1_l3_mi_popw": 12.0
+ },
+ "48251": {
+  "county": "Johnson",
+  "stroke_l1_l2_min_popw": 35.2,
+  "stroke_l1_l2_mi_popw": 24.6,
+  "pct_pop_stroke_l1_l2_over_45min": 11.5,
+  "pct_pop_stroke_l1_l2_over_60min": 2.4,
+  "stroke_l1_l3_min_popw": 21.8,
+  "stroke_l1_l3_mi_popw": 13.2
+ },
+ "48257": {
+  "county": "Kaufman",
+  "stroke_l1_l2_min_popw": 42.4,
+  "stroke_l1_l2_mi_popw": 32.2,
+  "pct_pop_stroke_l1_l2_over_45min": 39.3,
+  "pct_pop_stroke_l1_l2_over_60min": 9.8,
+  "stroke_l1_l3_min_popw": 28.6,
+  "stroke_l1_l3_mi_popw": 20.0
+ },
+ "48293": {
+  "county": "Limestone",
+  "stroke_l1_l2_min_popw": 97.7,
+  "stroke_l1_l2_mi_popw": 74.3,
+  "pct_pop_stroke_l1_l2_over_45min": 100.0,
+  "pct_pop_stroke_l1_l2_over_60min": 100.0,
+  "stroke_l1_l3_min_popw": 67.6,
+  "stroke_l1_l3_mi_popw": 45.2
+ },
+ "48349": {
+  "county": "Navarro",
+  "stroke_l1_l2_min_popw": 75.2,
+  "stroke_l1_l2_mi_popw": 61.7,
+  "pct_pop_stroke_l1_l2_over_45min": 100.0,
+  "pct_pop_stroke_l1_l2_over_60min": 100.0,
+  "stroke_l1_l3_min_popw": 56.0,
+  "stroke_l1_l3_mi_popw": 42.4
+ },
+ "48367": {
+  "county": "Parker",
+  "stroke_l1_l2_min_popw": 41.4,
+  "stroke_l1_l2_mi_popw": 28.1,
+  "pct_pop_stroke_l1_l2_over_45min": 31.8,
+  "pct_pop_stroke_l1_l2_over_60min": 10.5,
+  "stroke_l1_l3_min_popw": 23.8,
+  "stroke_l1_l3_mi_popw": 12.4
+ },
+ "48379": {
+  "county": "Rains",
+  "stroke_l1_l2_min_popw": 70.1,
+  "stroke_l1_l2_mi_popw": 51.9,
+  "pct_pop_stroke_l1_l2_over_45min": 100.0,
+  "pct_pop_stroke_l1_l2_over_60min": 100.0,
+  "stroke_l1_l3_min_popw": 34.8,
+  "stroke_l1_l3_mi_popw": 23.7
+ },
+ "48397": {
+  "county": "Rockwall",
+  "stroke_l1_l2_min_popw": 29.8,
+  "stroke_l1_l2_mi_popw": 22.1,
+  "pct_pop_stroke_l1_l2_over_45min": 0.0,
+  "pct_pop_stroke_l1_l2_over_60min": 0.0,
+  "stroke_l1_l3_min_popw": 14.7,
+  "stroke_l1_l3_mi_popw": 7.8
+ },
+ "48439": {
+  "county": "Tarrant",
+  "stroke_l1_l2_min_popw": 14.7,
+  "stroke_l1_l2_mi_popw": 8.2,
+  "pct_pop_stroke_l1_l2_over_45min": 0.0,
+  "pct_pop_stroke_l1_l2_over_60min": 0.0,
+  "stroke_l1_l3_min_popw": 9.6,
+  "stroke_l1_l3_mi_popw": 4.9
+ },
+ "48467": {
+  "county": "Van Zandt",
+  "stroke_l1_l2_min_popw": 57.8,
+  "stroke_l1_l2_mi_popw": 43.8,
+  "pct_pop_stroke_l1_l2_over_45min": 84.3,
+  "pct_pop_stroke_l1_l2_over_60min": 38.9,
+  "stroke_l1_l3_min_popw": 53.8,
+  "stroke_l1_l3_mi_popw": 37.7
+ },
+ "48497": {
+  "county": "Wise",
+  "stroke_l1_l2_min_popw": 57.1,
+  "stroke_l1_l2_mi_popw": 42.0,
+  "pct_pop_stroke_l1_l2_over_45min": 81.4,
+  "pct_pop_stroke_l1_l2_over_60min": 45.2,
+  "stroke_l1_l3_min_popw": 22.3,
+  "stroke_l1_l3_mi_popw": 12.5
+ }
+}
