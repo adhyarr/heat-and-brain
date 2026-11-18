@@ -68,46 +68,46 @@ footer{color:#8a8fa3;font-size:12.5px;padding:4px 0 40px}
   </div>
 
   <div class="panel">
-    <h2>How the Project Flows (Step by Step)</h2>
-    <p class="sub">Every chart, map layer, and score is built from real public data through reproducible scripts.</p>
+    <h2>Methodology &amp; Outputs (How Results Were Built)</h2>
+    <p class="sub">All charts, map layers, and county scores were produced from real public datasets using reproducible scripts.</p>
     <div class="flow">
       <div class="step">
         <span class="num">1</span>
-        <b>Collect Data</b>
-        <p>Pull Census ACS (65+, no vehicle), CDC PLACES (stroke), HRSA AHRF (neurologists), and 2020 tract centers.</p>
+        <b>Data Collected</b>
+        <p>Pulled Census ACS (65+, no vehicle), CDC PLACES (stroke), HRSA AHRF (neurologists), and 1,885 tract centers.</p>
         <a href="scripts/expand_stage_a.py">expand_stage_a.py</a>
         <a href="DATA_CHECKLIST.md">DATA_CHECKLIST.md</a>
       </div>
       <div class="step">
         <span class="num">2</span>
-        <b>Measure Heat</b>
-        <p>Pick the nearest NOAA station (&ge;95% complete, 2015–2024) and count days &ge;100&deg;F per year.</p>
+        <b>Heat Analyzed</b>
+        <p>Selected nearest NOAA stations (&ge;95% complete, 2015–2024) and counted annual days &ge;100&deg;F.</p>
         <a href="scripts/expand_stage_b.py">expand_stage_b.py</a>
         <a href="data/noaa_tmax_expanded.csv">noaa_tmax_expanded.csv</a>
       </div>
       <div class="step">
         <span class="num">3</span>
-        <b>Route Drive Times</b>
-        <p>Geocode 327 TX ER hospitals and compute pop-weighted drive times across 1,885 tracts.</p>
+        <b>Drive Times Routed</b>
+        <p>Geocoded 327 TX ERs &amp; 114 DSHS stroke centers; routed pop-weighted drives across 1,885 tracts.</p>
         <a href="scripts/expand_stage_c.py">expand_stage_c.py</a>
-        <a href="scripts/expand_stage_d.py">expand_stage_d.py</a>
+        <a href="scripts/route_dshs_stroke.py">route_dshs_stroke.py</a>
         <a href="data/tract_access.csv">tract_access.csv</a>
       </div>
       <div class="step">
         <span class="num">4</span>
-        <b>Merge &amp; Score</b>
-        <p>Combine into 24 counties, rank 1–24 on each measure, and average Heat, Vulnerability, and Access gap.</p>
+        <b>Scored &amp; Ranked</b>
+        <p>Merged 24 counties, ranked 1–24 on 7 measures, and averaged Heat, Vulnerability, and Access gap.</p>
         <a href="scripts/merge_expanded.py">merge_expanded.py</a>
         <a href="county_data_expanded.csv">county_data_expanded.csv</a>
         <a href="score.py">score.py</a>
       </div>
       <div class="step">
         <span class="num">5</span>
-        <b>Map &amp; Present</b>
-        <p>Generate the interactive map, visual charts report, resident guide, and research write-up.</p>
+        <b>Published Outputs</b>
+        <p>Built the interactive map, 24-county charts &amp; case studies, 1-page guide, and research write-up.</p>
         <a href="map.html">map.html</a>
         <a href="report_expanded.html">report_expanded.html</a>
-        <a href="resident_guide.html">resident_guide.html (1-page handout)</a>
+        <a href="resident_guide.pdf">resident_guide.pdf</a>
         <a href="report.html">report.html (5-county pilot)</a>
       </div>
     </div>
