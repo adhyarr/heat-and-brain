@@ -1,0 +1,214 @@
+<html><head><meta charset="utf-8"><title>Heat and the Brain</title></head><body>
+<h1>Heat and the Brain: Heat Exposure vs. Neurological Care Access in Rural Counties Near Dallas</h1>
+<p><i>HOSA project draft. Updated 2026-11-18. All six measures have data for all five counties. Results are preliminary: Table C sources must still be opened and checked.</i></p>
+
+<h2>Executive Summary</h2>
+<p><b>Question.</b> Which rural counties near Dallas combine extreme heat with limited access to neurological and emergency care, and which groups are most exposed?</p>
+<p><b>Approach.</b> Five Texas counties (Dallas as the urban comparison; Navarro, Henderson, Hunt and Wise as rural counties) were compared on six public-data measures: extreme-heat days, share of residents age 65+, share of households with no vehicle, stroke rate, neurologists per 100,000 people, and driving distance to the nearest emergency room. Each measure was ranked, grouped into Heat, Vulnerability and Access gap, and averaged with equal weights.</p>
+<p><b>Key findings (preliminary).</b></p>
+<ul>
+<li><b>Navarro County ranks highest (3.75 of 5).</b> It has no neurologists on record, the highest stroke rate (3.7%), and moderate-to-high heat (16.0 days at or above 100&deg;F per year).</li>
+<li>Navarro stayed in first place under every alternative weighting tested (see Robustness Check). With heat counted double, Dallas came within 0.02 points.</li>
+<li><b>Wise County</b> has the longest drive to an ER (6.6 miles, about 16 minutes) and the second-most heat days among the rural counties (18.3 per year).</li>
+<li><b>Dallas</b> is the hottest county (23.7 days per year) but has the shortest drive to an ER and 10.0 neurologists per 100,000.</li>
+<li><b>Henderson</b> has the oldest population (22.4% age 65+) but the fewest heat days (10.6, probably an undercount).</li>
+<li>Two of the four rural counties (Navarro and Hunt) have no neurologists on record. The other two have two each.</li>
+</ul>
+<p><b>Caution.</b> This shows association, not causation. Rural neurologist counts are tiny, one weather station represents each county, and the score weights are a choice. See Limitations.</p>
+
+<h2>1. Research Question</h2>
+<p>In rural counties near Dallas, which areas combine high heat exposure with low access to neurological and emergency care, and which patient groups are most at risk?</p>
+
+<h2>2. Hypothesis</h2>
+<p>Rural counties with more extreme-heat days, fewer neurologists and farther emergency rooms will have higher risk for people with neurological conditions.</p>
+
+<h2>3. Background (cite sources)</h2>
+<ul>
+<li>How heat affects the brain and neurological conditions: see Table C. [add checked sources]</li>
+<li>Medicines that affect temperature regulation: [CDC guidance on heat and medications. Open and cite the exact page.]</li>
+<li>Why rural, older, and low-income groups face more risk: [source needed]</li>
+</ul>
+
+<h2>4. Study Area and Project Overview</h2>
+<p>Urban comparison: Dallas County. Rural comparison: Navarro, Henderson, Hunt and Wise counties, Texas. The figure below shows how the data moves from public sources to the final score and report.</p>
+<p>[[FIG1]]</p>
+<p><i>Figure 1. Data flow: five public data sources feed one CSV file, a scoring script, and the report.</i></p>
+
+<h2>5. Data Sources</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<tr><th>Data</th><th>Source</th><th>Year</th><th>Notes</th></tr>
+<tr><td>Days at or above 100&deg;F</td><td>NOAA NCEI GHCN-Daily, one station per county</td><td>2015&ndash;2024 average</td><td>Stations: Dallas Love Field, Corsicana Campbell Field, Athens, Greenville Majors Field, Decatur Municipal Airport</td></tr>
+<tr><td>% age 65+, % households with no vehicle</td><td>US Census ACS 5-year, profile tables DP05 and DP04</td><td>2019&ndash;2023</td><td>Variables DP05_0024PE and DP04_0058PE</td></tr>
+<tr><td>Stroke rate</td><td>CDC PLACES, county level</td><td>2023 release</td><td>Age-adjusted % of adults</td></tr>
+<tr><td>Neurologists (MD and DO)</td><td>HRSA Area Health Resources Files 2024&ndash;2025</td><td>2023 counts</td><td>Field tot_md_do_neuro_23; population field popn_23</td></tr>
+<tr><td>Distance to nearest ER</td><td>Hospital list: CMS Care Compare (emergency services = Yes). Locations: US Census geocoder and OpenStreetMap Nominatim. Driving distance: OSRM on OpenStreetMap roads.</td><td>Accessed 2026-11-17</td><td>Measured from each county's Census internal point. Medical City Decatur was missing from the CMS list and was added from the hospital's website.</td></tr>
+</table>
+
+<h3>Data quality at a glance</h3>
+<table border="1" cellpadding="6" cellspacing="0">
+<tr><th>Measure</th><th>Confidence</th><th>Why</th></tr>
+<tr><td>% age 65+, % no vehicle</td><td>High</td><td>Official Census estimates, same year for all counties</td></tr>
+<tr><td>Stroke rate</td><td>Medium</td><td>CDC model-based estimates, nearly identical across counties (2.9&ndash;3.7%)</td></tr>
+<tr><td>Days at or above 100&deg;F</td><td>Medium</td><td>Real station records, but one station per county. Henderson's station is missing days.</td></tr>
+<tr><td>Neurologists per 100,000</td><td>Medium to low</td><td>Counts of 0&ndash;2 in rural counties are very small. Patients may travel to other counties.</td></tr>
+<tr><td>ER distance</td><td>Medium to low</td><td>Measured from the county center. Some hospital locations came from a geocoder not checked by hand.</td></tr>
+</table>
+
+<h2>6. Table A: Heat and Emergency Access</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<tr><th>County</th><th>Type</th><th>Avg days &ge;100&deg;F per year (2015&ndash;2024)</th><th>Driving distance to nearest ER (mi)</th><th>Drive time (min)</th><th>Nearest ER</th></tr>
+<tr><td>Dallas</td><td>Urban</td><td>23.7</td><td>2.2</td><td>5.1</td><td>Baylor University Medical Center</td></tr>
+<tr><td>Navarro</td><td>Rural</td><td>16.0</td><td>4.2</td><td>10.3</td><td>Navarro Regional Hospital</td></tr>
+<tr><td>Henderson</td><td>Rural</td><td>10.6 (station has missing days)</td><td>2.9</td><td>5.5</td><td>UT Health East Texas Athens Hospital</td></tr>
+<tr><td>Hunt</td><td>Rural</td><td>15.4</td><td>3.2</td><td>6.5</td><td>Hunt Regional Medical Center</td></tr>
+<tr><td>Wise</td><td>Rural</td><td>18.3</td><td>6.6</td><td>16.4</td><td>Medical City Decatur</td></tr>
+</table>
+<p>[[FIG2]]</p>
+<p><i>Figure 2. Average days per year at or above 100&deg;F, 2015&ndash;2024. Henderson's station has missing days, so its value is probably too low.</i></p>
+<p>Reading Table A: Dallas has more than twice as many extreme-heat days as Henderson. Part of that gap may come from the Dallas station sitting in the city, where buildings and pavement hold heat. Among rural counties, Wise has the most heat days and also the longest drive to an ER.</p>
+
+<h2>7. Table B: Patient Groups and Neurological Access</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<tr><th>County</th><th>Population (2023)</th><th>% age 65+</th><th>% no vehicle</th><th>Stroke rate (%)</th><th>Neurologists</th><th>Neurologists per 100,000</th></tr>
+<tr><td>Dallas</td><td>2,606,358</td><td>11.5</td><td>6.8</td><td>3.3</td><td>261</td><td>10.0</td></tr>
+<tr><td>Navarro</td><td>55,635</td><td>16.7</td><td>5.1</td><td>3.7</td><td>0</td><td>0.0</td></tr>
+<tr><td>Henderson</td><td>86,158</td><td>22.4</td><td>5.3</td><td>3.3</td><td>2</td><td>2.3</td></tr>
+<tr><td>Hunt</td><td>113,347</td><td>15.6</td><td>4.0</td><td>3.2</td><td>0</td><td>0.0</td></tr>
+<tr><td>Wise</td><td>78,097</td><td>15.4</td><td>1.6</td><td>2.9</td><td>2</td><td>2.6</td></tr>
+</table>
+<p>[[FIG3]]</p>
+<p><i>Figure 3. Neurologists per 100,000 people against drive time to the nearest ER. Bubble size shows the share of residents age 65+. The shaded corner marks low neurologist access with a long drive.</i></p>
+<p>Reading Table B: older adults are a larger share of Henderson (22.4%) than of any other county, and the 65+ group is the one most exposed to heat illness according to CDC guidance (to be cited). Households without a vehicle matter because they have a harder time reaching a clinic, cooling center, or ER in a heat emergency. Dallas has the most such households (6.8%) even though it has the best care access.</p>
+
+<h2>8. Table C: Neurological Condition vs. Heat Sensitivity</h2>
+<p><i>Entries below come from a web search summary of the named organizations. Open each source, confirm the wording, and add the exact page link before using it. Rows marked "source needed" have no checked source yet.</i></p>
+<table border="1" cellpadding="6" cellspacing="0">
+<tr><th>Condition</th><th>How heat may affect it</th><th>Higher-risk group</th><th>Source (to verify)</th></tr>
+<tr><td>Epilepsy</td><td>Heat, dehydration and overheating may make seizures more likely in some people. Some seizure medicines can reduce sweating.</td><td>People taking medicines that affect sweating</td><td>Epilepsy Foundation (epilepsy.com); Epilepsy Society UK (epilepsysociety.org.uk)</td></tr>
+<tr><td>Migraine</td><td>Heat and dehydration are commonly reported triggers.</td><td>[source needed]</td><td>[source needed]</td></tr>
+<tr><td>Multiple sclerosis</td><td>Heat can temporarily worsen symptoms such as fatigue, vision and weakness (Uhthoff's phenomenon). It usually eases after cooling and is not a true relapse.</td><td>Many people with MS</td><td>National Multiple Sclerosis Society (nationalmssociety.org)</td></tr>
+<tr><td>Stroke</td><td>[source needed]</td><td>[source needed]</td><td>[source needed]</td></tr>
+<tr><td>Dementia</td><td>People may not notice they are overheating or may forget to drink.</td><td>Older adults</td><td>[source needed; use Alzheimer's Association or CDC]</td></tr>
+<tr><td>Parkinson's</td><td>Autonomic problems can impair sweating and blood pressure, which raises the risk of overheating and dizziness.</td><td>People with Parkinson's, especially on certain medicines</td><td>Michael J. Fox Foundation (michaeljfox.org)</td></tr>
+</table>
+
+<h2>9. Method: Heat-Risk and Access-Gap Score</h2>
+<ol>
+<li>Rank each county on each measure (1 = lowest risk, 5 = highest risk). More heat days, older population, more households without a vehicle, higher stroke rate, fewer neurologists per 100,000, and longer ER distance all rank as higher risk. Ties share the average rank.</li>
+<li>Average the ranks within three groups: Heat (days over 100&deg;F), Vulnerability (age 65+, no vehicle, stroke rate), and Access gap (neurologists per 100,000, ER distance).</li>
+<li>Average the three group scores with equal weights to get the total. Equal weights are a simple starting choice and are tested below.</li>
+<li>Map the score in QGIS or Google My Maps and choose the 1&ndash;2 highest-risk counties for case studies.</li>
+</ol>
+
+<h3>Ranks for every measure (1 = lowest risk, 5 = highest)</h3>
+<table border="1" cellpadding="6" cellspacing="0">
+<tr><th>County</th><th>Heat days</th><th>% 65+</th><th>% no vehicle</th><th>Stroke</th><th>Neurologists (fewer = higher risk)</th><th>ER distance</th></tr>
+<tr><td>Dallas</td><td>5</td><td>1</td><td>5</td><td>3.5</td><td>1</td><td>1</td></tr>
+<tr><td>Navarro</td><td>3</td><td>4</td><td>3</td><td>5</td><td>4.5</td><td>4</td></tr>
+<tr><td>Henderson</td><td>1</td><td>5</td><td>4</td><td>3.5</td><td>3</td><td>2</td></tr>
+<tr><td>Hunt</td><td>2</td><td>3</td><td>2</td><td>2</td><td>4.5</td><td>3</td></tr>
+<tr><td>Wise</td><td>4</td><td>2</td><td>1</td><td>1</td><td>2</td><td>5</td></tr>
+</table>
+<p><b>Worked example, Navarro.</b> Heat score = 3 (one measure). Vulnerability score = (4 + 3 + 5) / 3 = 4.00. Access-gap score = (4.5 + 4) / 2 = 4.25. Total = (3 + 4.00 + 4.25) / 3 = 3.75.</p>
+
+<h2>10. Results (preliminary)</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<tr><th>County</th><th>Heat</th><th>Vulnerability</th><th>Access gap</th><th>Total</th></tr>
+<tr><td>Navarro</td><td>3.00</td><td>4.00</td><td>4.25</td><td>3.75</td></tr>
+<tr><td>Dallas</td><td>5.00</td><td>3.17</td><td>1.00</td><td>3.06</td></tr>
+<tr><td>Wise</td><td>4.00</td><td>1.33</td><td>3.50</td><td>2.94</td></tr>
+<tr><td>Hunt</td><td>2.00</td><td>2.33</td><td>3.75</td><td>2.69</td></tr>
+<tr><td>Henderson</td><td>1.00</td><td>4.17</td><td>2.50</td><td>2.56</td></tr>
+</table>
+<p>[[FIG4]]</p>
+<p><i>Figure 4. Total score by county. Each bar is split into one third of the Heat, Vulnerability and Access-gap scores.</i></p>
+<p>[[FIG5]]</p>
+<p><i>Figure 5. Every measure at a glance. Numbers are real values. Colors show each county's rank on that measure, from lower risk (green) to higher risk (red).</i></p>
+
+<h3>County profiles</h3>
+<ul>
+<li><b>Navarro (rural, 55,635 people).</b> 16.0 heat days; 16.7% age 65+; 5.1% no vehicle; stroke rate 3.7% (highest); no neurologists on record; 4.2 miles and 10.3 minutes to Navarro Regional Hospital. Total 3.75. Its score comes mostly from neurologist access, stroke rate and age.</li>
+<li><b>Dallas (urban, 2.6 million people).</b> 23.7 heat days (highest); 11.5% age 65+ (lowest); 6.8% no vehicle (highest); stroke rate 3.3%; 261 neurologists (10.0 per 100,000); 2.2 miles and 5.1 minutes to Baylor University Medical Center. Total 3.06. Heat is its main risk factor, and care access is its strength.</li>
+<li><b>Wise (rural, 78,097 people).</b> 18.3 heat days; 15.4% age 65+; 1.6% no vehicle (lowest); stroke rate 2.9% (lowest); 2 neurologists (2.6 per 100,000); 6.6 miles and 16.4 minutes to Medical City Decatur (longest). Total 2.94. Heat and ER distance drive its score.</li>
+<li><b>Hunt (rural, 113,347 people).</b> 15.4 heat days; 15.6% age 65+; 4.0% no vehicle; stroke rate 3.2%; no neurologists on record; 3.2 miles and 6.5 minutes to Hunt Regional Medical Center. Total 2.69. Its score comes mostly from neurologist access.</li>
+<li><b>Henderson (rural, 86,158 people).</b> 10.6 heat days (lowest, probably an undercount); 22.4% age 65+ (highest); 5.3% no vehicle; stroke rate 3.3%; 2 neurologists (2.3 per 100,000); 2.9 miles and 5.5 minutes to UT Health East Texas Athens Hospital. Total 2.56. Age is its main risk factor.</li>
+</ul>
+
+<h3>Robustness check: does the answer change with different weights?</h3>
+<table border="1" cellpadding="6" cellspacing="0">
+<tr><th>Scenario</th><th>Order (highest risk first), with scores</th></tr>
+<tr><td>Baseline: equal group weights</td><td>Navarro 3.75, Dallas 3.06, Wise 2.94, Hunt 2.69, Henderson 2.56</td></tr>
+<tr><td>Heat counts double</td><td>Navarro 3.56, Dallas 3.54, Wise 3.21, Hunt 2.52, Henderson 2.17</td></tr>
+<tr><td>Vulnerability counts double</td><td>Navarro 3.81, Dallas 3.08, Henderson 2.96, Hunt 2.60, Wise 2.54</td></tr>
+<tr><td>Access gap counts double</td><td>Navarro 3.88, Wise 3.08, Hunt 2.96, Henderson 2.54, Dallas 2.54</td></tr>
+<tr><td>Without stroke rate</td><td>Navarro 3.58, Dallas 3.00, Wise 3.00, Hunt 2.75, Henderson 2.67</td></tr>
+<tr><td>Without ER distance</td><td>Navarro 3.83, Dallas 3.06, Hunt 2.94, Henderson 2.72, Wise 2.44</td></tr>
+<tr><td>Flat average of all six ranks</td><td>Navarro 3.92, Henderson 3.08, Dallas 2.75, Hunt 2.75, Wise 2.50</td></tr>
+</table>
+<p>Navarro ranks first in every scenario. Dallas is a close second when heat counts double (3.54 vs. 3.56). The order of the other counties changes with the weights, so only the top rank should be treated as stable. With only five counties and ranks rather than raw values, small data changes can reorder the middle of the list.</p>
+
+<h2>11. Discussion and Recommendations</h2>
+<p><b>What the data suggests.</b> The county with the most heat (Dallas) is not the county with the highest combined risk, because Dallas has strong neurological and emergency care. The highest combined risk appears where moderate heat meets the lowest neurologist access (Navarro). Wise stands out for the longest drive to an ER, which matters most in emergencies such as heat stroke or a seizure.</p>
+<p><b>Ideas to evaluate (these are hypotheses, not findings).</b></p>
+<ul>
+<li>Telehealth neurology options for counties with no neurologists on record (Navarro, Hunt).</li>
+<li>Heat-safety and medication guidance aimed at older adults, especially in Henderson, where 22.4% of residents are 65+.</li>
+<li>EMS coverage and response time review for Wise County, given the longest ER drive.</li>
+<li>Cooling-center and transport outreach for households without a vehicle, especially in Dallas County (6.8%).</li>
+</ul>
+<p>Each idea needs a source or a local check (for example, whether a county already runs cooling centers) before it goes into a final recommendation.</p>
+
+<h2>12. Limitations</h2>
+<ul>
+<li>Shows association, not causation.</li>
+<li>One weather station stands in for each county. Henderson's station (Athens) has missing days, so its heat count may be too low. Dallas's station is in the city, which adds urban heat.</li>
+<li>Neurologist counts are very small (0&ndash;2) in rural counties, so one doctor moving changes the rank. Residents may also see neurologists in neighboring counties.</li>
+<li>Stroke is one condition and stands in for neurological burden. It differs little between counties (2.9&ndash;3.7%).</li>
+<li>ER distance is measured from each county's geographic center, not from where people live. It uses OpenStreetMap routing, which may differ from Google Maps.</li>
+<li>The CMS hospital list left out Wise County's hospital, so Medical City Decatur was added by hand. Three candidate hospitals could not be located, and some locations came from a geocoder that was not checked by hand.</li>
+<li>Rankings across only five counties cannot show how far apart the counties really are.</li>
+<li>Equal weights in the score are a choice, not a finding.</li>
+</ul>
+
+<h2>13. Next Steps</h2>
+<ol>
+<li>Open each source in Table C, confirm the wording, and add exact links. Fill in migraine, stroke and dementia.</li>
+<li>Add more rural counties (for example Rains, Hopkins, Van Zandt) so the comparison has more than four rural cases.</li>
+<li>Spot-check two or three ER distances in Google Maps and note any differences.</li>
+<li>Check Henderson's heat count against a second weather station.</li>
+<li>Add a map of the counties colored by score.</li>
+<li>Find and cite a source for each recommendation idea, then write the final Discussion.</li>
+<li>Confirm the HOSA event name, format and rules on hosa.org.</li>
+<li>Ask a teacher or mentor to review before submitting.</li>
+</ol>
+
+<h2>14. Glossary</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td>Extreme-heat day</td><td>A day with a high temperature of 100&deg;F or more.</td></tr>
+<tr><td>ACS (American Community Survey)</td><td>Yearly Census survey; the 5-year version averages five years for small counties.</td></tr>
+<tr><td>Age-adjusted rate</td><td>A rate adjusted so counties with older or younger populations can be compared fairly.</td></tr>
+<tr><td>Neurologist</td><td>A doctor who treats conditions of the brain and nervous system.</td></tr>
+<tr><td>Rank</td><td>A county's place on a measure, from 1 (lowest risk) to 5 (highest risk).</td></tr>
+<tr><td>Access gap</td><td>How hard it is to reach neurological and emergency care.</td></tr>
+<tr><td>Uhthoff's phenomenon</td><td>A temporary worsening of multiple sclerosis symptoms when body temperature rises.</td></tr>
+<tr><td>Geocoder</td><td>A tool that turns an address into map coordinates.</td></tr>
+</table>
+
+<h2>15. Sources (accessed 2026-11-17)</h2>
+<ul>
+<li>NOAA NCEI, Global Historical Climatology Network Daily: ncei.noaa.gov</li>
+<li>US Census Bureau, American Community Survey 5-year estimates 2019&ndash;2023, and Census Gazetteer and geocoder: data.census.gov, census.gov</li>
+<li>CDC PLACES, 2023 release: cdc.gov/places</li>
+<li>HRSA National Center for Health Workforce Analysis, Area Health Resources Files 2024&ndash;2025: data.hrsa.gov</li>
+<li>CMS Care Compare, Hospital General Information: data.cms.gov</li>
+<li>OpenStreetMap contributors, OSRM routing and Nominatim geocoding: openstreetmap.org, project-osrm.org</li>
+<li>Medical City Decatur, 609 Medical Center Dr, Decatur TX: medicalcityhealthcare.com</li>
+<li>Epilepsy Foundation; National Multiple Sclerosis Society; Michael J. Fox Foundation (Table C, to verify)</li>
+</ul>
+
+<h2>Project Files</h2>
+<p>Stored in the folder ~/Dev/ai-learning/heat-and-brain/ on the laptop: county_data.csv (the data), score.py (scoring), build_report.py (interactive report), report.html (charts and links), make_charts.py (chart images), DATA_CHECKLIST.md (where each number comes from), PROJECT_NOTES.md (goals and timeline), data/ (raw NOAA temperatures and ER distance results), and charts/ (figure images).</p>
+
+<p><i>Informational only. Not medical advice. In an emergency, call 911.</i></p>
+</body></html>

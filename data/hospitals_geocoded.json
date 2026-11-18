@@ -1,0 +1,3960 @@
+[
+ {
+  "name": "THE HOSPITALS OF PROVIDENCE - MEMORIAL CAMPUS",
+  "county": "EL PASO",
+  "type": "Acute Care Hospitals",
+  "addr": "2001 N OREGON ST, EL PASO, TX 79902",
+  "city": "EL PASO",
+  "pt": [
+   31.771311437765,
+   -106.499570438158
+  ],
+  "county_neurologists": 40
+ },
+ {
+  "name": "PETERSON REGIONAL MEDICAL CENTER",
+  "county": "KERR",
+  "type": "Acute Care Hospitals",
+  "addr": "551 HILL COUNTRY DRIVE, KERRVILLE, TX 78028",
+  "city": "KERRVILLE",
+  "pt": [
+   30.04341378384,
+   -99.150825801638
+  ],
+  "county_neurologists": 2
+ },
+ {
+  "name": "UNITED REGIONAL HEALTH CARE SYSTEM",
+  "county": "WICHITA",
+  "type": "Acute Care Hospitals",
+  "addr": "1600 11TH STREET, WICHITA FALLS, TX 76301",
+  "city": "WICHITA FALLS",
+  "pt": [
+   33.902962827316,
+   -98.500423942087
+  ],
+  "county_neurologists": 7
+ },
+ {
+  "name": "CHI ST JOSEPH HEALTH REGIONAL HOSPITAL",
+  "county": "BRAZOS",
+  "type": "Acute Care Hospitals",
+  "addr": "2801 FRANCISCAN DR, BRYAN, TX 77802",
+  "city": "BRYAN",
+  "pt": [
+   30.65558102421,
+   -96.347295348647
+  ],
+  "county_neurologists": 7
+ },
+ {
+  "name": "PARKLAND HEALTH & HOSPITAL SYSTEM",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "5200 HARRY HINES BLVD, DALLAS, TX 75235",
+  "city": "DALLAS",
+  "pt": [
+   32.811585784755,
+   -96.836791663022
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "UNIVERSITY OF TEXAS MEDICAL BRANCH GALVESTON",
+  "county": "GALVESTON",
+  "type": "Acute Care Hospitals",
+  "addr": "301 UNIVERSITY BOULEVARD, GALVESTON, TX 77555",
+  "city": "GALVESTON",
+  "pt": [
+   29.310374542715,
+   -94.774535017524
+  ],
+  "county_neurologists": 49
+ },
+ {
+  "name": "BAYLOR UNIVERSITY MEDICAL CENTER",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "3500 GASTON AVE, DALLAS, TX 75246",
+  "city": "DALLAS",
+  "pt": [
+   32.790471386554,
+   -96.780903601446
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "CITIZENS MEDICAL CENTER",
+  "county": "VICTORIA",
+  "type": "Acute Care Hospitals",
+  "addr": "2701 HOSPITAL DRIVE, VICTORIA, TX 77901",
+  "city": "VICTORIA",
+  "pt": [
+   28.813160746865,
+   -96.976686158543
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "UNIVERSITY MEDICAL CENTER OF EL PASO",
+  "county": "EL PASO",
+  "type": "Acute Care Hospitals",
+  "addr": "4815 ALAMEDA AVE, EL PASO, TX 79905",
+  "city": "EL PASO",
+  "pt": [
+   31.77073358236,
+   -106.434348417828
+  ],
+  "county_neurologists": 40
+ },
+ {
+  "name": "VALLEY BAPTIST MEDICAL CENTER- BROWNSVILLE",
+  "county": "CAMERON",
+  "type": "Acute Care Hospitals",
+  "addr": "1040 W JEFFERSON ST, BROWNSVILLE, TX 78520",
+  "city": "BROWNSVILLE",
+  "pt": [
+   25.917471490511,
+   -97.511417674185
+  ],
+  "county_neurologists": 10
+ },
+ {
+  "name": "LAREDO MEDICAL CENTER",
+  "county": "WEBB",
+  "type": "Acute Care Hospitals",
+  "addr": "1700 EAST SAUNDERS, LAREDO, TX 78044",
+  "city": "LAREDO",
+  "pt": [
+   27.530636690605,
+   -99.479367678336
+  ],
+  "county_neurologists": 5
+ },
+ {
+  "name": "CHRISTUS GOOD SHEPHERD MEDICAL CENTER",
+  "county": "GREGG",
+  "type": "Acute Care Hospitals",
+  "addr": "700 E MARSHALL AVE, LONGVIEW, TX 75601",
+  "city": "LONGVIEW",
+  "pt": [
+   32.501458959026,
+   -94.731366823301
+  ],
+  "county_neurologists": 3
+ },
+ {
+  "name": "VHS HARLINGEN HOSPITAL COMPANY LLC",
+  "county": "CAMERON",
+  "type": "Acute Care Hospitals",
+  "addr": "2101 PEASE ST, HARLINGEN, TX 78550",
+  "city": "HARLINGEN",
+  "pt": [
+   26.174462724648,
+   -97.671526184329
+  ],
+  "county_neurologists": 10
+ },
+ {
+  "name": "CHRISTUS SOUTHEAST TEXAS- ST ELIZABETH",
+  "county": "JEFFERSON",
+  "type": "Acute Care Hospitals",
+  "addr": "2830 CALDER AVENUE, BEAUMONT, TX 77702",
+  "city": "BEAUMONT",
+  "pt": [
+   30.085651028868,
+   -94.131275303159
+  ],
+  "county_neurologists": 12
+ },
+ {
+  "name": "ST JOSEPH MEDICAL CENTER",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "1401 ST. JOSEPH PARKWAY, HOUSTON, TX 77002",
+  "city": "HOUSTON",
+  "pt": [
+   29.748168893632,
+   -95.366705240565
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "JPS HEALTH NETWORK",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "1500 S MAIN ST, FORT WORTH, TX 76104",
+  "city": "FORT WORTH",
+  "pt": [
+   32.728136109652,
+   -97.326474392496
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "COVENANT MEDICAL CENTER",
+  "county": "LUBBOCK",
+  "type": "Acute Care Hospitals",
+  "addr": "3615 19TH STREET, LUBBOCK, TX 79410",
+  "city": "LUBBOCK",
+  "pt": [
+   33.57775471673,
+   -101.892188715623
+  ],
+  "county_neurologists": 32
+ },
+ {
+  "name": "ASCENSION PROVIDENCE",
+  "county": "MC LENNAN",
+  "type": "Acute Care Hospitals",
+  "addr": "6901 MEDICAL PARKWAY, WACO, TX 76712",
+  "city": "WACO",
+  "pt": [
+   31.514610676212,
+   -97.197997135281
+  ],
+  "county_neurologists": null
+ },
+ {
+  "name": "UT OF TEXAS  SOUTHWESTERN UNIVERSITY HOSPITAL - WILLIAM P. CLEMENTS JR.",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "6201 HARRY HINES BLVD, DALLAS, TX 75390",
+  "city": "DALLAS",
+  "pt": [
+   32.819792821696,
+   -96.847232679976
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "CHRISTUS SPOHN HOSPITAL CORPUS CHRISTI",
+  "county": "NUECES",
+  "type": "Acute Care Hospitals",
+  "addr": "600 ELIZABETH STREET, CORPUS CHRISTI, TX 78404",
+  "city": "CORPUS CHRISTI",
+  "geocoder": "nominatim",
+  "pt": [
+   27.7778793,
+   -97.3950902
+  ],
+  "county_neurologists": 13
+ },
+ {
+  "name": "METHODIST DALLAS MEDICAL CENTER",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "1441 NORTH BECKLEY AVENUE, DALLAS, TX 75203",
+  "city": "DALLAS",
+  "pt": [
+   32.761267216358,
+   -96.823003425122
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - TEMPLE",
+  "county": "BELL",
+  "type": "Acute Care Hospitals",
+  "addr": "2401 S  31ST ST, TEMPLE, TX 76508",
+  "city": "TEMPLE",
+  "pt": [
+   31.078683889338,
+   -97.365899898738
+  ],
+  "county_neurologists": 31
+ },
+ {
+  "name": "ROLLING PLAINS MEMORIAL HOSPITAL",
+  "county": "NOLAN",
+  "type": "Acute Care Hospitals",
+  "addr": "200 E ARIZONA, SWEETWATER, TX 79556",
+  "city": "SWEETWATER",
+  "pt": [
+   32.453835063809,
+   -100.398200565781
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "ASCENSION SETON MEDICAL CENTER AUSTIN",
+  "county": "TRAVIS",
+  "type": "Acute Care Hospitals",
+  "addr": "1201 W 38TH ST, AUSTIN, TX 78705",
+  "city": "AUSTIN",
+  "pt": [
+   30.305991183863,
+   -97.74498764669
+  ],
+  "county_neurologists": 125
+ },
+ {
+  "name": "BAPTIST MEDICAL CENTER",
+  "county": "BEXAR",
+  "type": "Acute Care Hospitals",
+  "addr": "111 DALLAS STREET, SAN ANTONIO, TX 78205",
+  "city": "SAN ANTONIO",
+  "pt": [
+   29.433049463702,
+   -98.492639999664
+  ],
+  "county_neurologists": 138
+ },
+ {
+  "name": "TEXAS HEALTH ARLINGTON MEMORIAL HOSPITAL",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "800 W RANDOL MILL RD, ARLINGTON, TX 76012",
+  "city": "ARLINGTON",
+  "pt": [
+   32.750080167023,
+   -97.116112535337
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "MEMORIAL HERMANN - TEXAS MEDICAL CENTER",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "6411 FANNIN, HOUSTON, TX 77030",
+  "city": "HOUSTON",
+  "pt": [
+   29.71509482743,
+   -95.396526728592
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "CHI ST LUKE'S HEALTH BRAZOSPORT",
+  "county": "BRAZORIA",
+  "type": "Acute Care Hospitals",
+  "addr": "100 MEDICAL DRIVE, LAKE JACKSON, TX 77566",
+  "city": "LAKE JACKSON",
+  "pt": [
+   29.027549334335,
+   -95.450451014372
+  ],
+  "county_neurologists": 20
+ },
+ {
+  "name": "TITUS REGIONAL MEDICAL CENTER",
+  "county": "TITUS",
+  "type": "Acute Care Hospitals",
+  "addr": "2001 N JEFFERSON, MOUNT PLEASANT, TX 75455",
+  "city": "MOUNT PLEASANT",
+  "geocoder": "nominatim",
+  "pt": [
+   33.1756496,
+   -94.9713506
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CHRISTUS SPOHN HOSPITAL BEEVILLE",
+  "county": "BEE",
+  "type": "Acute Care Hospitals",
+  "addr": "1500 E HOUSTON HWY, BEEVILLE, TX 78102",
+  "city": "BEEVILLE",
+  "pt": [
+   28.407921843132,
+   -97.732609060128
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "UT HEALTH EAST TEXAS TYLER REGIONAL HOSPITAL",
+  "county": "SMITH",
+  "type": "Acute Care Hospitals",
+  "addr": "1000 SOUTH BECKHAM AVE, TYLER, TX 75701",
+  "city": "TYLER",
+  "pt": [
+   32.338681868619,
+   -95.291829143979
+  ],
+  "county_neurologists": 16
+ },
+ {
+  "name": "MEDICAL CITY NORTH HILLS",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "4401 BOOTH CALLOWAY ROAD, NORTH RICHLAND HILLS, TX 76180",
+  "city": "NORTH RICHLAND HILLS",
+  "pt": [
+   32.829102915739,
+   -97.212281424845
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "NORTH TEXAS MEDICAL CENTER",
+  "county": "COOKE",
+  "type": "Acute Care Hospitals",
+  "addr": "1900 HOSPITAL BLVD, GAINESVILLE, TX 76240",
+  "city": "GAINESVILLE",
+  "pt": [
+   33.6446834,
+   -97.1625482
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "FORT DUNCAN MEDICAL CENTER",
+  "county": "MAVERICK",
+  "type": "Acute Care Hospitals",
+  "addr": "3333 N FOSTER MALDONADO BLVD, EAGLE PASS, TX 78852",
+  "city": "EAGLE PASS",
+  "pt": [
+   28.712233219786,
+   -100.453967903111
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "HCA HOUSTON HEALTHCARE SOUTHEAST",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "4000 SPENCER HWY, PASADENA, TX 77504",
+  "city": "PASADENA",
+  "pt": [
+   29.665100011863,
+   -95.182336438962
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER HILLCREST",
+  "county": "MC LENNAN",
+  "type": "Acute Care Hospitals",
+  "addr": "100 HILLCREST MEDICAL BLVD, WACO, TX 76712",
+  "city": "WACO",
+  "geocoder": "nominatim",
+  "pt": [
+   31.488905,
+   -97.157075
+  ],
+  "county_neurologists": null
+ },
+ {
+  "name": "CHRISTUS MOTHER FRANCES HOSPITAL",
+  "county": "SMITH",
+  "type": "Acute Care Hospitals",
+  "addr": "800 EAST DAWSON, TYLER, TX 75701",
+  "city": "TYLER",
+  "pt": [
+   32.342288248679,
+   -95.292637814188
+  ],
+  "county_neurologists": 16
+ },
+ {
+  "name": "GUADALUPE REGIONAL MEDICAL CENTER",
+  "county": "GUADALUPE",
+  "type": "Acute Care Hospitals",
+  "addr": "1215 E COURT ST, SEGUIN, TX 78155",
+  "city": "SEGUIN",
+  "pt": [
+   29.56903851381,
+   -97.94725304181
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "LAS PALMAS MEDICAL CENTER A CAMPUS OF LPDS HEALTHC",
+  "county": "EL PASO",
+  "type": "Acute Care Hospitals",
+  "addr": "1801 NORTH OREGON STREET, EL PASO, TX 79902",
+  "city": "EL PASO",
+  "pt": [
+   31.769899462109,
+   -106.498324381914
+  ],
+  "county_neurologists": 40
+ },
+ {
+  "name": "CONNALLY MEMORIAL MEDICAL CENTER",
+  "county": "WILSON",
+  "type": "Acute Care Hospitals",
+  "addr": "499 10TH STREET, FLORESVILLE, TX 78114",
+  "city": "FLORESVILLE",
+  "pt": [
+   29.162600149763,
+   -98.176503666007
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "SOUTH TEXAS HEALTH SYSTEM",
+  "county": "HIDALGO",
+  "type": "Acute Care Hospitals",
+  "addr": "1102 W TRENTON ROAD, EDINBURG, TX 78539",
+  "city": "EDINBURG",
+  "pt": [
+   26.263324365812,
+   -98.183138046401
+  ],
+  "county_neurologists": 21
+ },
+ {
+  "name": "KNAPP MEDICAL CENTER",
+  "county": "HIDALGO",
+  "type": "Acute Care Hospitals",
+  "addr": "1401 EAST EIGHT STREET, WESLACO, TX 78596",
+  "city": "WESLACO",
+  "pt": [
+   26.152073293334,
+   -97.978613200369
+  ],
+  "county_neurologists": 21
+ },
+ {
+  "name": "MEDICAL CENTER HOSPITAL",
+  "county": "ECTOR",
+  "type": "Acute Care Hospitals",
+  "addr": "500 W 4TH STREET, ODESSA, TX 79761",
+  "city": "ODESSA",
+  "pt": [
+   31.84965666509,
+   -102.364572351263
+  ],
+  "county_neurologists": 3
+ },
+ {
+  "name": "MIDLAND MEMORIAL HOSPITAL",
+  "county": "MIDLAND",
+  "type": "Acute Care Hospitals",
+  "addr": "400 ROSALIND REDFERN GROVER PARKWAY, MIDLAND, TX 79701",
+  "city": "MIDLAND",
+  "geocoder": "nominatim",
+  "pt": [
+   31.9971096,
+   -102.0996476
+  ],
+  "county_neurologists": 5
+ },
+ {
+  "name": "TEXAS HEALTH HARRIS METHODIST FORT WORTH",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "1301 PENNSYLVANIA AVENUE, FORT WORTH, TX 76104",
+  "city": "FORT WORTH",
+  "pt": [
+   32.738430419663,
+   -97.338808230785
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "BAYLOR SCOTT AND WHITE ALL SAINTS MEDICAL CENTER",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "1400 EIGHTH AVE, FORT WORTH, TX 76104",
+  "city": "FORT WORTH",
+  "pt": [
+   32.729621329384,
+   -97.34377312841
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "PERMIAN REGIONAL MEDICAL CENTER ANDREWS COUNTY HO",
+  "county": "ANDREWS",
+  "type": "Acute Care Hospitals",
+  "addr": "720 HOSPITAL DRIVE, ANDREWS, TX 79714",
+  "city": "ANDREWS",
+  "pt": [
+   32.338480835991,
+   -102.547376824474
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "DE TAR HOSPITAL NAVARRO",
+  "county": "VICTORIA",
+  "type": "Acute Care Hospitals",
+  "addr": "506 E SAN ANTONIO ST, VICTORIA, TX 77901",
+  "city": "VICTORIA",
+  "pt": [
+   28.807679866969,
+   -97.00796149611
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "TEXAS HEALTH HARRIS METHODIST HOSPITAL CLEBURNE",
+  "county": "JOHNSON",
+  "type": "Acute Care Hospitals",
+  "addr": "201 WALLS DRIVE, CLEBURNE, TX 76031",
+  "city": "CLEBURNE",
+  "pt": [
+   32.332717262267,
+   -97.438953129121
+  ],
+  "county_neurologists": 2
+ },
+ {
+  "name": "ADVENTHEALTH CENTRAL TEXAS",
+  "county": "BELL",
+  "type": "Acute Care Hospitals",
+  "addr": "2201 S CLEAR CREEK ROAD, KILLEEN, TX 76542",
+  "city": "KILLEEN",
+  "pt": [
+   31.116477265396,
+   -97.798366344365
+  ],
+  "county_neurologists": 31
+ },
+ {
+  "name": "VAL VERDE REGIONAL MEDICAL CENTER",
+  "county": "VAL VERDE",
+  "type": "Acute Care Hospitals",
+  "addr": "801 BEDELL AVE, DEL RIO, TX 78840",
+  "city": "DEL RIO",
+  "pt": [
+   29.374072359958,
+   -100.89248128715
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "HEREFORD REGIONAL MEDICAL CENTER",
+  "county": "DEAF SMITH",
+  "type": "Acute Care Hospitals",
+  "addr": "801 EAST THIRD, HEREFORD, TX 79045",
+  "city": "HEREFORD",
+  "pt": [
+   34.820363931501,
+   -102.391826576541
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CHRISTUS SPOHN HOSPITAL KLEBERG",
+  "county": "KLEBERG",
+  "type": "Acute Care Hospitals",
+  "addr": "1311 EAST GENERAL CAVAZOS BLVD, KINGSVILLE, TX 78363",
+  "city": "KINGSVILLE",
+  "pt": [
+   27.491344884575,
+   -97.851686158117
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "METHODIST HOSPITAL ATASCOSA",
+  "county": "ATASCOSA",
+  "type": "Acute Care Hospitals",
+  "addr": "1905 HWY 97 EAST, JOURDANTON, TX 78026",
+  "city": "JOURDANTON",
+  "pt": [
+   28.920934508767,
+   -98.577608897179
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "MISSION REGIONAL MEDICAL CENTER",
+  "county": "HIDALGO",
+  "type": "Acute Care Hospitals",
+  "addr": "900 SOUTH BRYAN ROAD, MISSION, TX 78572",
+  "city": "MISSION",
+  "pt": [
+   26.197551742209,
+   -98.312591706819
+  ],
+  "county_neurologists": 21
+ },
+ {
+  "name": "MEMORIAL HERMANN HOSPITAL SYSTEM",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "1635  NORTH LOOP WEST, HOUSTON, TX 77008",
+  "city": "HOUSTON",
+  "pt": [
+   29.812257148738,
+   -95.429509726379
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "Baylor St Lukes Medical Center",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "6720 BERTNER AVE, STE MC1-266, HOUSTON, TX 77030",
+  "city": "HOUSTON",
+  "pt": [
+   29.708569811682,
+   -95.399138877233
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "UT HEALTH EAST TEXAS JACKSONVILLE HOSPITAL",
+  "county": "CHEROKEE",
+  "type": "Acute Care Hospitals",
+  "addr": "501 S RAGSDALE, JACKSONVILLE, TX 75766",
+  "city": "JACKSONVILLE",
+  "pt": [
+   31.961367398922,
+   -95.270580350415
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "PARIS REGIONAL MEDICAL CENTER",
+  "county": "LAMAR",
+  "type": "Acute Care Hospitals",
+  "addr": "865 DESHONG DR, PARIS, TX 75460",
+  "city": "PARIS",
+  "pt": [
+   33.686103545301,
+   -95.545804132735
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "WADLEY REGIONAL MEDICAL CENTER",
+  "county": "BOWIE",
+  "type": "Acute Care Hospitals",
+  "addr": "1000 PINE STREET, TEXARKANA, TX 75501",
+  "city": "TEXARKANA",
+  "pt": [
+   33.428023522198,
+   -94.04681114566
+  ],
+  "county_neurologists": 4
+ },
+ {
+  "name": "MEDICAL CITY WEATHERFORD",
+  "county": "PARKER",
+  "type": "Acute Care Hospitals",
+  "addr": "713 E ANDERSON ST, WEATHERFORD, TX 76086",
+  "city": "WEATHERFORD",
+  "pt": [
+   32.747556847867,
+   -97.787140541697
+  ],
+  "county_neurologists": 2
+ },
+ {
+  "name": "NORTHWEST TEXAS HOSPITAL",
+  "county": "POTTER",
+  "type": "Acute Care Hospitals",
+  "addr": "1501 S  COULTER ST, AMARILLO, TX 79106",
+  "city": "AMARILLO",
+  "pt": [
+   35.199367620724,
+   -101.921796328701
+  ],
+  "county_neurologists": 6
+ },
+ {
+  "name": "UT HEALTH EAST TEXAS CARTHAGE HOSPITAL",
+  "county": "PANOLA",
+  "type": "Acute Care Hospitals",
+  "addr": "409 COTTAGE RD, CARTHAGE, TX 75633",
+  "city": "CARTHAGE",
+  "pt": [
+   32.167029987996,
+   -94.346000007628
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CHI ST LUKES HEALTH MEMORIAL LUFKIN",
+  "county": "ANGELINA",
+  "type": "Acute Care Hospitals",
+  "addr": "1201 WEST FRANK STREET, LUFKIN, TX 75901",
+  "city": "LUFKIN",
+  "pt": [
+   31.337524343092,
+   -94.741714336098
+  ],
+  "county_neurologists": 4
+ },
+ {
+  "name": "UNIVERSITY HEALTH SYSTEM",
+  "county": "BEXAR",
+  "type": "Acute Care Hospitals",
+  "addr": "4502 MEDICAL DR, SAN ANTONIO, TX 78229",
+  "city": "SAN ANTONIO",
+  "pt": [
+   29.509014391269,
+   -98.574033613545
+  ],
+  "county_neurologists": 138
+ },
+ {
+  "name": "HCA HOUSTON HEALTHCARE CONROE",
+  "county": "MONTGOMERY",
+  "type": "Acute Care Hospitals",
+  "addr": "504 MEDICAL CENTER BLVD, CONROE, TX 77304",
+  "city": "CONROE",
+  "pt": [
+   30.284524183012,
+   -95.466241624246
+  ],
+  "county_neurologists": 25
+ },
+ {
+  "name": "HENDRICK MEDICAL CENTER",
+  "county": "TAYLOR",
+  "type": "Acute Care Hospitals",
+  "addr": "1900 PINE, ABILENE, TX 79601",
+  "city": "ABILENE",
+  "pt": [
+   32.471641068462,
+   -99.731187212822
+  ],
+  "county_neurologists": 4
+ },
+ {
+  "name": "BSA HOSPITAL",
+  "county": "POTTER",
+  "type": "Acute Care Hospitals",
+  "addr": "1600 WALLACE BLVD, AMARILLO, TX 79106",
+  "city": "AMARILLO",
+  "pt": [
+   35.194930058385,
+   -101.919819997233
+  ],
+  "county_neurologists": 6
+ },
+ {
+  "name": "CHRISTUS MOTHER FRANCES HOSPITAL SULPHUR SPRINGS",
+  "county": "HOPKINS",
+  "type": "Acute Care Hospitals",
+  "addr": "115 AIRPORT RD, SULPHUR SPRINGS, TX 75482",
+  "city": "SULPHUR SPRINGS",
+  "pt": [
+   33.156160221936,
+   -95.599269622225
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CHRISTUS SANTA ROSA MEDICAL CENTER",
+  "county": "BEXAR",
+  "type": "Acute Care Hospitals",
+  "addr": "11212 STATE HWY 151, SAN ANTONIO, TX 78251",
+  "city": "SAN ANTONIO",
+  "geocoder": "nominatim",
+  "pt": [
+   29.5128348,
+   -98.5902387
+  ],
+  "county_neurologists": 138
+ },
+ {
+  "name": "FAITH COMMUNITY HOSPITAL",
+  "county": "JACK",
+  "type": "Acute Care Hospitals",
+  "addr": "215 CHISHOLM TRAIL, JACKSBORO, TX 76458",
+  "city": "JACKSBORO",
+  "pt": [
+   33.2309834,
+   -98.1667198
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "BELLVILLE MEDICAL CENTER",
+  "county": "AUSTIN",
+  "type": "Acute Care Hospitals",
+  "addr": "44 N CUMMINGS ST, BELLVILLE, TX 77418",
+  "city": "BELLVILLE",
+  "pt": [
+   29.950380837351,
+   -96.261746117606
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CHRISTUS SANTA ROSA HOSPITAL-SAN MARCOS",
+  "county": "HAYS",
+  "type": "Acute Care Hospitals",
+  "addr": "1301 WONDER WORLD DRIVE, SAN MARCOS, TX 78666",
+  "city": "SAN MARCOS",
+  "pt": [
+   29.852360620885,
+   -97.947671605423
+  ],
+  "county_neurologists": 4
+ },
+ {
+  "name": "HARRIS HEALTH",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "1504 TAUB LOOP, HOUSTON, TX 77030",
+  "city": "HOUSTON",
+  "pt": [
+   29.712578916721,
+   -95.393750521299
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL KAUFMAN",
+  "county": "KAUFMAN",
+  "type": "Acute Care Hospitals",
+  "addr": "850 ED HALL, KAUFMAN, TX 75142",
+  "city": "KAUFMAN",
+  "pt": [
+   32.591949,
+   -96.31818
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "TEXOMA MEDICAL CENTER",
+  "county": "GRAYSON",
+  "type": "Acute Care Hospitals",
+  "addr": "5016 S US HIGHWAY 75, DENISON, TX 75020",
+  "city": "DENISON",
+  "geocoder": "nominatim",
+  "pt": [
+   33.7102953,
+   -96.5854489
+  ],
+  "county_neurologists": 10
+ },
+ {
+  "name": "OAKBEND MEDICAL CENTER",
+  "county": "FORT BEND",
+  "type": "Acute Care Hospitals",
+  "addr": "1705 JACKSON ST, RICHMOND, TX 77469",
+  "city": "RICHMOND",
+  "pt": [
+   29.578268587252,
+   -95.770558563932
+  ],
+  "county_neurologists": 58
+ },
+ {
+  "name": "BAPTIST BEAUMONT HOSPITAL",
+  "county": "JEFFERSON",
+  "type": "Acute Care Hospitals",
+  "addr": "3080 COLLEGE STREET, BEAUMONT, TX 77701",
+  "city": "BEAUMONT",
+  "pt": [
+   30.068523527012,
+   -94.120064345901
+  ],
+  "county_neurologists": 12
+ },
+ {
+  "name": "HUNTSVILLE MEMORIAL HOSPITAL",
+  "county": "WALKER",
+  "type": "Acute Care Hospitals",
+  "addr": "110 MEMORIAL HOSPITAL DRIVE, HUNTSVILLE, TX 77340",
+  "city": "HUNTSVILLE",
+  "geocoder": "nominatim",
+  "pt": [
+   30.6983502,
+   -95.5590324
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "TEXAS HEALTH HARRIS METHODIST HOSPITAL STEPHENVILL",
+  "county": "ERATH",
+  "type": "Acute Care Hospitals",
+  "addr": "411 N BELKNAP ST, STEPHENVILLE, TX 76401",
+  "city": "STEPHENVILLE",
+  "pt": [
+   32.222254533392,
+   -98.204160179433
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "HUNT REGIONAL MEDICAL CENTER",
+  "county": "HUNT",
+  "type": "Acute Care Hospitals",
+  "addr": "4215 JOE RAMSEY BLVD E, GREENVILLE, TX 75401",
+  "city": "GREENVILLE",
+  "pt": [
+   33.122963341348,
+   -96.122090772753
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "HOUSTON METHODIST HOSPITAL",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "6565 FANNIN, HOUSTON, TX 77030",
+  "city": "HOUSTON",
+  "pt": [
+   29.711314009215,
+   -95.399530276451
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "CHILDRESS REGIONAL MEDICAL CENTER",
+  "county": "CHILDRESS",
+  "type": "Acute Care Hospitals",
+  "addr": "HWY 83 NORTH, CHILDRESS, TX 79201",
+  "city": "CHILDRESS",
+  "geocoder": "nominatim",
+  "pt": [
+   34.4392412,
+   -100.2273681
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "COLUMBUS COMMUNITY HOSPITAL",
+  "county": "COLORADO",
+  "type": "Acute Care Hospitals",
+  "addr": "110 SHULT DR, COLUMBUS, TX 78934",
+  "city": "COLUMBUS",
+  "pt": [
+   29.694709088406,
+   -96.540935209425
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER- WAXAHACHIE",
+  "county": "ELLIS",
+  "type": "Acute Care Hospitals",
+  "addr": "2400 N INTERSTATE HIGHWAY 35E, WAXAHACHIE, TX 75165",
+  "city": "WAXAHACHIE",
+  "pt": [
+   32.4273249,
+   -96.8580221
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "DALLAS MEDICAL CENTER",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "7 MEDICAL PARKWAY, DALLAS, TX 75234",
+  "city": "DALLAS",
+  "pt": [
+   32.914781468009,
+   -96.87124984841
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "METHODIST HOSPITAL",
+  "county": "BEXAR",
+  "type": "Acute Care Hospitals",
+  "addr": "7700 FLOYD CURL DR, SAN ANTONIO, TX 78229",
+  "city": "SAN ANTONIO",
+  "pt": [
+   29.507373474258,
+   -98.573449257102
+  ],
+  "county_neurologists": 138
+ },
+ {
+  "name": "UT HEALTH EAST TEXAS ATHENS HOSPITAL",
+  "county": "HENDERSON",
+  "type": "Acute Care Hospitals",
+  "addr": "2000 SOUTH PALESTINE ST, ATHENS, TX 75751",
+  "city": "ATHENS",
+  "pt": [
+   32.171330782304,
+   -95.844035051436
+  ],
+  "county_neurologists": 2
+ },
+ {
+  "name": "BROWNFIELD REGIONAL MEDICAL CENTER",
+  "county": "TERRY",
+  "type": "Acute Care Hospitals",
+  "addr": "705 EAST FELT STREET, BROWNFIELD, TX 79316",
+  "city": "BROWNFIELD",
+  "pt": [
+   33.187123785369,
+   -102.268169317067
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "PARKVIEW REGIONAL HOSPITAL",
+  "county": "LIMESTONE",
+  "type": "Acute Care Hospitals",
+  "addr": "600 SOUTH BONHAM STREET, MEXIA, TX 76667",
+  "city": "MEXIA",
+  "pt": [
+   31.673126128897,
+   -96.479775513898
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "MEDICAL CENTER OF MCKINNEY",
+  "county": "COLLIN",
+  "type": "Acute Care Hospitals",
+  "addr": "4500 MEDICAL CENTER DRIVE, MCKINNEY, TX 75069",
+  "city": "MCKINNEY",
+  "pt": [
+   33.161488887789,
+   -96.635522125223
+  ],
+  "county_neurologists": 68
+ },
+ {
+  "name": "TEXAS HEALTH HARRIS METHODIST HOSPITAL AZLE",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "108 DENVER TRAIL, AZLE, TX 76020",
+  "city": "AZLE",
+  "pt": [
+   32.880687103799,
+   -97.534373740422
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "BAYLOR SCOTT AND WHITE MEDICAL CENTER UPTOWN",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "2727 EAST LEMMON AVENUE BUILDING I, DALLAS, TX 75204",
+  "city": "DALLAS",
+  "pt": [
+   32.804073633494,
+   -96.794425292279
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "HOUSTON METHODIST BAYTOWN HOSPITAL",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "4401 GARTH ROAD, BAYTOWN, TX 77521",
+  "city": "BAYTOWN",
+  "pt": [
+   29.769007413772,
+   -94.977602979673
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "ST DAVID'S MEDICAL CENTER",
+  "county": "TRAVIS",
+  "type": "Acute Care Hospitals",
+  "addr": "919 E 32ND ST, AUSTIN, TX 78705",
+  "city": "AUSTIN",
+  "pt": [
+   30.290795703294,
+   -97.726748144738
+  ],
+  "county_neurologists": 125
+ },
+ {
+  "name": "NAVARRO REGIONAL HOSPITAL",
+  "county": "NAVARRO",
+  "type": "Acute Care Hospitals",
+  "addr": "3201 WEST HIGHWAY 22, CORSICANA, TX 75110",
+  "city": "CORSICANA",
+  "pt": [
+   32.0838359,
+   -96.5035993
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "GLEN ROSE MEDICAL CENTER",
+  "county": "SOMERVELL",
+  "type": "Acute Care Hospitals",
+  "addr": "1021 HOLDEN STREET, GLEN ROSE, TX 76043",
+  "city": "GLEN ROSE",
+  "pt": [
+   32.241183586391,
+   -97.747534325471
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "TYLER COUNTY HOSPITAL",
+  "county": "TYLER",
+  "type": "Acute Care Hospitals",
+  "addr": "1100 WEST BLUFF, WOODVILLE, TX 75979",
+  "city": "WOODVILLE",
+  "pt": [
+   30.775351275507,
+   -94.428221715023
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL  DALLAS",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "8200 WALNUT HILL LANE, DALLAS, TX 75231",
+  "city": "DALLAS",
+  "pt": [
+   32.883201653359,
+   -96.76226802055
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "MATAGORDA REGIONAL MEDICAL CENTER",
+  "county": "MATAGORDA",
+  "type": "Acute Care Hospitals",
+  "addr": "104 7TH STREET, BAY CITY, TX 77414",
+  "city": "BAY CITY",
+  "pt": [
+   28.834194181197,
+   -95.938444096659
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "WILSON N JONES REGIONAL MEDICAL CENTER",
+  "county": "GRAYSON",
+  "type": "Acute Care Hospitals",
+  "addr": "500 N HIGHLAND AVENUE, SHERMAN, TX 75092",
+  "city": "SHERMAN",
+  "pt": [
+   33.637849891909,
+   -96.623598995116
+  ],
+  "county_neurologists": 10
+ },
+ {
+  "name": "UT HEALTH EAST TEXAS HENDERSON HOSPITAL",
+  "county": "RUSK",
+  "type": "Acute Care Hospitals",
+  "addr": "300 WILSON STREET, HENDERSON, TX 75652",
+  "city": "HENDERSON",
+  "pt": [
+   32.16156415839,
+   -94.796358397142
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "WOODLAND HEIGHTS MEDICAL CENTER",
+  "county": "ANGELINA",
+  "type": "Acute Care Hospitals",
+  "addr": "505 SOUTH JOHN REDDITT DRIVE, LUFKIN, TX 75904",
+  "city": "LUFKIN",
+  "geocoder": "nominatim",
+  "pt": [
+   31.3284239,
+   -94.7540036
+  ],
+  "county_neurologists": 4
+ },
+ {
+  "name": "MEDICAL ARTS HOSPITAL",
+  "county": "DAWSON",
+  "type": "Acute Care Hospitals",
+  "addr": "2200 N BRYAN AVE, LAMESA, TX 79331",
+  "city": "LAMESA",
+  "geocoder": "nominatim",
+  "pt": [
+   32.7496757,
+   -101.9679631
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "NACOGDOCHES MEMORIAL HOSPITAL",
+  "county": "NACOGDOCHES",
+  "type": "Acute Care Hospitals",
+  "addr": "1204 MOUND ST, NACOGDOCHES, TX 75961",
+  "city": "NACOGDOCHES",
+  "pt": [
+   31.613359431411,
+   -94.649387395536
+  ],
+  "county_neurologists": 3
+ },
+ {
+  "name": "THE MEDICAL CENTER OF SOUTHEAST TEXAS",
+  "county": "JEFFERSON",
+  "type": "Acute Care Hospitals",
+  "addr": "2555 JIMMY JOHNSON BLVD, PORT ARTHUR, TX 77640",
+  "city": "PORT ARTHUR",
+  "geocoder": "nominatim",
+  "pt": [
+   29.9356256,
+   -93.9889448
+  ],
+  "county_neurologists": 12
+ },
+ {
+  "name": "METHODIST RICHARDSON MEDICAL CENTER",
+  "county": "COLLIN",
+  "type": "Acute Care Hospitals",
+  "addr": "2831 E PRESIDENT GEORGE BUSH HIGHWAY, RICHARDSON, TX 75082",
+  "city": "RICHARDSON",
+  "pt": [
+   32.995271628904,
+   -96.668508949189
+  ],
+  "county_neurologists": 68
+ },
+ {
+  "name": "COVENANT HOSPITAL PLAINVIEW",
+  "county": "HALE",
+  "type": "Acute Care Hospitals",
+  "addr": "2601 DIMMITT RD, PLAINVIEW, TX 79072",
+  "city": "PLAINVIEW",
+  "pt": [
+   34.206672827315,
+   -101.730943449641
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER  GRAPEVINE",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "1650 W COLLEGE ST, GRAPEVINE, TX 76051",
+  "city": "GRAPEVINE",
+  "pt": [
+   32.9338752,
+   -97.0940581
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "PALO PINTO GENERAL HOSPITAL",
+  "county": "PALO PINTO",
+  "type": "Acute Care Hospitals",
+  "addr": "400 SOUTHWEST 25 AVE, MINERAL WELLS, TX 76067",
+  "city": "MINERAL WELLS",
+  "pt": [
+   32.789113694603,
+   -98.115533075351
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "SHANNON MEDICAL CENTER",
+  "county": "TOM GREEN",
+  "type": "Acute Care Hospitals",
+  "addr": "120 E HARRIS AVE., SAN ANGELO, TX 76903",
+  "city": "SAN ANGELO",
+  "pt": [
+   31.464524638743,
+   -100.435162223013
+  ],
+  "county_neurologists": 5
+ },
+ {
+  "name": "CHRISTUS JASPER MEMORIAL HOSPITAL",
+  "county": "JASPER",
+  "type": "Acute Care Hospitals",
+  "addr": "1275 MARVIN HANCOCK DRIVE, JASPER, TX 75951",
+  "city": "JASPER",
+  "pt": [
+   30.914187526551,
+   -94.008185555857
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "WILBARGER GENERAL HOSPITAL",
+  "county": "WILBARGER",
+  "type": "Acute Care Hospitals",
+  "addr": "920 HILLCREST DR, VERNON, TX 76384",
+  "city": "VERNON",
+  "pt": [
+   34.159589391992,
+   -99.3133796916
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "HENDRICK MEDICAL CENTER BROWNWOOD",
+  "county": "BROWN",
+  "type": "Acute Care Hospitals",
+  "addr": "1501 BURNET DR, BROWNWOOD, TX 76801",
+  "city": "BROWNWOOD",
+  "pt": [
+   31.680334638752,
+   -98.9883018944
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "LAKE GRANBURY MEDICAL CENTER",
+  "county": "HOOD",
+  "type": "Acute Care Hospitals",
+  "addr": "1310 PALUXY RD, GRANBURY, TX 76048",
+  "city": "GRANBURY",
+  "pt": [
+   32.413661003552,
+   -97.801692624275
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "CUERO REGIONAL HOSPITAL",
+  "county": "DE WITT",
+  "type": "Acute Care Hospitals",
+  "addr": "2550 N ESPLANADE, CUERO, TX 77954",
+  "city": "CUERO",
+  "pt": [
+   29.112733862761,
+   -97.281674028102
+  ],
+  "county_neurologists": null
+ },
+ {
+  "name": "METHODIST HOSPITAL HILL COUNTRY",
+  "county": "GILLESPIE",
+  "type": "Acute Care Hospitals",
+  "addr": "1020 SOUTH STATE HIGHWAY 16, FREDERICKSBURG, TX 78624",
+  "city": "FREDERICKSBURG",
+  "pt": [
+   30.262080293889,
+   -98.880799876677
+  ],
+  "county_neurologists": 4
+ },
+ {
+  "name": "VA AMARILLO HEALTHCARE SYSTEM",
+  "county": "POTTER",
+  "type": "Acute Care - Veterans Administration",
+  "addr": "6010 AMARILLO BLVD. WEST, AMARILLO, TX 79106",
+  "city": "AMARILLO",
+  "pt": [
+   35.202807694345,
+   -101.90570426805
+  ],
+  "county_neurologists": 6
+ },
+ {
+  "name": "MEMORIAL HERMANN MEMORIAL CITY HOSPITAL",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "921 GESSNER, HOUSTON, TX 77024",
+  "city": "HOUSTON",
+  "pt": [
+   29.780120490088,
+   -95.544550256667
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "HCA HOUSTON HEALTHCARE CLEAR LAKE",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "500 W MEDICAL CENTER BLVD, WEBSTER, TX 77598",
+  "city": "WEBSTER",
+  "geocoder": "nominatim",
+  "pt": [
+   29.5410145,
+   -95.1278911
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "MEDICAL CITY DENTON",
+  "county": "DENTON",
+  "type": "Acute Care Hospitals",
+  "addr": "3535 SOUTH I35 EAST, DENTON, TX 76210",
+  "city": "DENTON",
+  "pt": [
+   33.175765690151,
+   -97.092384019556
+  ],
+  "county_neurologists": 17
+ },
+ {
+  "name": "TEXAS HEALTH HARRIS METHODIST HURST-EULESS-BEDFORD",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "1600 HOSPITAL PARKWAY, BEDFORD, TX 76022",
+  "city": "BEDFORD",
+  "pt": [
+   32.832812803426,
+   -97.125216466928
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "NOCONA GENERAL HOSPITAL",
+  "county": "MONTAGUE",
+  "type": "Acute Care Hospitals",
+  "addr": "100 PARK ROAD, NOCONA, TX 76255",
+  "city": "NOCONA",
+  "pt": [
+   33.777711529466,
+   -97.731613917394
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "DOCTORS HOSPITAL OF LAREDO",
+  "county": "WEBB",
+  "type": "Acute Care Hospitals",
+  "addr": "10700 MCPHERSON ROAD, LAREDO, TX 78041",
+  "city": "LAREDO",
+  "pt": [
+   27.604207969444,
+   -99.477112895275
+  ],
+  "county_neurologists": 5
+ },
+ {
+  "name": "HCA HOUSTON HEALTHCARE WEST",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "12141 RICHMOND AVE, HOUSTON, TX 77082",
+  "city": "HOUSTON",
+  "pt": [
+   29.730658047184,
+   -95.593010390299
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "MEDICAL CITY DALLAS HOSPITAL",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "7777 FOREST LANE, DALLAS, TX 75230",
+  "city": "DALLAS",
+  "pt": [
+   32.909511874931,
+   -96.77215182227
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "MEDICAL CITY PLANO",
+  "county": "COLLIN",
+  "type": "Acute Care Hospitals",
+  "addr": "3901 W 15TH ST, PLANO, TX 75075",
+  "city": "PLANO",
+  "pt": [
+   33.019439918561,
+   -96.765761634768
+  ],
+  "county_neurologists": 68
+ },
+ {
+  "name": "SHANNON MEDICAL CENTER",
+  "county": "HOWARD",
+  "type": "Acute Care Hospitals",
+  "addr": "1601 W 11TH PLACE, BIG SPRING, TX 79720",
+  "city": "BIG SPRING",
+  "pt": [
+   32.240019083786,
+   -101.492068364962
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "STARR COUNTY MEMORIAL HOSPITAL",
+  "county": "STARR",
+  "type": "Acute Care Hospitals",
+  "addr": "128  N FM RD 3167, RIO GRANDE CITY, TX 78582",
+  "city": "RIO GRANDE CITY",
+  "pt": [
+   26.376200830518,
+   -98.860084835393
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "NACOGDOCHES MEDICAL CENTER",
+  "county": "NACOGDOCHES",
+  "type": "Acute Care Hospitals",
+  "addr": "4920 NE STALLINGS DRIVE, NACOGDOCHES, TX 75965",
+  "city": "NACOGDOCHES",
+  "pt": [
+   31.652097867397,
+   -94.654868267589
+  ],
+  "county_neurologists": 3
+ },
+ {
+  "name": "FREESTONE MEDICAL CENTER",
+  "county": "FREESTONE",
+  "type": "Acute Care Hospitals",
+  "addr": "125 NEWMAN ST, FAIRFIELD, TX 75840",
+  "city": "FAIRFIELD",
+  "pt": [
+   31.7250550028,
+   -96.16965105789
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "HCA HOUSTON HEALTHCARE MEDICAL CENTER",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "1313 HERMANN DR, HOUSTON, TX 77004",
+  "city": "HOUSTON",
+  "pt": [
+   29.722505364611,
+   -95.388137544682
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "ODESSA REGIONAL MEDICAL CENTER",
+  "county": "ECTOR",
+  "type": "Acute Care Hospitals",
+  "addr": "520 E 6TH STREET, ODESSA, TX 79761",
+  "city": "ODESSA",
+  "pt": [
+   31.851203061754,
+   -102.366331528454
+  ],
+  "county_neurologists": 3
+ },
+ {
+  "name": "VALLEY REGIONAL MEDICAL CENTER",
+  "county": "CAMERON",
+  "type": "Acute Care Hospitals",
+  "addr": "100 A ALTON GLOOR, BROWNSVILLE, TX 78526",
+  "city": "BROWNSVILLE",
+  "pt": [
+   25.978979465599,
+   -97.516099677108
+  ],
+  "county_neurologists": 10
+ },
+ {
+  "name": "SIERRA MEDICAL CENTER",
+  "county": "EL PASO",
+  "type": "Acute Care Hospitals",
+  "addr": "1625 MEDICAL CENTER DR, EL PASO, TX 79902",
+  "city": "EL PASO",
+  "pt": [
+   31.777234715362,
+   -106.479725712088
+  ],
+  "county_neurologists": 40
+ },
+ {
+  "name": "MEDICAL CITY LEWISVILLE",
+  "county": "DENTON",
+  "type": "Acute Care Hospitals",
+  "addr": "500 WEST MAIN STREET, LEWISVILLE, TX 75057",
+  "city": "LEWISVILLE",
+  "pt": [
+   33.046263036749,
+   -97.004238726859
+  ],
+  "county_neurologists": 17
+ },
+ {
+  "name": "DALLAS VA MEDICAL CENTER (VA NORTH TEXAS HEALTHCARE SYSTEM)",
+  "county": "DALLAS",
+  "type": "Acute Care - Veterans Administration",
+  "addr": "4500 S. LANCASTER ROAD, DALLAS, TX 75216",
+  "city": "DALLAS",
+  "pt": [
+   32.691659746987,
+   -96.791887868321
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "HCA HOUSTON HEALTHCARE TOMBALL",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "605 HOLDERRIETH, TOMBALL, TX 77375",
+  "city": "TOMBALL",
+  "pt": [
+   30.089348580473,
+   -95.624014725831
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "MEDICAL CITY FORT WORTH",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "900 EIGHTH AVENUE, FORT WORTH, TX 76104",
+  "city": "FORT WORTH",
+  "pt": [
+   32.735532227109,
+   -97.343741818877
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "WOMANS HOSPITAL OF TEXAS,THE",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "7600 FANNIN, HOUSTON, TX 77054",
+  "city": "HOUSTON",
+  "pt": [
+   29.692303818106,
+   -95.401790211856
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "MEDICAL CITY ARLINGTON",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "3301 MATLOCK ROAD, ARLINGTON, TX 76015",
+  "city": "ARLINGTON",
+  "pt": [
+   32.692705534812,
+   -97.114720018561
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "TEXAS HEALTH HUGULEY HOSPITAL FORT WORTH SOUTH",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "11801 SOUTH FREEWAY, FORT WORTH, TX 76115",
+  "city": "FORT WORTH",
+  "pt": [
+   32.5861591,
+   -97.3166179
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "WHITE ROCK MEDICAL CENTER",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "9440 POPPY DRIVE, DALLAS, TX 75218",
+  "city": "DALLAS",
+  "pt": [
+   32.835490222503,
+   -96.704915436432
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "MEMORIAL HERMANN NORTHEAST HOSPITAL",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "18951 MEMORIAL NORTH, HUMBLE, TX 77338",
+  "city": "HUMBLE",
+  "pt": [
+   29.99629896939,
+   -95.274790214094
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "UNIVERSITY MEDICAL CENTER",
+  "county": "LUBBOCK",
+  "type": "Acute Care Hospitals",
+  "addr": "602 INDIANA AVENUE, LUBBOCK, TX 79415",
+  "city": "LUBBOCK",
+  "pt": [
+   33.590821655057,
+   -101.888052221799
+  ],
+  "county_neurologists": 32
+ },
+ {
+  "name": "DALLAS REGIONAL MEDICAL CENTER",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "1011 NORTH GALLOWAY AVENUE, MESQUITE, TX 75149",
+  "city": "MESQUITE",
+  "pt": [
+   32.778328021583,
+   -96.600011680928
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "EL CAMPO MEMORIAL HOSPITAL",
+  "county": "WHARTON",
+  "type": "Acute Care Hospitals",
+  "addr": "303 SANDY CORNER RD, EL CAMPO, TX 77437",
+  "city": "EL CAMPO",
+  "pt": [
+   29.220101043825,
+   -96.290240445429
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "LAMB HEALTHCARE CENTER",
+  "county": "LAMB",
+  "type": "Acute Care Hospitals",
+  "addr": "1500 S SUNSET, LITTLEFIELD, TX 79339",
+  "city": "LITTLEFIELD",
+  "pt": [
+   33.912502003168,
+   -102.345373786547
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "Brooke Army Medical Center (FT Sam Houston)",
+  "county": "BEXAR",
+  "type": "Acute Care - Department of Defense",
+  "addr": "3551 Roger Brooke Dr, Fort Sam Houston, TX 78234",
+  "city": "Fort Sam Houston",
+  "pt": [
+   29.459458945911,
+   -98.417020268015
+  ],
+  "county_neurologists": 138
+ },
+ {
+  "name": "LONGVIEW REGIONAL MEDICAL CENTER",
+  "county": "GREGG",
+  "type": "Acute Care Hospitals",
+  "addr": "2901 N FOURTH ST, LONGVIEW, TX 75605",
+  "city": "LONGVIEW",
+  "pt": [
+   32.532095607562,
+   -94.728868820689
+  ],
+  "county_neurologists": 3
+ },
+ {
+  "name": "HOUSTON METHODIST CLEAR LAKE HOSPITAL",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "18300 ST JOHN DRIVE, NASSAU BAY, TX 77058",
+  "city": "NASSAU BAY",
+  "pt": [
+   29.550606280102,
+   -95.085617561605
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "RIO GRANDE REGIONAL HOSPITAL",
+  "county": "HIDALGO",
+  "type": "Acute Care Hospitals",
+  "addr": "101 E RIDGE RD, MCALLEN, TX 78503",
+  "city": "MCALLEN",
+  "pt": [
+   26.185949881435,
+   -98.223774949184
+  ],
+  "county_neurologists": 21
+ },
+ {
+  "name": "ST DAVID'S SOUTH AUSTIN MEDICAL CENTER",
+  "county": "TRAVIS",
+  "type": "Acute Care Hospitals",
+  "addr": "901 WEST BEN WHITE BLVD, AUSTIN, TX 78704",
+  "city": "AUSTIN",
+  "pt": [
+   30.227260425401,
+   -97.77354477937
+  ],
+  "county_neurologists": 125
+ },
+ {
+  "name": "ROUND ROCK MEDICAL CENTER",
+  "county": "WILLIAMSON",
+  "type": "Acute Care Hospitals",
+  "addr": "2400 ROUND ROCK AVE, ROUND ROCK, TX 78681",
+  "city": "ROUND ROCK",
+  "pt": [
+   30.509615140027,
+   -97.711771442365
+  ],
+  "county_neurologists": 28
+ },
+ {
+  "name": "METHODIST CHARLTON MEDICAL CENTER",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "3500 W WHEATLAND ROAD, DALLAS, TX 75237",
+  "city": "DALLAS",
+  "pt": [
+   32.647399730123,
+   -96.876339094062
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "CARROLLTON REGIONAL MEDICAL CENTER",
+  "county": "DENTON",
+  "type": "Acute Care Hospitals",
+  "addr": "4343 NORTH JOSEY LANE, CARROLLTON, TX 75010",
+  "city": "CARROLLTON",
+  "pt": [
+   33.028269965314,
+   -96.884444676174
+  ],
+  "county_neurologists": 17
+ },
+ {
+  "name": "BAYLOR SCOTT AND WHITE MEDICAL CENTER LAKE POINTE",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "6800 SCENIC DR, ROWLETT, TX 75088",
+  "city": "ROWLETT",
+  "pt": [
+   32.923220874629,
+   -96.509327764279
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL DENTON",
+  "county": "DENTON",
+  "type": "Acute Care Hospitals",
+  "addr": "3000 N I-35, DENTON, TX 76201",
+  "city": "DENTON",
+  "pt": [
+   33.2173795,
+   -97.1654195
+  ],
+  "county_neurologists": 17
+ },
+ {
+  "name": "PALESTINE REGIONAL MEDICAL CENTER",
+  "county": "ANDERSON",
+  "type": "Acute Care Hospitals",
+  "addr": "2900 S LOOP 256, PALESTINE, TX 75801",
+  "city": "PALESTINE",
+  "pt": [
+   31.734018894288,
+   -95.627585537147
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "HOUSTON VA MEDICAL CENTER",
+  "county": "HARRIS",
+  "type": "Acute Care - Veterans Administration",
+  "addr": "2002 HOLCOMBE BLVD., HOUSTON, TX 77030",
+  "city": "HOUSTON",
+  "pt": [
+   29.705917076104,
+   -95.390066952977
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "COVENANT HOSPITAL LEVELLAND",
+  "county": "HOCKLEY",
+  "type": "Acute Care Hospitals",
+  "addr": "1900 COLLEGE AVE, LEVELLAND, TX 79336",
+  "city": "LEVELLAND",
+  "pt": [
+   33.573092401917,
+   -102.367830410759
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL PLANO",
+  "county": "COLLIN",
+  "type": "Acute Care Hospitals",
+  "addr": "6200 W PARKER RD, PLANO, TX 75093",
+  "city": "PLANO",
+  "pt": [
+   33.045078724335,
+   -96.83587384628
+  ],
+  "county_neurologists": 68
+ },
+ {
+  "name": "HCA HOUSTON HEALTHCARE KINGWOOD",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "22999 US HWY 59, KINGWOOD, TX 77325",
+  "city": "KINGWOOD",
+  "pt": [
+   30.050453704105,
+   -95.252980641047
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "TEXAS HEALTH HARRIS METHODIST HOSPITAL SOUTHWEST F",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "6100 HARRIS PKWY, FORT WORTH, TX 76132",
+  "city": "FORT WORTH",
+  "pt": [
+   32.659969341993,
+   -97.420318145176
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "CORPUS CHRISTI MEDICAL CENTER,THE",
+  "county": "NUECES",
+  "type": "Acute Care Hospitals",
+  "addr": "3315 S ALAMEDA ST, CORPUS CHRISTI, TX 78411",
+  "city": "CORPUS CHRISTI",
+  "pt": [
+   27.752309943387,
+   -97.38704172249
+  ],
+  "county_neurologists": 13
+ },
+ {
+  "name": "CHRISTUS ST MICHAEL HEALTH SYSTEM",
+  "county": "BOWIE",
+  "type": "Acute Care Hospitals",
+  "addr": "2600 ST MICHAEL DR, TEXARKANA, TX 75503",
+  "city": "TEXARKANA",
+  "pt": [
+   33.461995397658,
+   -94.076104670981
+  ],
+  "county_neurologists": 4
+ },
+ {
+  "name": "NORTH AUSTIN MEDICAL CENTER",
+  "county": "TRAVIS",
+  "type": "Acute Care Hospitals",
+  "addr": "12221 MOPAC EXPRESSWAY NORTH, AUSTIN, TX 78758",
+  "city": "AUSTIN",
+  "pt": [
+   30.412592217419,
+   -97.70758234746
+  ],
+  "county_neurologists": 125
+ },
+ {
+  "name": "MEDICAL CITY LAS COLINAS",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "6800 N MACARTHUR BLVD, IRVING, TX 75039",
+  "city": "IRVING",
+  "pt": [
+   32.902009668062,
+   -96.958610739364
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "CORNERSTONE REGIONAL HOSPITAL",
+  "county": "HIDALGO",
+  "type": "Acute Care Hospitals",
+  "addr": "2302 CORNERSTONE BOULEVARD, EDINBURG, TX 78539",
+  "city": "EDINBURG",
+  "pt": [
+   26.26452551073,
+   -98.198585934454
+  ],
+  "county_neurologists": 21
+ },
+ {
+  "name": "CHRISTUS SPOHN HOSPITAL ALICE",
+  "county": "JIM WELLS",
+  "type": "Acute Care Hospitals",
+  "addr": "2500 E MAIN STREET, ALICE, TX 78332",
+  "city": "ALICE",
+  "geocoder": "nominatim",
+  "pt": [
+   27.7642208,
+   -98.0417496
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "ENNIS REGIONAL MEDICAL CENTER",
+  "county": "ELLIS",
+  "type": "Acute Care Hospitals",
+  "addr": "2201 WEST LAMPASAS STREET, ENNIS, TX 75119",
+  "city": "ENNIS",
+  "pt": [
+   32.308471203901,
+   -96.641983799926
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "PHYSICIANS CENTRE,THE",
+  "county": "BRAZOS",
+  "type": "Acute Care Hospitals",
+  "addr": "3131 UNIVERSITY DRIVE EAST, BRYAN, TX 77802",
+  "city": "BRYAN",
+  "pt": [
+   30.648424662905,
+   -96.298018554434
+  ],
+  "county_neurologists": 7
+ },
+ {
+  "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL ALLEN",
+  "county": "COLLIN",
+  "type": "Acute Care Hospitals",
+  "addr": "1105 CENTRAL EXPRESSWAY NORTH, ALLEN, TX 75013",
+  "city": "ALLEN",
+  "pt": [
+   33.080609173738,
+   -96.683857619388
+  ],
+  "county_neurologists": 68
+ },
+ {
+  "name": "HOUSTON METHODIST WILLOWBROOK HOSPITAL",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "18220 STATE HIGHWAY 249, HOUSTON, TX 77070",
+  "city": "HOUSTON",
+  "geocoder": "nominatim",
+  "pt": [
+   29.9671381,
+   -95.55113
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "MEMORIAL HERMANN KATY HOSPITAL",
+  "county": "FORT BEND",
+  "type": "Acute Care Hospitals",
+  "addr": "23900 KATY FREEWAY, KATY, TX 77494",
+  "city": "KATY",
+  "geocoder": "nominatim",
+  "pt": [
+   29.7875104,
+   -95.7852442
+  ],
+  "county_neurologists": 58
+ },
+ {
+  "name": "MEMORIAL HERMANN SUGAR LAND HOSPITAL",
+  "county": "FORT BEND",
+  "type": "Acute Care Hospitals",
+  "addr": "17500 W GRAND PARKWAY SOUTH, SUGAR LAND, TX 77479",
+  "city": "SUGAR LAND",
+  "pt": [
+   29.566585323192,
+   -95.687656336925
+  ],
+  "county_neurologists": 58
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - FRISCO",
+  "county": "DENTON",
+  "type": "Acute Care Hospitals",
+  "addr": "5601 WARREN PARKWAY, FRISCO, TX 75034",
+  "city": "FRISCO",
+  "pt": [
+   33.10666410066,
+   -96.838690598395
+  ],
+  "county_neurologists": 17
+ },
+ {
+  "name": "HARLINGEN MEDICAL CENTER",
+  "county": "CAMERON",
+  "type": "Acute Care Hospitals",
+  "addr": "5501 SOUTH EXPRESSWAY 77, HARLINGEN, TX 78550",
+  "city": "HARLINGEN",
+  "geocoder": "nominatim",
+  "pt": [
+   26.1575127,
+   -97.6752878
+  ],
+  "county_neurologists": 10
+ },
+ {
+  "name": "ST LUKE'S THE WOODLANDS HOSPITAL",
+  "county": "MONTGOMERY",
+  "type": "Acute Care Hospitals",
+  "addr": "17200 ST LUKE'S WAY, THE WOODLANDS, TX 77384",
+  "city": "THE WOODLANDS",
+  "pt": [
+   30.204839513046,
+   -95.459683402794
+  ],
+  "county_neurologists": 25
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE TEXAS SPINE & JOINT HOSPITAL",
+  "county": "SMITH",
+  "type": "Acute Care Hospitals",
+  "addr": "1814 ROSELAND BOULEVARD, TYLER, TX 75701",
+  "city": "TYLER",
+  "pt": [
+   32.329686147171,
+   -95.299389927139
+  ],
+  "county_neurologists": 16
+ },
+ {
+  "name": "ASCENSION SETON  SOUTHWEST",
+  "county": "HAYS",
+  "type": "Acute Care Hospitals",
+  "addr": "7900 FM 1826, AUSTIN, TX 78737",
+  "city": "AUSTIN",
+  "pt": [
+   30.228313109204,
+   -97.888744959715
+  ],
+  "county_neurologists": 4
+ },
+ {
+  "name": "ASCENSION SETON NORTHWEST",
+  "county": "TRAVIS",
+  "type": "Acute Care Hospitals",
+  "addr": "11113 RESEARCH BOULEVARD, AUSTIN, TX 78759",
+  "city": "AUSTIN",
+  "pt": [
+   30.404879847391,
+   -97.744939867831
+  ],
+  "county_neurologists": 125
+ },
+ {
+  "name": "DOCTORS HOSPITAL AT RENAISSANCE",
+  "county": "HIDALGO",
+  "type": "Acute Care Hospitals",
+  "addr": "5501 SOUTH MCCOLL, EDINBURG, TX 78539",
+  "city": "EDINBURG",
+  "pt": [
+   26.252734623771,
+   -98.204163266588
+  ],
+  "county_neurologists": 21
+ },
+ {
+  "name": "USMD HOSPITAL AT ARLINGTON L P",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "801 W INTERSTATE 20, ARLINGTON, TX 76017",
+  "city": "ARLINGTON",
+  "pt": [
+   32.6792482495,
+   -97.115656556377
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "BAYLOR MEDICAL CENTER AT TROPHY CLUB",
+  "county": "DENTON",
+  "type": "Acute Care Hospitals",
+  "addr": "2850  E STATE HIGHWAY 114, TROPHY CLUB, TX 76262",
+  "city": "TROPHY CLUB",
+  "pt": [
+   32.9887854,
+   -97.175379
+  ],
+  "county_neurologists": 17
+ },
+ {
+  "name": "BAYLOR SCOTT &  WHITE MEDICAL CENTER - CENTENNIAL",
+  "county": "COLLIN",
+  "type": "Acute Care Hospitals",
+  "addr": "12505 LEBANON ROAD, FRISCO, TX 75035",
+  "city": "FRISCO",
+  "pt": [
+   33.115838264839,
+   -96.771581872265
+  ],
+  "county_neurologists": 68
+ },
+ {
+  "name": "TEXAS HEALTH HARRIS METHODIST HOSPITAL SOUTHLAKE",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "1545 E SOUTHLAKE BLVD, SOUTHLAKE, TX 76092",
+  "city": "SOUTHLAKE",
+  "pt": [
+   32.9409269165,
+   -97.127555555126
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "BAYLOR REGIONAL MEDICAL CENTER AT PLANO",
+  "county": "COLLIN",
+  "type": "Acute Care Hospitals",
+  "addr": "4700 ALLIANCE BOULEVARD, PLANO, TX 75093",
+  "city": "PLANO",
+  "pt": [
+   33.014302020631,
+   -96.791507110552
+  ],
+  "county_neurologists": 68
+ },
+ {
+  "name": "SAN ANTONIO VA MEDICAL CENTER (VA SOUTH TEXAS HEALTHCARE SYSTEM)",
+  "county": "BEXAR",
+  "type": "Acute Care - Veterans Administration",
+  "addr": "7400 MERTON MINTER BLVD., SAN ANTONIO, TX 78229",
+  "city": "SAN ANTONIO",
+  "pt": [
+   29.508351116754,
+   -98.580918956265
+  ],
+  "county_neurologists": 138
+ },
+ {
+  "name": "PARMER COUNTY COMMUNITY HOSPITAL",
+  "county": "PARMER",
+  "type": "Critical Access Hospitals",
+  "addr": "1307 CLEVELAND STREET, FRIONA, TX 79035",
+  "city": "FRIONA",
+  "pt": [
+   34.643394884565,
+   -102.721154836386
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "REAGAN MEMORIAL HOSPITAL",
+  "county": "REAGAN",
+  "type": "Critical Access Hospitals",
+  "addr": "1300 N MAIN AVENUE, BIG LAKE, TX 76932",
+  "city": "BIG LAKE",
+  "pt": [
+   31.202345437976,
+   -101.461426584273
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "LIMESTONE MEDICAL CENTER",
+  "county": "LIMESTONE",
+  "type": "Critical Access Hospitals",
+  "addr": "701 MCCLINTIC DRIVE, GROESBECK, TX 76642",
+  "city": "GROESBECK",
+  "pt": [
+   31.531414110162,
+   -96.52995359214
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "BURLESON ST JOSEPH HEALTH CENTER",
+  "county": "BURLESON",
+  "type": "Critical Access Hospitals",
+  "addr": "1101 WOODSON DRIVE, CALDWELL, TX 77836",
+  "city": "CALDWELL",
+  "pt": [
+   30.520764271,
+   -96.715848088777
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "KIMBLE HOSPITAL",
+  "county": "KIMBLE",
+  "type": "Critical Access Hospitals",
+  "addr": "349 REID ROAD, JUNCTION, TX 76849",
+  "city": "JUNCTION",
+  "pt": [
+   30.50008319749,
+   -99.78254847712
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "IRAAN GENERAL HOSPITAL",
+  "county": "PECOS",
+  "type": "Critical Access Hospitals",
+  "addr": "600 HIGHWAY 349 NORTH, IRAAN, TX 79744",
+  "city": "IRAAN",
+  "geocoder": "nominatim",
+  "pt": [
+   30.914839,
+   -101.9068355
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "YOAKUM COUNTY HOSPITAL",
+  "county": "YOAKUM",
+  "type": "Critical Access Hospitals",
+  "addr": "412 MUSTANG AVENUE, DENVER CITY, TX 79323",
+  "city": "DENVER CITY",
+  "pt": [
+   32.96811248944,
+   -102.836333368458
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "BALLINGER MEMORIAL HOSPITAL",
+  "county": "RUNNELS",
+  "type": "Critical Access Hospitals",
+  "addr": "608 AVENUE B, BALLINGER, TX 76821",
+  "city": "BALLINGER",
+  "pt": [
+   31.750356750462,
+   -99.96197312103
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "SWEENY COMMUNITY HOSPITAL",
+  "county": "BRAZORIA",
+  "type": "Critical Access Hospitals",
+  "addr": "305 NORTH MCKINNEY, SWEENY, TX 77480",
+  "city": "SWEENY",
+  "pt": [
+   29.048161582247,
+   -95.691087907698
+  ],
+  "county_neurologists": 20
+ },
+ {
+  "name": "RICE MEDICAL CENTER",
+  "county": "COLORADO",
+  "type": "Critical Access Hospitals",
+  "addr": "600 SOUTH AUSTIN ROAD, EAGLE LAKE, TX 77434",
+  "city": "EAGLE LAKE",
+  "pt": [
+   29.5878920145,
+   -96.34598091874
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "FISHER COUNTY HOSPITAL DISTRICT",
+  "county": "FISHER",
+  "type": "Critical Access Hospitals",
+  "addr": "774 STATE HIGHWAY 70 N, ROTAN, TX 79546",
+  "city": "ROTAN",
+  "pt": [
+   32.839378033818,
+   -100.442536848496
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "WINKLER COUNTY MEMORIAL HOSPITAL",
+  "county": "WINKLER",
+  "type": "Critical Access Hospitals",
+  "addr": "821 JEFFEE DRIVE, KERMIT, TX 79745",
+  "city": "KERMIT",
+  "pt": [
+   31.850053465852,
+   -103.090065428387
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "NORTH RUNNELS HOSPITAL",
+  "county": "RUNNELS",
+  "type": "Critical Access Hospitals",
+  "addr": "7821 EAST HIGHWAY 153, WINTERS, TX 79567",
+  "city": "WINTERS",
+  "pt": [
+   31.949676932547,
+   -99.957991003779
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "MADISON ST JOSEPH HEALTH CENTER",
+  "county": "MADISON",
+  "type": "Critical Access Hospitals",
+  "addr": "100 WEST CROSS STREET, MADISONVILLE, TX 77864",
+  "city": "MADISONVILLE",
+  "pt": [
+   30.942087243099,
+   -95.910006425107
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "STONEWALL MEMORIAL HOSPITAL DISTRICT",
+  "county": "STONEWALL",
+  "type": "Critical Access Hospitals",
+  "addr": "821 NORTH BROADWAY, ASPERMONT, TX 79502",
+  "city": "ASPERMONT",
+  "pt": [
+   33.150948813334,
+   -100.227473613364
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CHRISTUS MOTHER FRANCES HOSPITAL- JACKSONVILLE",
+  "county": "CHEROKEE",
+  "type": "Critical Access Hospitals",
+  "addr": "2026 S JACKSON STREET, JACKSONVILLE, TX 75766",
+  "city": "JACKSONVILLE",
+  "pt": [
+   31.937407090994,
+   -95.248896386934
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "BAYSIDE COMMUNITY HOSPITAL",
+  "county": "CHAMBERS",
+  "type": "Critical Access Hospitals",
+  "addr": "200 HOSPITAL DRIVE, ANAHUAC, TX 77514",
+  "city": "ANAHUAC",
+  "pt": [
+   29.752105564925,
+   -94.686804513212
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "GRIMES ST JOSEPH HEALTH CENTER",
+  "county": "GRIMES",
+  "type": "Critical Access Hospitals",
+  "addr": "210 JUDSON ST, NAVASOTA, TX 77868",
+  "city": "NAVASOTA",
+  "pt": [
+   30.393164106493,
+   -96.077347931362
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "ADVENTHEALTH ROLLINS BROOK",
+  "county": "LAMPASAS",
+  "type": "Critical Access Hospitals",
+  "addr": "608 NORTH KEY AVENUE, LAMPASAS, TX 76550",
+  "city": "LAMPASAS",
+  "pt": [
+   31.071829983621,
+   -98.18552768431
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "LILLIAN M HUDSPETH MEMORIAL HOSPITAL",
+  "county": "SUTTON",
+  "type": "Critical Access Hospitals",
+  "addr": "308 HUDSPETH, SONORA, TX 76950",
+  "city": "SONORA",
+  "pt": [
+   30.563816601548,
+   -100.634742745529
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CONCHO COUNTY HOSPITAL",
+  "county": "CONCHO",
+  "type": "Critical Access Hospitals",
+  "addr": "614 EAKER STREET, EDEN, TX 76837",
+  "city": "EDEN",
+  "geocoder": "nominatim",
+  "pt": [
+   31.2214206,
+   -99.8481789
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "RICELAND MEDICAL CENTER",
+  "county": "CHAMBERS",
+  "type": "Critical Access Hospitals",
+  "addr": "538 BROADWAY, WINNIE, TX 77665",
+  "city": "WINNIE",
+  "pt": [
+   29.820468470782,
+   -94.376396315084
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "MEDINA REGIONAL HOSPITAL",
+  "county": "MEDINA",
+  "type": "Critical Access Hospitals",
+  "addr": "3100 AVENUE E, HONDO, TX 78861",
+  "city": "HONDO",
+  "pt": [
+   29.335842490641,
+   -99.133486087251
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "PALACIOS COMMUNITY MEDICAL CENTER",
+  "county": "MATAGORDA",
+  "type": "Critical Access Hospitals",
+  "addr": "311 GREEN AVENUE, PALACIOS, TX 77465",
+  "city": "PALACIOS",
+  "pt": [
+   28.717387393669,
+   -96.212878380351
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "PARKVIEW HOSPITAL",
+  "county": "WHEELER",
+  "type": "Critical Access Hospitals",
+  "addr": "901 S. SWEETWATER, WHEELER, TX 79096",
+  "city": "WHEELER",
+  "pt": [
+   35.439790194109,
+   -100.270799330537
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "MUENSTER MEMORIAL HOSPITAL",
+  "county": "COOKE",
+  "type": "Critical Access Hospitals",
+  "addr": "605 N MAPLE STREET, MUENSTER, TX 76252",
+  "city": "MUENSTER",
+  "pt": [
+   33.654710273233,
+   -97.379906792631
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "W J MANGOLD MEMORIAL HOSPITAL",
+  "county": "FLOYD",
+  "type": "Critical Access Hospitals",
+  "addr": "320 NORTH MAIN, LOCKNEY, TX 79241",
+  "city": "LOCKNEY",
+  "pt": [
+   34.127255051069,
+   -101.441620317893
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CULBERSON HOSPITAL",
+  "county": "CULBERSON",
+  "type": "Critical Access Hospitals",
+  "addr": "EISENHOWER ROAD AND FM 2185, VAN HORN, TX 79855",
+  "city": "VAN HORN",
+  "geocoder": "nominatim",
+  "pt": [
+   31.0489426,
+   -104.8271757
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "THROCKMORTON COUNTY MEMORIAL HOSPITAL",
+  "county": "THROCKMORTON",
+  "type": "Critical Access Hospitals",
+  "addr": "802 N MINTER AVENUE, THROCKMORTON, TX 76483",
+  "city": "THROCKMORTON",
+  "pt": [
+   33.190890817789,
+   -99.177208511693
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "SHAMROCK GENERAL HOSPITAL",
+  "county": "WHEELER",
+  "type": "Critical Access Hospitals",
+  "addr": "1000 SOUTH MAIN STREET, SHAMROCK, TX 79079",
+  "city": "SHAMROCK",
+  "pt": [
+   35.199746105971,
+   -100.249111658699
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "HASKELL MEMORIAL HOSPITAL",
+  "county": "HASKELL",
+  "type": "Critical Access Hospitals",
+  "addr": "1 NORTH AVENUE N  PO BOX 1117, HASKELL, TX 79521",
+  "city": "HASKELL",
+  "pt": [
+   33.156852737055,
+   -99.744214688036
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "ELECTRA MEMORIAL HOSPITAL",
+  "county": "WICHITA",
+  "type": "Critical Access Hospitals",
+  "addr": "1207 S BAILEY STREET, ELECTRA, TX 76360",
+  "city": "ELECTRA",
+  "pt": [
+   34.019846447876,
+   -98.92412568633
+  ],
+  "county_neurologists": 7
+ },
+ {
+  "name": "HANSFORD COUNTY HOSPITAL",
+  "county": "HANSFORD",
+  "type": "Critical Access Hospitals",
+  "addr": "707 ROLAND ST, SPEARMAN, TX 79081",
+  "city": "SPEARMAN",
+  "pt": [
+   36.190808722595,
+   -101.200126132396
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "YOAKUM COMMUNITY HOSPITAL",
+  "county": "LAVACA",
+  "type": "Critical Access Hospitals",
+  "addr": "1200 CARL RAMERT DRIVE, YOAKUM, TX 77995",
+  "city": "YOAKUM",
+  "pt": [
+   29.30794363895,
+   -97.13151880161
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "COLEMAN COUNTY MEDICAL CENTER COMPANY",
+  "county": "COLEMAN",
+  "type": "Critical Access Hospitals",
+  "addr": "310 SOUTH PECOS STREET, COLEMAN, TX 76834",
+  "city": "COLEMAN",
+  "pt": [
+   31.829035692405,
+   -99.42526896552
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "LYNN COUNTY HOSPITAL DISTRICT",
+  "county": "LYNN",
+  "type": "Critical Access Hospitals",
+  "addr": "2600 LOCKWOOD BOX 1310, TAHOKA, TX 79373",
+  "city": "TAHOKA",
+  "pt": [
+   33.166559286167,
+   -101.815185480962
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "HARDEMAN COUNTY MEMORIAL HOSPITAL",
+  "county": "HARDEMAN",
+  "type": "Critical Access Hospitals",
+  "addr": "402 MERCER ST, QUANAH, TX 79252",
+  "city": "QUANAH",
+  "pt": [
+   34.296895035501,
+   -99.741006172346
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CRANE COUNTY HOSPITAL DISTRICT",
+  "county": "CRANE",
+  "type": "Critical Access Hospitals",
+  "addr": "1310 S ALFORD ST, CRANE, TX 79731",
+  "city": "CRANE",
+  "pt": [
+   31.390530395129,
+   -102.349387109559
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "HAMILTON HOSPITAL",
+  "county": "YOUNG",
+  "type": "Critical Access Hospitals",
+  "addr": "901 WEST HAMILTON, OLNEY, TX 76374",
+  "city": "OLNEY",
+  "geocoder": "nominatim",
+  "pt": [
+   33.3690486,
+   -98.764187
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "COLLINGSWORTH GENERAL HOSPITAL",
+  "county": "COLLINGSWORTH",
+  "type": "Critical Access Hospitals",
+  "addr": "1013 15TH ST, WELLINGTON, TX 79095",
+  "city": "WELLINGTON",
+  "pt": [
+   34.849031531548,
+   -100.211922397042
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "MEMORIAL MEDICAL CENTER",
+  "county": "CALHOUN",
+  "type": "Critical Access Hospitals",
+  "addr": "701 N VIRGINIA ST, PORT LAVACA, TX 77979",
+  "city": "PORT LAVACA",
+  "pt": [
+   28.610022506144,
+   -96.621909425979
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "MEMORIAL HOSPITAL",
+  "county": "GAINES",
+  "type": "Critical Access Hospitals",
+  "addr": "209 NORTHWEST 8TH STREET, SEMINOLE, TX 79360",
+  "city": "SEMINOLE",
+  "pt": [
+   32.721409908961,
+   -102.65378172142
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "OCHILTREE GENERAL HOSPITAL",
+  "county": "OCHILTREE",
+  "type": "Critical Access Hospitals",
+  "addr": "3101 GARRETT DRIVE, PERRYTON, TX 79070",
+  "city": "PERRYTON",
+  "pt": [
+   36.370343036686,
+   -100.799732398686
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "SABINE COUNTY HOSPITAL",
+  "county": "SABINE",
+  "type": "Critical Access Hospitals",
+  "addr": "PO BOX 750, 2301 HWY 83 W, HEMPHILL, TX 75948",
+  "city": "HEMPHILL",
+  "pt": [
+   31.359160682296,
+   -93.80315632551
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CLAY COUNTY MEMORIAL HOSPITAL",
+  "county": "CLAY",
+  "type": "Critical Access Hospitals",
+  "addr": "310 W SOUTH STREET, HENRIETTA, TX 76365",
+  "city": "HENRIETTA",
+  "pt": [
+   33.813948367849,
+   -98.197532668975
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "JACKSON HEALTHCARE CENTER",
+  "county": "JACKSON",
+  "type": "Critical Access Hospitals",
+  "addr": "1013 S WELLS, EDNA, TX 77957",
+  "city": "EDNA",
+  "pt": [
+   28.970063408295,
+   -96.636115966673
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "OTTO KAISER MEMORIAL HOSPITAL",
+  "county": "KARNES",
+  "type": "Critical Access Hospitals",
+  "addr": "3349 S HIGHWAY 181, KENEDY, TX 78119",
+  "city": "KENEDY",
+  "pt": [
+   28.848179049524,
+   -97.877758992903
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "ASCENSION SETON HIGHLAND LAKES",
+  "county": "BURNET",
+  "type": "Critical Access Hospitals",
+  "addr": "HIGHWAY 281 SOUTH, BURNET, TX 78611",
+  "city": "BURNET",
+  "geocoder": "nominatim",
+  "pt": [
+   30.7331706,
+   -98.2361172
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "COCHRAN MEMORIAL HOSPITAL",
+  "county": "COCHRAN",
+  "type": "Critical Access Hospitals",
+  "addr": "205 E GRANT STREET, MORTON, TX 79346",
+  "city": "MORTON",
+  "pt": [
+   33.719341366792,
+   -102.7579849339
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "UT HEALTH EAST TEXAS PITTSBURG HOSPITAL",
+  "county": "CAMP",
+  "type": "Critical Access Hospitals",
+  "addr": "2701 US HWY 271 N, PITTSBURG, TX 75686",
+  "city": "PITTSBURG",
+  "pt": [
+   33.031257428662,
+   -94.961901939445
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "GOLDEN PLAINS COMMUNITY HOSPITAL",
+  "county": "HUTCHINSON",
+  "type": "Critical Access Hospitals",
+  "addr": "100 MEDICAL DRIVE, BORGER, TX 79007",
+  "city": "BORGER",
+  "pt": [
+   35.653847937226,
+   -101.409014946595
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "TMC- BONHAM HOSPITAL",
+  "county": "FANNIN",
+  "type": "Critical Access Hospitals",
+  "addr": "504 LIPSCOMB STREET, BONHAM, TX 75418",
+  "city": "BONHAM",
+  "pt": [
+   33.57667825603,
+   -96.1674524436
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "ASCENSION SETON EDGAR B DAVIS",
+  "county": "CALDWELL",
+  "type": "Critical Access Hospitals",
+  "addr": "130 HAYS STREET, LULING, TX 78648",
+  "city": "LULING",
+  "pt": [
+   29.672642837306,
+   -97.653939687426
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "MULESHOE AREA MEDICAL CENTER",
+  "county": "BAILEY",
+  "type": "Critical Access Hospitals",
+  "addr": "708 S 1ST ST, MULESHOE, TX 79347",
+  "city": "MULESHOE",
+  "geocoder": "nominatim",
+  "pt": [
+   34.2213871,
+   -102.7289812
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "WARD MEMORIAL HOSPITAL",
+  "county": "WARD",
+  "type": "Critical Access Hospitals",
+  "addr": "406 SOUTH GARY ST, MONAHANS, TX 79756",
+  "city": "MONAHANS",
+  "pt": [
+   31.593947266201,
+   -102.884494237411
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER -TAYLOR",
+  "county": "WILLIAMSON",
+  "type": "Critical Access Hospitals",
+  "addr": "305 MALLARD, TAYLOR, TX 76574",
+  "city": "TAYLOR",
+  "pt": [
+   30.592520342718,
+   -97.413263553033
+  ],
+  "county_neurologists": 28
+ },
+ {
+  "name": "LIBERTY DAYTON REGIONAL MEDICAL CENTER",
+  "county": "LIBERTY",
+  "type": "Critical Access Hospitals",
+  "addr": "1353 N TRAVIS ST, LIBERTY, TX 77575",
+  "city": "LIBERTY",
+  "pt": [
+   30.06867712306,
+   -94.79795640497
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "LAVACA MEDICAL CENTER",
+  "county": "LAVACA",
+  "type": "Critical Access Hospitals",
+  "addr": "1400 NORTH TEXANA STREET, HALLETTSVILLE, TX 77964",
+  "city": "HALLETTSVILLE",
+  "pt": [
+   29.460664651317,
+   -96.939692682898
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "REEVES REGIONAL HEALTH",
+  "county": "REEVES",
+  "type": "Critical Access Hospitals",
+  "addr": "2323 TEXAS STREET, PECOS, TX 79772",
+  "city": "PECOS",
+  "pt": [
+   31.40158737066,
+   -103.512896189762
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "BIG BEND REGIONAL MEDICAL CENTER",
+  "county": "BREWSTER",
+  "type": "Critical Access Hospitals",
+  "addr": "2600 HIGHWAY 118 NORTH, ALPINE, TX 79830",
+  "city": "ALPINE",
+  "pt": [
+   30.384498994817,
+   -103.672435929835
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CORYELL MEMORIAL HOSPITAL",
+  "county": "CORYELL",
+  "type": "Critical Access Hospitals",
+  "addr": "1507 W MAIN STREET, GATESVILLE, TX 76528",
+  "city": "GATESVILLE",
+  "pt": [
+   31.433623240774,
+   -97.77613408594
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "UT HEALTH EAST TEXAS QUITMAN HOSPITAL",
+  "county": "WOOD",
+  "type": "Critical Access Hospitals",
+  "addr": "117 WINNSBORO STREET, QUITMAN, TX 75783",
+  "city": "QUITMAN",
+  "pt": [
+   32.797556355329,
+   -95.443996459669
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CHRISTUS MOTHER FRANCES HOSPITAL- WINNSBORO",
+  "county": "WOOD",
+  "type": "Critical Access Hospitals",
+  "addr": "719 WEST COKE ROAD, WINNSBORO, TX 75494",
+  "city": "WINNSBORO",
+  "pt": [
+   32.947971531687,
+   -95.305127329796
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "COMANCHE COUNTY MEDICAL CENTER",
+  "county": "COMANCHE",
+  "type": "Critical Access Hospitals",
+  "addr": "10201 HWY 16, COMANCHE, TX 76442",
+  "city": "COMANCHE",
+  "pt": [
+   31.98933640647,
+   -98.563207471625
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "COGDELL MEMORIAL HOSPITAL",
+  "county": "SCURRY",
+  "type": "Critical Access Hospitals",
+  "addr": "1700 COGDELL BLVD, SNYDER, TX 79549",
+  "city": "SNYDER",
+  "pt": [
+   32.688485091028,
+   -100.917655385828
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "GOODALL WITCHER HOSPITAL",
+  "county": "BOSQUE",
+  "type": "Critical Access Hospitals",
+  "addr": "101 POSEY AVENUE, CLIFTON, TX 76634",
+  "city": "CLIFTON",
+  "geocoder": "nominatim",
+  "pt": [
+   31.776399,
+   -97.5893471
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "MEMORIAL HOSPITAL",
+  "county": "MOORE",
+  "type": "Critical Access Hospitals",
+  "addr": "224 E SECOND STREET, DUMAS, TX 79029",
+  "city": "DUMAS",
+  "pt": [
+   35.864344860079,
+   -101.971444233453
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "UVALDE MEMORIAL HOSPITAL",
+  "county": "UVALDE",
+  "type": "Critical Access Hospitals",
+  "addr": "1025 GARNER FIELD ROAD, UVALDE, TX 78801",
+  "city": "UVALDE",
+  "pt": [
+   29.216291349165,
+   -99.764432600901
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "PECOS COUNTY MEMORIAL HOSPITAL",
+  "county": "PECOS",
+  "type": "Critical Access Hospitals",
+  "addr": "387 WEST I 10, FORT STOCKTON, TX 79735",
+  "city": "FORT STOCKTON",
+  "geocoder": "nominatim",
+  "pt": [
+   30.9054605,
+   -102.8808347
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "DIMMIT REGIONAL HOSPITAL",
+  "county": "DIMMIT",
+  "type": "Critical Access Hospitals",
+  "addr": "704 HOSPITAL DRIVE, CARRIZO SPRINGS, TX 78834",
+  "city": "CARRIZO SPRINGS",
+  "pt": [
+   28.520018740879,
+   -99.861547522864
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "FRIO REGIONAL HOSPITAL",
+  "county": "FRIO",
+  "type": "Critical Access Hospitals",
+  "addr": "200 S IH 35, PEARSALL, TX 78061",
+  "city": "PEARSALL",
+  "geocoder": "nominatim",
+  "pt": [
+   28.8964493,
+   -99.1170692
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "HAMILTON GENERAL HOSPITAL",
+  "county": "HAMILTON",
+  "type": "Critical Access Hospitals",
+  "addr": "400 N BROWN, BUILDING 1, HAMILTON, TX 76531",
+  "city": "HAMILTON",
+  "pt": [
+   31.703912026724,
+   -98.11336365777
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CROCKETT MEDICAL CENTER",
+  "county": "HOUSTON",
+  "type": "Critical Access Hospitals",
+  "addr": "1100 E LOOP 304, CROCKETT, TX 75835",
+  "city": "CROCKETT",
+  "pt": [
+   31.322006245771,
+   -95.437069196915
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "KNOX COUNTY HOSPITAL",
+  "county": "KNOX",
+  "type": "Critical Access Hospitals",
+  "addr": "701 SOUTHEAST 5TH STREET, KNOX CITY, TX 79529",
+  "city": "KNOX CITY",
+  "pt": [
+   33.414044593929,
+   -99.811839345674
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "HILL REGIONAL HOSPITAL",
+  "county": "HILL",
+  "type": "Critical Access Hospitals",
+  "addr": "101 CIRCLE DRIVE, HILLSBORO, TX 76645",
+  "city": "HILLSBORO",
+  "geocoder": "nominatim",
+  "pt": [
+   32.0127862,
+   -97.0992231
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "MID COAST MEDICAL CENTER - CENTRAL",
+  "county": "LLANO",
+  "type": "Critical Access Hospitals",
+  "addr": "200 W OLLIE, LLANO, TX 78643",
+  "city": "LLANO",
+  "pt": [
+   30.74328658308,
+   -98.677143631044
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE HOSPITAL BRENHAM",
+  "county": "WASHINGTON",
+  "type": "Critical Access Hospitals",
+  "addr": "700 MEDICAL PARKWAY, BRENHAM, TX 77833",
+  "city": "BRENHAM",
+  "pt": [
+   30.145989632,
+   -96.398533817299
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "PAMPA REGIONAL MEDICAL CENTER",
+  "county": "GRAY",
+  "type": "Critical Access Hospitals",
+  "addr": "1 MEDICAL PLAZA, PAMPA, TX 79065",
+  "city": "PAMPA",
+  "geocoder": "nominatim",
+  "pt": [
+   35.5728217,
+   -100.9644615
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "SEYMOUR HOSPITAL",
+  "county": "BAYLOR",
+  "type": "Critical Access Hospitals",
+  "addr": "200 STADIUM DRIVE, SEYMOUR, TX 76380",
+  "city": "SEYMOUR",
+  "pt": [
+   33.592203319674,
+   -99.247683161691
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "THE HOSPITAL AT WESTLAKE MEDICAL CENTER",
+  "county": "TRAVIS",
+  "type": "Acute Care Hospitals",
+  "addr": "5656 BEE CAVES ROAD, SUITE M-302, AUSTIN, TX 78746",
+  "city": "AUSTIN",
+  "pt": [
+   30.294223633013,
+   -97.824029327309
+  ],
+  "county_neurologists": 125
+ },
+ {
+  "name": "MEMORIAL HERMANN HOUSTON PHYSICIANS HOSPITAL",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "333 N TEXAS AVENUE, SUITE 1000, WEBSTER, TX 77598",
+  "city": "WEBSTER",
+  "pt": [
+   29.534361905773,
+   -95.125380499603
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "METHODIST MANSFIELD MEDICAL CENTER",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "2700 E BROAD STREET, MANSFIELD, TX 76063",
+  "city": "MANSFIELD",
+  "pt": [
+   32.568415300682,
+   -97.097065360308
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "ST LUKE'S PATIENTS MEDICAL CENTER",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "4600 EAST SAM HOUSTON PARKWAY SOUTH, PASADENA, TX 77505",
+  "city": "PASADENA",
+  "pt": [
+   29.640123846692,
+   -95.160922019586
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - ROUND ROCK",
+  "county": "WILLIAMSON",
+  "type": "Acute Care Hospitals",
+  "addr": "300 UNIVERSITY BLVD, ROUND ROCK, TX 78664",
+  "city": "ROUND ROCK",
+  "pt": [
+   30.55990813464,
+   -97.686337454464
+  ],
+  "county_neurologists": 28
+ },
+ {
+  "name": "ASCENSION SETON WILLIAMSON",
+  "county": "WILLIAMSON",
+  "type": "Acute Care Hospitals",
+  "addr": "201 SETON PARKWAY, ROUND ROCK, TX 78664",
+  "city": "ROUND ROCK",
+  "pt": [
+   30.571347796454,
+   -97.65334190706
+  ],
+  "county_neurologists": 28
+ },
+ {
+  "name": "ASCENSION SETON CEDAR PARK",
+  "county": "WILLIAMSON",
+  "type": "Acute Care Hospitals",
+  "addr": "1401 MEDICAL PARKWAY, CEDAR PARK, TX 78613",
+  "city": "CEDAR PARK",
+  "pt": [
+   30.531526548296,
+   -97.813973921318
+  ],
+  "county_neurologists": 28
+ },
+ {
+  "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWALL",
+  "county": "ROCKWALL",
+  "type": "Acute Care Hospitals",
+  "addr": "3150 HORIZON ROAD, ROCKWALL, TX 75032",
+  "city": "ROCKWALL",
+  "pt": [
+   32.886369756075,
+   -96.465202435495
+  ],
+  "county_neurologists": 3
+ },
+ {
+  "name": "THE HOSPITALS OF PROVIDENCE - EAST CAMPUS",
+  "county": "EL PASO",
+  "type": "Acute Care Hospitals",
+  "addr": "3280 JOE BATTLE BLVD, EL PASO, TX 79938",
+  "city": "EL PASO",
+  "pt": [
+   31.789306670019,
+   -106.267608718762
+  ],
+  "county_neurologists": 40
+ },
+ {
+  "name": "ST LUKE'S SUGAR LAND HOSPITAL",
+  "county": "FORT BEND",
+  "type": "Acute Care Hospitals",
+  "addr": "1317 LAKE POINTE PARKWAY, SUGAR LAND, TX 77478",
+  "city": "SUGAR LAND",
+  "pt": [
+   29.605357345301,
+   -95.621344561975
+  ],
+  "county_neurologists": 58
+ },
+ {
+  "name": "METHODIST HOSPITAL  STONE OAK",
+  "county": "BEXAR",
+  "type": "Acute Care Hospitals",
+  "addr": "1139 E SONTERRA BLVD,, SAN ANTONIO, TX 78258",
+  "city": "SAN ANTONIO",
+  "pt": [
+   29.614986834322,
+   -98.473744526465
+  ],
+  "county_neurologists": 138
+ },
+ {
+  "name": "ASCENSION  SETON HAYS",
+  "county": "HAYS",
+  "type": "Acute Care Hospitals",
+  "addr": "6001 KYLE PKWY, KYLE, TX 78640",
+  "city": "KYLE",
+  "pt": [
+   30.00983742766,
+   -97.856030596839
+  ],
+  "county_neurologists": 4
+ },
+ {
+  "name": "CHI ST LUKES LAKESIDE HOSPITAL",
+  "county": "MONTGOMERY",
+  "type": "Acute Care Hospitals",
+  "addr": "17400 ST LUKES WAY, THE WOODLANDS, TX 77384",
+  "city": "THE WOODLANDS",
+  "pt": [
+   30.201969531078,
+   -95.459362574066
+  ],
+  "county_neurologists": 25
+ },
+ {
+  "name": "BAYLOR SCOTT AND WHITE MEDICAL CENTER SUNNYVALE",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "231 SOUTH COLLINS ROAD, SUNNYVALE, TX 75182",
+  "city": "SUNNYVALE",
+  "pt": [
+   32.79762240922,
+   -96.561228549753
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE EMERGENCY HOSPITAL",
+  "county": "DENTON",
+  "type": "Acute Care Hospitals",
+  "addr": "26791 HIGHWAY 380, AUBREY, TX 76227",
+  "city": "AUBREY",
+  "pt": [
+   33.22111444091,
+   -96.938218323855
+  ],
+  "county_neurologists": 17
+ },
+ {
+  "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL FLOWER MOUND",
+  "county": "DENTON",
+  "type": "Acute Care Hospitals",
+  "addr": "4400 LONG PRAIRIE ROAD, FLOWER MOUND, TX 75028",
+  "city": "FLOWER MOUND",
+  "pt": [
+   33.045215015087,
+   -97.069304499845
+  ],
+  "county_neurologists": 17
+ },
+ {
+  "name": "METHODIST MCKINNEY HOSPITAL",
+  "county": "COLLIN",
+  "type": "Acute Care Hospitals",
+  "addr": "8000 W ELDORADO PKWY BLDG C SUITE C, MCKINNEY, TX 75070",
+  "city": "MCKINNEY",
+  "pt": [
+   33.175299775324,
+   -96.722166057939
+  ],
+  "county_neurologists": 68
+ },
+ {
+  "name": "ST LUKE'S HOSPITAL AT THE VINTAGE",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "20171 CHASEWOOD PARK DRIVE, HOUSTON, TX 77070",
+  "city": "HOUSTON",
+  "pt": [
+   29.989803750412,
+   -95.570181095425
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "HOUSTON METHODIST WEST HOSPITAL",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "18500 KATY FREEWAY, HOUSTON, TX 77094",
+  "city": "HOUSTON",
+  "pt": [
+   29.785585656878,
+   -95.69487821397
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "BAPTIST NEIGHBORHOOD HOSPITAL THOUSAND OAKS",
+  "county": "BEXAR",
+  "type": "Acute Care Hospitals",
+  "addr": "16088 SAN PEDRO, SAN ANTONIO, TX 78232",
+  "city": "SAN ANTONIO",
+  "pt": [
+   29.587709495582,
+   -98.474187278861
+  ],
+  "county_neurologists": 138
+ },
+ {
+  "name": "SETON MEDICAL CENTER HARKER HEIGHTS",
+  "county": "BELL",
+  "type": "Acute Care Hospitals",
+  "addr": "850 W CENTRAL TEXAS EXPRESSWAY, HARKER HEIGHTS, TX 76548",
+  "city": "HARKER HEIGHTS",
+  "geocoder": "nominatim",
+  "pt": [
+   31.0725556,
+   -97.6826383
+  ],
+  "county_neurologists": 31
+ },
+ {
+  "name": "BAYLOR SCOTT AND WHITE  MEDICAL CENTER  MCKINNEY",
+  "county": "COLLIN",
+  "type": "Acute Care Hospitals",
+  "addr": "5252 WEST UNIVERSITY DRIVE, MC KINNEY, TX 75071",
+  "city": "MC KINNEY",
+  "pt": [
+   33.218447312786,
+   -96.680681565565
+  ],
+  "county_neurologists": 68
+ },
+ {
+  "name": "TEXAS HEALTH HARRIS METHODIST HOSPITAL ALLIANCE",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "10864 TEXAS HEALTH TRAIL, FORT WORTH, TX 76244",
+  "city": "FORT WORTH",
+  "pt": [
+   32.931340356157,
+   -97.309206625095
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "CRESCENT MEDICAL CENTER LANCASTER",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "2600 WEST PLEASANT RUN ROAD, LANCASTER, TX 75146",
+  "city": "LANCASTER",
+  "pt": [
+   32.6024115,
+   -96.8127477
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "RESOLUTE HEALTH HOSPITAL",
+  "county": "COMAL",
+  "type": "Acute Care Hospitals",
+  "addr": "555 CREEKSIDE XING,, NEW BRAUNFELS, TX 78130",
+  "city": "NEW BRAUNFELS",
+  "pt": [
+   29.719897916536,
+   -98.071996542003
+  ],
+  "county_neurologists": 7
+ },
+ {
+  "name": "AD HOSPITAL EAST, LLC",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "12950 EAST FREEWAY, SUITE 100, HOUSTON, TX 77015",
+  "city": "HOUSTON",
+  "pt": [
+   29.771073781568,
+   -95.201467393022
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "MEDICAL CITY ALLIANCE",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "3101 NORTH TARRANT PARKWAY, FORT WORTH, TX 76177",
+  "city": "FORT WORTH",
+  "pt": [
+   32.898257202923,
+   -97.312849728846
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "BAYLOR SCOTT AND WHITE EMERGENCY HOSPITAL",
+  "county": "JOHNSON",
+  "type": "Acute Care Hospitals",
+  "addr": "12500 SOUTH FREEWAY SUITE 100, BURLESON, TX 76028",
+  "city": "BURLESON",
+  "pt": [
+   32.576387351188,
+   -97.32122121348
+  ],
+  "county_neurologists": 2
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - MARBLE FALLS",
+  "county": "BURNET",
+  "type": "Acute Care Hospitals",
+  "addr": "810 W HIGHWAY 71, MARBLE FALLS, TX 78654",
+  "city": "MARBLE FALLS",
+  "pt": [
+   30.511733596794,
+   -98.305574103667
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "BAYTOWN MEDICAL CENTER LP",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "1626 W BAKER ROAD, BAYTOWN, TX 77521",
+  "city": "BAYTOWN",
+  "pt": [
+   29.76985767743,
+   -94.980852854586
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "CLEVELAND EMERGENCY HOSPITAL",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "8901 FM 1960 BYPASS RD W, SUITE 105, HUMBLE, TX 77338",
+  "city": "HUMBLE",
+  "pt": [
+   30.005104617096,
+   -95.282686626374
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "THE HOSPITALS OF PROVIDENCE TRANSMOUNTAIN CAMPUS",
+  "county": "EL PASO",
+  "type": "Acute Care Hospitals",
+  "addr": "2000 TRANSMOUNTAIN RD, EL PASO, TX 79911",
+  "city": "EL PASO",
+  "geocoder": "nominatim",
+  "pt": [
+   31.9048631,
+   -106.5643405
+  ],
+  "county_neurologists": 40
+ },
+ {
+  "name": "SAINT CAMILLUS MEDICAL CENTER",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "1612 HURST TOWN CENTER DRIVE, HURST, TX 76054",
+  "city": "HURST",
+  "pt": [
+   32.841537017833,
+   -97.188536095408
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "HOUSTON METHODIST THE WOODLANDS HOSPITAL",
+  "county": "MONTGOMERY",
+  "type": "Acute Care Hospitals",
+  "addr": "17201 INTERSTATE 45 SOUTH, THE WOODLANDS, TX 77385",
+  "city": "THE WOODLANDS",
+  "geocoder": "nominatim",
+  "pt": [
+   30.2055971,
+   -95.452096
+  ],
+  "county_neurologists": 25
+ },
+ {
+  "name": "THE HOSPITALS OF PROVIDENCE HORIZON CITY CAMPUS",
+  "county": "EL PASO",
+  "type": "Acute Care Hospitals",
+  "addr": "13600 HORIZON STREET, SUITE 100, HORIZON CITY, TX 79928",
+  "city": "HORIZON CITY",
+  "pt": [
+   31.682676618677,
+   -106.208457730045
+  ],
+  "county_neurologists": 40
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER PFLUGERVILLE",
+  "county": "TRAVIS",
+  "type": "Acute Care Hospitals",
+  "addr": "2600 EAST  PFLUGERVILLE  PARKWAY, PFLUGERVILLE, TX 78660",
+  "city": "PFLUGERVILLE",
+  "pt": [
+   30.451247914777,
+   -97.593037631379
+  ],
+  "county_neurologists": 125
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE MEDICAL CENTER - BUDA",
+  "county": "HAYS",
+  "type": "Acute Care Hospitals",
+  "addr": "5330 OVERPASS ROAD SUITE 110, BUDA, TX 78610",
+  "city": "BUDA",
+  "geocoder": "nominatim",
+  "pt": [
+   30.0767089,
+   -97.8200969
+  ],
+  "county_neurologists": 4
+ },
+ {
+  "name": "METHODIST SOUTHLAKE MEDICAL CENTER",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "421 E STATE HIGHWAY 114, SOUTHLAKE, TX 76092",
+  "city": "SOUTHLAKE",
+  "pt": [
+   32.9574985,
+   -97.1452107
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "ALTUS LUMBERTON HOSPITAL",
+  "county": "HARDIN",
+  "type": "Acute Care Hospitals",
+  "addr": "220 BLANCO ST, LUMBERTON, TX 77657",
+  "city": "LUMBERTON",
+  "pt": [
+   30.261993623278,
+   -94.221372956493
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "ALTUS HOUSTON HOSPITAL, LP",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "6011 W SAM HOUSTON PKWY SOUTH, HOUSTON, TX 77072",
+  "city": "HOUSTON",
+  "pt": [
+   29.811937204438,
+   -95.164053483749
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "TEXAS HEALTH HOSPITAL FRISCO",
+  "county": "DENTON",
+  "type": "Acute Care Hospitals",
+  "addr": "12400 N DALLAS PARKWAY, FRISCO, TX 75033",
+  "city": "FRISCO",
+  "pt": [
+   33.180351549031,
+   -96.838899542315
+  ],
+  "county_neurologists": 17
+ },
+ {
+  "name": "TOWNSEN MEMORIAL HOSPITAL",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "1475 FM 1960 BYPASS E, HUMBLE, TX 77338",
+  "city": "HUMBLE",
+  "pt": [
+   30.004705639969,
+   -95.253997660663
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "THE WOODLANDS SPECIALTY HOSPITAL",
+  "county": "MONTGOMERY",
+  "type": "Acute Care Hospitals",
+  "addr": "25440 INTERSTATE 45 NORTH, SPRING, TX 77386",
+  "city": "SPRING",
+  "pt": [
+   30.130702591461,
+   -95.443424192193
+  ],
+  "county_neurologists": 25
+ },
+ {
+  "name": "METHODIST MIDLOTHIAN MEDICAL CENTER",
+  "county": "ELLIS",
+  "type": "Acute Care Hospitals",
+  "addr": "1201 E HIGHWAY 287, MIDLOTHIAN, TX 76065",
+  "city": "MIDLOTHIAN",
+  "pt": [
+   32.4689565,
+   -96.9820021
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "TEXAS HEALTH HOSPITAL MANSFIELD",
+  "county": "TARRANT",
+  "type": "Acute Care Hospitals",
+  "addr": "2300 LONE STAR ROAD, MANSFIELD, TX 76063",
+  "city": "MANSFIELD",
+  "pt": [
+   32.5374606,
+   -97.0995592
+  ],
+  "county_neurologists": 85
+ },
+ {
+  "name": "EAST HOUSTON MEDICAL CENTER",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "15149 WALLISVILLE ROAD, HOUSTON, TX 77049",
+  "city": "HOUSTON",
+  "pt": [
+   29.806914670823,
+   -95.170892269707
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "MID COAST MEDICAL CENTER-TRINITY",
+  "county": "TRINITY",
+  "type": "Acute Care Hospitals",
+  "addr": "317 PROSPECT DRIVE, TRINITY, TX 75862",
+  "city": "TRINITY",
+  "pt": [
+   30.954872905041,
+   -95.379540707848
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "WESTOVER HILLS BAPTIST HOSPITAL",
+  "county": "BEXAR",
+  "type": "Acute Care Hospitals",
+  "addr": "3011 W LOOP 1604 N, SAN ANTONIO, TX 78251",
+  "city": "SAN ANTONIO",
+  "geocoder": "nominatim",
+  "pt": [
+   29.4634236,
+   -98.7136039
+  ],
+  "county_neurologists": 138
+ },
+ {
+  "name": "BANDERA FAMILY HOSPITAL",
+  "county": "BEXAR",
+  "type": "Acute Care Hospitals",
+  "addr": "8703 BANDERA RD, SAN ANTONIO, TX 78250",
+  "city": "SAN ANTONIO",
+  "pt": [
+   29.524054524634,
+   -98.639587056031
+  ],
+  "county_neurologists": 138
+ },
+ {
+  "name": "METHODIST CELINA MEDICAL CENTER",
+  "county": "COLLIN",
+  "type": "Acute Care Hospitals",
+  "addr": "1500 S DALLAS PARKWAY, CELINA, TX 75009",
+  "city": "CELINA",
+  "pt": [
+   33.305946,
+   -96.8099567
+  ],
+  "county_neurologists": 68
+ },
+ {
+  "name": "HOUSTON METHODIST CYPRESS HOSPITAL",
+  "county": "HARRIS",
+  "type": "Acute Care Hospitals",
+  "addr": "24500 NORTHWEST FWY, CYPRESS, TX 77429",
+  "city": "CYPRESS",
+  "geocoder": "nominatim",
+  "pt": [
+   29.9621086,
+   -95.6825207
+  ],
+  "county_neurologists": 482
+ },
+ {
+  "name": "BAYLOR SCOTT & WHITE HOSPITAL BRENHAM",
+  "county": "WASHINGTON",
+  "type": "Acute Care Hospitals",
+  "addr": "700 MEDICAL PARKWAY, BRENHAM, TX 77833",
+  "city": "BRENHAM",
+  "pt": [
+   30.145989632,
+   -96.398533817299
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "CORALVITA RICHARDSON",
+  "county": "DALLAS",
+  "type": "Acute Care Hospitals",
+  "addr": "401 WEST CAMPBELL ROAD SUITE 300, RICHARDSON, TX 75080",
+  "city": "RICHARDSON",
+  "pt": [
+   32.975313353556,
+   -96.727282829295
+  ],
+  "county_neurologists": 261
+ },
+ {
+  "name": "GRAHAM REGIONAL MEDICAL CENTER",
+  "county": "YOUNG",
+  "type": "Critical Access Hospitals",
+  "addr": "1301 MONTGOMERY ROAD, GRAHAM, TX 76450",
+  "city": "GRAHAM",
+  "geocoder": "nominatim",
+  "pt": [
+   33.089291,
+   -98.583631
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "HEMPHILL COUNTY HOSPITAL",
+  "county": "HEMPHILL",
+  "type": "Critical Access Hospitals",
+  "addr": "1020 S 4TH ST, CANADIAN, TX 79014",
+  "city": "CANADIAN",
+  "pt": [
+   35.902745846588,
+   -100.387463575567
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "STEPHENS MEMORIAL HOSPITAL",
+  "county": "STEPHENS",
+  "type": "Critical Access Hospitals",
+  "addr": "200 SOUTH GENEVA STREET, BRECKENRIDGE, TX 76424",
+  "city": "BRECKENRIDGE",
+  "pt": [
+   32.754638490818,
+   -98.887682124525
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "EASTLAND MEMORIAL HOSPITAL",
+  "county": "EASTLAND",
+  "type": "Critical Access Hospitals",
+  "addr": "304 S DAUGHERTY STREET, EASTLAND, TX 76448",
+  "city": "EASTLAND",
+  "pt": [
+   32.400209363307,
+   -98.821541311017
+  ],
+  "county_neurologists": 0
+ },
+ {
+  "name": "ASCENSION SETON SMITHVILLE",
+  "county": "BASTROP",
+  "type": "Critical Access Hospitals",
+  "addr": "1201 Hill Rd, SMITHVILLE, TX 78957",
+  "city": "SMITHVILLE",
+  "pt": [
+   30.003544011349,
+   -97.134887637434
+  ],
+  "county_neurologists": 1
+ },
+ {
+  "name": "MEDICAL CITY DECATUR (added by hand; missing from CMS list)",
+  "county": "WISE",
+  "type": "Acute Care Hospitals",
+  "addr": "609 Medical Center Dr, Decatur, TX 76234",
+  "city": "DECATUR",
+  "pt": [
+   33.218500503899,
+   -97.594511587399
+  ],
+  "county_neurologists": 2
+ }
+]

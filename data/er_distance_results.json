@@ -1,0 +1,72 @@
+{
+ "Dallas": {
+  "centroid": [
+   2.1583328362363794,
+   5.0633333333333335,
+   "BAYLOR UNIVERSITY MEDICAL CENTER",
+   "3500 GASTON AVE, DALLAS, TX 75246"
+  ],
+  "Dallas downtown": [
+   1.8291303785890398,
+   4.638333333333334,
+   "BAYLOR UNIVERSITY MEDICAL CENTER",
+   "3500 GASTON AVE, DALLAS, TX 75246"
+  ]
+ },
+ "Navarro": {
+  "centroid": [
+   4.225510518571542,
+   10.268333333333334,
+   "NAVARRO REGIONAL HOSPITAL",
+   "3201 WEST HIGHWAY 22, CORSICANA, TX 75110"
+  ],
+  "Corsicana": [
+   2.260051300405631,
+   4.753333333333333,
+   "NAVARRO REGIONAL HOSPITAL",
+   "3201 WEST HIGHWAY 22, CORSICANA, TX 75110"
+  ]
+ },
+ "Henderson": {
+  "centroid": [
+   2.90913564781675,
+   5.48,
+   "UT HEALTH EAST TEXAS ATHENS HOSPITAL",
+   "2000 SOUTH PALESTINE ST, ATHENS, TX 75751"
+  ],
+  "Athens": [
+   2.487286745406824,
+   4.611666666666666,
+   "UT HEALTH EAST TEXAS ATHENS HOSPITAL",
+   "2000 SOUTH PALESTINE ST, ATHENS, TX 75751"
+  ]
+ },
+ "Hunt": {
+  "centroid": [
+   3.2314408852302554,
+   6.456666666666666,
+   "HUNT REGIONAL MEDICAL CENTER",
+   "4215 JOE RAMSEY BLVD E, GREENVILLE, TX 75401"
+  ],
+  "Greenville": [
+   2.188096516344548,
+   4.015,
+   "HUNT REGIONAL MEDICAL CENTER",
+   "4215 JOE RAMSEY BLVD E, GREENVILLE, TX 75401"
+  ]
+ },
+ "Wise": {
+  "centroid": [
+   6.563171080887616,
+   16.418333333333333,
+   "MEDICAL CITY DECATUR (added from medicalcityhealthcare.com; missing from CMS list)",
+   "609 Medical Center Dr, Decatur, TX 76234"
+  ],
+  "Decatur": [
+   1.6008386025610435,
+   3.603333333333333,
+   "MEDICAL CITY DECATUR (added from medicalcityhealthcare.com; missing from CMS list)",
+   "609 Medical Center Dr, Decatur, TX 76234"
+  ]
+ }
+}

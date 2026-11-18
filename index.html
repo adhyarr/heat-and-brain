@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heat and the Brain — Project Home</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f4f5fa;color:#2b2f42;line-height:1.55}
+header{background:linear-gradient(135deg,#2b2f42 0%,#6a4c93 55%,#e4572e 120%);color:#fff;padding:44px 24px 52px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header .wrap{padding:0}
+.tag{display:inline-block;background:rgba(255,255,255,.16);padding:4px 12px;border-radius:99px;font-size:12px;margin-bottom:10px;letter-spacing:.5px}
+h1{margin:0 0 8px;font-size:34px;letter-spacing:-.5px}
+header p{margin:0;max-width:740px;opacity:.92;font-size:16px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:-28px auto 26px}
+.hero-card{background:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 6px 22px rgba(43,47,66,.1);text-decoration:none;color:#2b2f42;border-top:4px solid #6a4c93;display:block}
+.hero-card.map{border-top-color:#e4572e}
+.hero-card.doc{border-top-color:#1982c4}
+.hero-card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(43,47,66,.14)}
+.hero-card b{display:block;font-size:17px;margin-bottom:4px}
+.hero-card span{font-size:13px;color:#6b7088}
+.panel{background:#fff;border-radius:14px;padding:24px;box-shadow:0 4px 16px rgba(43,47,66,.07);margin-bottom:24px}
+h2{margin:0 0 6px;font-size:20px}
+.sub{color:#6b7088;font-size:14px;margin:0 0 18px}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.step{background:#f7f8fc;border:1px solid #e3e6f2;border-radius:12px;padding:14px;position:relative}
+.num{display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;border-radius:99px;background:#2b2f42;color:#fff;font-size:12px;font-weight:700;margin-bottom:8px}
+.step b{display:block;font-size:14px;margin-bottom:4px}
+.step p{margin:0 0 8px;font-size:12.5px;color:#5b6075}
+.step a{font-size:12px;color:#1982c4;text-decoration:none;font-weight:600;display:block;margin-top:3px}
+.step a:hover{text-decoration:underline}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.item{background:#f7f8fc;border-radius:10px;padding:12px 14px;border-left:3px solid #6a4c93}
+.item b{display:block;font-size:14px}
+.item span{font-size:12.5px;color:#6b7088}
+footer{color:#8a8fa3;font-size:12.5px;padding:4px 0 40px}
+@media(max-width:860px){.cards,.flow,.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="tag">INDEPENDENT RESEARCH PROJECT · NORTH &amp; EAST TEXAS</div>
+  <h1>Heat and the Brain</h1>
+  <p>Mapping where extreme summer heat overlaps with limited access to emergency and neurological care across 24 North and East Texas counties.</p>
+</div></header>
+
+<div class="wrap">
+  <div class="cards">
+    <a class="hero-card map" href="map.html">
+      <b>1. Open Interactive Map</b>
+      <span>Explore all 24 counties, 1,885 Census tracts, ERs, and neurology hubs.</span>
+    </a>
+    <a class="hero-card" href="report_expanded.html">
+      <b>2. Open 24-County Report</b>
+      <span>Charts, scatter plot, rankings, and full county comparison heatmap.</span>
+    </a>
+    <a class="hero-card doc" href="https://docs.google.com/document/d/12Vvehx7DZWSoc6yMMl-tF_CJ7IqRWU_9fGOWhPVDKUw/edit?usp=drivesdk">
+      <b>3. Open Google Doc</b>
+      <span>Editable research write-up (methods, tables, limitations, sources).</span>
+    </a>
+  </div>
+
+  <div class="panel">
+    <h2>What This Project Is Doing</h2>
+    <p class="sub" style="margin-bottom:10px">Extreme heat is more than uncomfortable—it is a documented brain-health risk. Older adults and people with neurological conditions (such as epilepsy, migraine, multiple sclerosis, stroke, dementia, and Parkinson's) face higher risk during heat waves, especially when medications interfere with sweating or thirst.</p>
+    <p class="sub" style="margin-bottom:0">Using public climate, Census, health, and hospital data across <b>24 North and East Texas counties</b> (4 urban DFW core counties and 20 surrounding rural counties) and <b>1,885 Census tracts</b>, we measure where high extreme-heat exposure (&ge;100&deg;F days) collides with vulnerable populations and long driving times to emergency rooms and neurologists. Every county is scored, mapped, and paired with a 1-page resident heat-safety guide.</p>
+  </div>
+
+  <div class="panel">
+    <h2>How the Project Flows (Step by Step)</h2>
+    <p class="sub">Every chart, map layer, and score is built from real public data through reproducible scripts.</p>
+    <div class="flow">
+      <div class="step">
+        <span class="num">1</span>
+        <b>Collect Data</b>
+        <p>Pull Census ACS (65+, no vehicle), CDC PLACES (stroke), HRSA AHRF (neurologists), and 2020 tract centers.</p>
+        <a href="scripts/expand_stage_a.py">expand_stage_a.py</a>
+        <a href="DATA_CHECKLIST.md">DATA_CHECKLIST.md</a>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <b>Measure Heat</b>
+        <p>Pick the nearest NOAA station (&ge;95% complete, 2015–2024) and count days &ge;100&deg;F per year.</p>
+        <a href="scripts/expand_stage_b.py">expand_stage_b.py</a>
+        <a href="data/noaa_tmax_expanded.csv">noaa_tmax_expanded.csv</a>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <b>Route Drive Times</b>
+        <p>Geocode 327 TX ER hospitals and compute pop-weighted drive times across 1,885 tracts.</p>
+        <a href="scripts/expand_stage_c.py">expand_stage_c.py</a>
+        <a href="scripts/expand_stage_d.py">expand_stage_d.py</a>
+        <a href="data/tract_access.csv">tract_access.csv</a>
+      </div>
+      <div class="step">
+        <span class="num">4</span>
+        <b>Merge &amp; Score</b>
+        <p>Combine into 24 counties, rank 1–24 on each measure, and average Heat, Vulnerability, and Access gap.</p>
+        <a href="scripts/merge_expanded.py">merge_expanded.py</a>
+        <a href="county_data_expanded.csv">county_data_expanded.csv</a>
+        <a href="score.py">score.py</a>
+      </div>
+      <div class="step">
+        <span class="num">5</span>
+        <b>Map &amp; Present</b>
+        <p>Generate the interactive map, visual charts report, resident guide, and research write-up.</p>
+        <a href="map.html">map.html</a>
+        <a href="report_expanded.html">report_expanded.html</a>
+        <a href="resident_guide.html">resident_guide.html (1-page handout)</a>
+        <a href="report.html">report.html (5-county pilot)</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Key Findings at a Glance</h2>
+    <div class="grid2">
+      <div class="item"><b>Highest Combined Risk: Hill County (19.89 / 24)</b><span>High heat (19.4 days &ge;100&deg;F), high vulnerability (20.3% age 65+), 0 neurologists, 22.3 min ER drive, 70.8 min neurology-hub drive.</span></div>
+      <div class="item"><b>Rural vs. Urban Access Gap</b><span>Avg pop-weighted ER drive: 19.3 min rural vs. 9.1 min urban. Avg neurology-hub drive: 50.7 min rural vs. 9.1 min urban.</span></div>
+      <div class="item"><b>Neurologist Deserts</b><span>12 of the 20 rural counties have 0 neurologists on record (HRSA AHRF 2023).</span></div>
+      <div class="item"><b>What's Next</b><span>Verify Table C medical sources in the Google Doc and add a 1-page resident heat-safety guide for the highest-risk counties.</span></div>
+    </div>
+  </div>
+
+  <footer>Folder: ~/Dev/ai-learning/heat-and-brain/ · Informational only, not medical advice.</footer>
+</div>
+</body>
+</html>

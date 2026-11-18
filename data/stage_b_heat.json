@@ -1,0 +1,195 @@
+{
+ "48001": {
+  "station": "USW00093983",
+  "station_name": "PALESTINE MUNI AP",
+  "km_from_county_center": 8.0,
+  "completeness": 0.981,
+  "years_counted": 10,
+  "avg_days_100F": 11.1
+ },
+ "48085": {
+  "station": "USW00053914",
+  "station_name": "MCKINNEY MUNI AP",
+  "km_from_county_center": 1.6,
+  "completeness": 1.0,
+  "years_counted": 10,
+  "avg_days_100F": 11.8
+ },
+ "48097": {
+  "station": "USC00413420",
+  "station_name": "GAINESVILLE 5 ENE",
+  "km_from_county_center": 14.0,
+  "completeness": 1.0,
+  "years_counted": 10,
+  "avg_days_100F": 13.8
+ },
+ "48113": {
+  "station": "USW00013960",
+  "station_name": "DALLAS FAA AP",
+  "km_from_county_center": 9.6,
+  "completeness": 1.0,
+  "years_counted": 10,
+  "avg_days_100F": 23.7
+ },
+ "48121": {
+  "station": "USC00412404",
+  "station_name": "DENTON 2 SE",
+  "km_from_county_center": 1.6,
+  "completeness": 0.998,
+  "years_counted": 10,
+  "avg_days_100F": 17.2
+ },
+ "48139": {
+  "station": "USW00053966",
+  "station_name": "MID WAY RGNL AP",
+  "km_from_county_center": 16.3,
+  "completeness": 0.967,
+  "years_counted": 10,
+  "avg_days_100F": 17.7
+ },
+ "48143": {
+  "station": "USW00003969",
+  "station_name": "STEPHENVILLE CLARK FLD",
+  "km_from_county_center": 4.7,
+  "completeness": 0.993,
+  "years_counted": 10,
+  "avg_days_100F": 21.3
+ },
+ "48147": {
+  "station": "USC00410923",
+  "station_name": "BONHAM 3NNE",
+  "km_from_county_center": 7.9,
+  "completeness": 0.979,
+  "years_counted": 9,
+  "avg_days_100F": 15.2
+ },
+ "48161": {
+  "station": "USW00053968",
+  "station_name": "PALESTINE 6 WNW",
+  "km_from_county_center": 40.8,
+  "completeness": 0.996,
+  "years_counted": 10,
+  "avg_days_100F": 11.4
+ },
+ "48181": {
+  "station": "USC00418274",
+  "station_name": "SHERMAN",
+  "km_from_county_center": 9.3,
+  "completeness": 0.987,
+  "years_counted": 10,
+  "avg_days_100F": 6.4
+ },
+ "48213": {
+  "station": "USC00410404",
+  "station_name": "ATHENS",
+  "km_from_county_center": 5.8,
+  "completeness": 0.985,
+  "years_counted": 10,
+  "avg_days_100F": 10.6
+ },
+ "48217": {
+  "station": "USC00414182",
+  "station_name": "HILLSBORO",
+  "km_from_county_center": 4.2,
+  "completeness": 0.993,
+  "years_counted": 10,
+  "avg_days_100F": 19.4
+ },
+ "48221": {
+  "station": "USW00053977",
+  "station_name": "GRANBURY MUNI AP",
+  "km_from_county_center": 2.1,
+  "completeness": 0.957,
+  "years_counted": 9,
+  "avg_days_100F": 34.2
+ },
+ "48223": {
+  "station": "USC00418743",
+  "station_name": "SULPHUR SPRINGS",
+  "km_from_county_center": 5.7,
+  "completeness": 0.989,
+  "years_counted": 10,
+  "avg_days_100F": 11.5
+ },
+ "48231": {
+  "station": "USW00013926",
+  "station_name": "GREENVILLE MUNI AP MAJORS FLD",
+  "km_from_county_center": 6.4,
+  "completeness": 0.981,
+  "years_counted": 10,
+  "avg_days_100F": 15.4
+ },
+ "48251": {
+  "station": "USC00411246",
+  "station_name": "BURLESON",
+  "km_from_county_center": 14.3,
+  "completeness": 0.979,
+  "years_counted": 9,
+  "avg_days_100F": 14.7
+ },
+ "48257": {
+  "station": "USW00053911",
+  "station_name": "TERRELL MUNI AP",
+  "km_from_county_center": 12.8,
+  "completeness": 0.997,
+  "years_counted": 10,
+  "avg_days_100F": 16.4
+ },
+ "48293": null,
+ "48349": {
+  "station": "USW00053912",
+  "station_name": "CORSICANA CAMPBELL FLD",
+  "km_from_county_center": 7.5,
+  "completeness": 0.994,
+  "years_counted": 10,
+  "avg_days_100F": 16.0
+ },
+ "48367": {
+  "station": "USW00093985",
+  "station_name": "MINERAL WELLS AP",
+  "km_from_county_center": 23.8,
+  "completeness": 0.998,
+  "years_counted": 10,
+  "avg_days_100F": 28.7
+ },
+ "48379": {
+  "station": "USC00414980",
+  "station_name": "LAKE TAWAKONI",
+  "km_from_county_center": 8.7,
+  "completeness": 0.996,
+  "years_counted": 10,
+  "avg_days_100F": 8.5
+ },
+ "48397": {
+  "station": "USW00053911",
+  "station_name": "TERRELL MUNI AP",
+  "km_from_county_center": 24.7,
+  "completeness": 0.997,
+  "years_counted": 10,
+  "avg_days_100F": 16.4
+ },
+ "48439": {
+  "station": "USC00413285",
+  "station_name": "FT WORTH WSFO",
+  "km_from_county_center": 6.9,
+  "completeness": 1.0,
+  "years_counted": 10,
+  "avg_days_100F": 13.0
+ },
+ "48467": {
+  "station": "USC00419800",
+  "station_name": "WILLS PT",
+  "km_from_county_center": 23.1,
+  "completeness": 0.998,
+  "years_counted": 10,
+  "avg_days_100F": 14.4
+ },
+ "48497": {
+  "station": "USW00053964",
+  "station_name": "DECATUR MUNI AP",
+  "km_from_county_center": 7.9,
+  "completeness": 0.985,
+  "years_counted": 10,
+  "avg_days_100F": 18.3
+ }
+}
