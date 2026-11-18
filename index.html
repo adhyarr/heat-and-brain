@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Heat and the Brain — Project Home</title>
+<title>Heat and the Brain: North and East Texas</title>
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f4f5fa;color:#2b2f42;line-height:1.55}
@@ -19,13 +19,13 @@ header p{margin:0;max-width:740px;opacity:.92;font-size:16px}
 .hero-card.doc{border-top-color:#1982c4}
 .hero-card.sol{border-top-color:#2e8540}
 .hero-card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(43,47,66,.14)}
-.hero-card b{display:block;font-size:17px;margin-bottom:4px}
+.hero-card b{display:block;font-size:16.5px;margin-bottom:4px}
 .hero-card span{font-size:13px;color:#6b7088}
 .panel{background:#fff;border-radius:14px;padding:24px;box-shadow:0 4px 16px rgba(43,47,66,.07);margin-bottom:24px}
 h2{margin:0 0 6px;font-size:20px}
-.sub{color:#6b7088;font-size:14px;margin:0 0 18px}
+.sub{color:#5b6075;font-size:14px;margin:0 0 16px}
 .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.step{background:#f7f8fc;border:1px solid #e3e6f2;border-radius:12px;padding:14px;position:relative}
+.step{background:#f7f8fc;border:1px solid #e3e6f2;border-radius:12px;padding:14px}
 .num{display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;border-radius:99px;background:#2b2f42;color:#fff;font-size:12px;font-weight:700;margin-bottom:8px}
 .step b{display:block;font-size:14px;margin-bottom:4px}
 .step p{margin:0 0 8px;font-size:12.5px;color:#5b6075}
@@ -33,75 +33,80 @@ h2{margin:0 0 6px;font-size:20px}
 .step a:hover{text-decoration:underline}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .item{background:#f7f8fc;border-radius:10px;padding:12px 14px;border-left:3px solid #6a4c93}
-.item b{display:block;font-size:14px}
-.item span{font-size:12.5px;color:#6b7088}
+.item b{display:block;font-size:14px;margin-bottom:3px}
+.item span{font-size:12.5px;color:#5b6075}
+.src-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.src-card{background:#f7f8fc;border-radius:10px;padding:12px 14px;border:1px solid #e3e6f2;text-decoration:none;color:#2b2f42;display:block}
+.src-card:hover{border-color:#6a4c93}
+.src-card b{display:block;font-size:13.5px;color:#1982c4;margin-bottom:3px}
+.src-card span{font-size:12px;color:#5b6075}
 footer{color:#8a8fa3;font-size:12.5px;padding:4px 0 40px}
-@media(max-width:860px){.cards,.flow,.grid2{grid-template-columns:1fr}}
+@media(max-width:860px){.cards,.flow,.grid2,.src-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
-  <div class="tag">INDEPENDENT RESEARCH PROJECT · NORTH &amp; EAST TEXAS</div>
+  <div class="tag">INDEPENDENT RESEARCH PROJECT · NORTH AND EAST TEXAS</div>
   <h1>Heat and the Brain</h1>
-  <p>Mapping where extreme summer heat overlaps with limited access to emergency and neurological care across 24 North and East Texas counties.</p>
+  <p>Mapping where extreme summer heat overlaps with limited access to emergency, primary, and neurological care across 24 North and East Texas counties.</p>
 </div></header>
 
 <div class="wrap">
   <div class="cards">
     <a class="hero-card map" href="map.html">
-      <b>1. Open Interactive Map</b>
-      <span>Explore all 24 counties, 1,885 Census tracts, ERs, and neurology hubs.</span>
+      <b>1. Interactive Map</b>
+      <span>Explore all 24 counties, 1,885 Census tracts, ERs, and stroke centers.</span>
     </a>
     <a class="hero-card" href="report_expanded.html">
-      <b>2. Open 24-County Report</b>
-      <span>Charts, scatter plot, rankings, and full county comparison heatmap.</span>
+      <b>2. 24-County Report</b>
+      <span>Charts, scatter plot, 10-year heat trend, case studies, and county table.</span>
     </a>
     <a class="hero-card doc" href="https://docs.google.com/document/d/12Vvehx7DZWSoc6yMMl-tF_CJ7IqRWU_9fGOWhPVDKUw/edit?usp=drivesdk">
-      <b>3. Open Google Doc</b>
-      <span>Editable research write-up (methods, tables, limitations, sources).</span>
+      <b>3. Research Write-Up</b>
+      <span>Editable Google Doc with peer-reviewed studies, methods, and sources.</span>
     </a>
     <a class="hero-card sol" href="solutions.html">
       <b>4. Actionable Solutions</b>
-      <span>What government does today, the remaining gap, and how to improve it.</span>
+      <span>What government programs do today, remaining gaps, and practical fixes.</span>
     </a>
   </div>
 
   <div class="panel">
-    <h2>What This Project Is Doing</h2>
-    <p class="sub" style="margin-bottom:10px">Extreme heat is more than uncomfortable—it is a documented brain-health risk. Older adults and people with neurological conditions (such as epilepsy, migraine, multiple sclerosis, stroke, dementia, and Parkinson's) face higher risk during heat waves, especially when medications interfere with sweating or thirst.</p>
-    <p class="sub" style="margin-bottom:0">Using public climate, Census, health, and hospital data across <b>24 North and East Texas counties</b> (4 urban DFW core counties and 20 surrounding rural counties) and <b>1,885 Census tracts</b>, we measure where high extreme-heat exposure (&ge;100&deg;F days) collides with vulnerable populations and long driving times to emergency rooms and neurologists. Every county is scored, mapped, and paired with a 1-page resident heat-safety guide.</p>
+    <h2>What This Project Is About</h2>
+    <p class="sub" style="margin-bottom:10px">Extreme summer heat is not just uncomfortable. For older adults and people living with neurological or chronic conditions (such as epilepsy, migraine, multiple sclerosis, stroke, dementia, and Parkinson's disease), high temperatures can trigger symptoms or interfere with how common medications regulate sweating and hydration.</p>
+    <p class="sub" style="margin-bottom:0">Using public climate, Census, health, and hospital data across <b>24 North and East Texas counties</b> (4 urban DFW core counties and 20 surrounding rural counties) and <b>1,885 Census tracts</b>, this project examines where frequent 100&deg;F+ heat overlaps with vulnerable populations and long driving times to emergency rooms, primary/EMS care, and specialized stroke centers. Each county is scored, mapped, and paired with a live forecast tool and a 1-page resident safety guide.</p>
   </div>
 
   <div class="panel">
-    <h2>Methodology &amp; Outputs (How Results Were Built)</h2>
-    <p class="sub">All charts, map layers, and county scores were produced from real public datasets using reproducible scripts.</p>
+    <h2>Methodology and Outputs</h2>
+    <p class="sub">All charts, map layers, and county scores were built from public datasets using reproducible Python scripts.</p>
     <div class="flow">
       <div class="step">
         <span class="num">1</span>
         <b>Data Collected</b>
-        <p>Pulled Census ACS (65+, no vehicle), CDC PLACES (stroke), HRSA AHRF (neurologists), and 1,885 tract centers.</p>
+        <p>Pulled Census ACS (age 65+, no vehicle), CDC PLACES (stroke), HRSA AHRF (physicians), and 1,885 tract centers.</p>
         <a href="scripts/expand_stage_a.py">expand_stage_a.py</a>
         <a href="DATA_CHECKLIST.md">DATA_CHECKLIST.md</a>
       </div>
       <div class="step">
         <span class="num">2</span>
         <b>Heat Analyzed</b>
-        <p>Selected nearest NOAA stations (&ge;95% complete, 2015–2024) and counted annual days &ge;100&deg;F.</p>
+        <p>Selected nearest NOAA stations (&ge;95% complete, 2015 to 2024) and counted annual days &ge;100&deg;F.</p>
         <a href="scripts/expand_stage_b.py">expand_stage_b.py</a>
         <a href="data/noaa_tmax_expanded.csv">noaa_tmax_expanded.csv</a>
       </div>
       <div class="step">
         <span class="num">3</span>
         <b>Drive Times Routed</b>
-        <p>Geocoded 327 TX ERs &amp; 114 DSHS stroke centers; routed pop-weighted drives across 1,885 tracts.</p>
+        <p>Geocoded 327 Texas ERs and 114 DSHS stroke centers; routed population-weighted drives across 1,885 tracts.</p>
         <a href="scripts/expand_stage_c.py">expand_stage_c.py</a>
         <a href="scripts/route_dshs_stroke.py">route_dshs_stroke.py</a>
         <a href="data/tract_access.csv">tract_access.csv</a>
       </div>
       <div class="step">
         <span class="num">4</span>
-        <b>Scored &amp; Ranked</b>
-        <p>Merged 24 counties, ranked 1–24 on 7 measures, and averaged Heat, Vulnerability, and Access gap.</p>
+        <b>Scored and Ranked</b>
+        <p>Merged 24 counties, ranked 1 to 24 on 7 measures, and averaged Heat, Vulnerability, and Access gap.</p>
         <a href="scripts/merge_expanded.py">merge_expanded.py</a>
         <a href="county_data_expanded.csv">county_data_expanded.csv</a>
         <a href="score.py">score.py</a>
@@ -109,12 +114,11 @@ footer{color:#8a8fa3;font-size:12.5px;padding:4px 0 40px}
       <div class="step">
         <span class="num">5</span>
         <b>Published Outputs</b>
-        <p>Built the interactive map, 24-county charts &amp; case studies, 1-page guide, and research write-up.</p>
+        <p>Built the interactive map, 24-county report, live NWS lookup tool, 1-page guide, and policy brief.</p>
         <a href="map.html">map.html</a>
-        <a href="checker.html">checker.html (live NWS risk tool)</a>
+        <a href="checker.html">checker.html (live NWS tool)</a>
         <a href="report_expanded.html">report_expanded.html</a>
         <a href="resident_guide.pdf">resident_guide.pdf</a>
-        <a href="report.html">report.html (5-county pilot)</a>
       </div>
     </div>
   </div>
@@ -122,33 +126,30 @@ footer{color:#8a8fa3;font-size:12.5px;padding:4px 0 40px}
   <div class="panel">
     <h2>Key Findings at a Glance</h2>
     <div class="grid2">
-      <div class="item"><b>Highest Combined Risk: Hill County (19.89 / 24)</b><span>High heat (19.4 days &ge;100&deg;F), high vulnerability (20.3% age 65+), 0 neurologists, 22.3 min ER drive, 70.8 min neurology-hub drive.</span></div>
-      <div class="item"><b>Rural vs. Urban Access Gap</b><span>Avg pop-weighted ER drive: 19.3 min rural vs. 9.1 min urban. Avg neurology-hub drive: 50.7 min rural vs. 9.1 min urban.</span></div>
-      <div class="item"><b>Neurologist Deserts</b><span>12 of the 20 rural counties have 0 neurologists on record (HRSA AHRF 2023).</span></div>
-      <div class="item"><b>What's Next</b><span>Verify Table C medical sources in the Google Doc and add a 1-page resident heat-safety guide for the highest-risk counties.</span></div>
+      <div class="item"><b>Highest Combined Risk: Hill County (19.89 / 24)</b><span>High heat (19.4 days &ge;100&deg;F), high vulnerability (20.3% age 65+), 0 neurologists, 22.3 min average ER drive, and 80.9 min average drive to a DSHS Level I/II stroke center.</span></div>
+      <div class="item"><b>Rural vs. Urban Care-Access Gap</b><span>Average population-weighted ER drive is 19.3 min in rural counties vs. 9.1 min in the urban core (Van Zandt averages 42.3 min). Average DSHS Level I/II stroke-center drive is 63.5 min rural vs. 17.4 min urban.</span></div>
+      <div class="item"><b>Specialist Deserts</b><span>12 of the 20 rural counties have 0 neurologists on record (HRSA AHRF 2023), making primary care, EMS, and local ERs the primary frontline for heat and brain emergencies.</span></div>
+      <div class="item"><b>Though Government Programs Exist, Gaps Remain</b><span>State and federal programs (CEAP cooling aid, 2-1-1 Texas, HeatRisk, HRSA Telestroke) provide real support, yet national heat alerts do not account for ER or specialist travel times, and telestroke only begins after hospital arrival.</span></div>
     </div>
   </div>
 
   <div class="panel">
-    <h2>Current Government Programs &amp; Where the Gap Remains</h2>
-    <p class="sub">Texas and U.S. agencies already run heat-relief and telestroke programs—but none connect extreme heat with rural neurological access.</p>
-    <div class="grid2">
-      <div class="item"><b>Texas State Measures</b><span><b>CEAP / LIHEAP</b> (TDHCA) directs ~50% of energy aid to summer cooling bills, fans/AC, and HVAC repair. <b>2-1-1 Texas</b> (HHSC) connects callers to local cooling centers, and <b>TX DSHS</b> certifies 4 stroke hospital levels.</span></div>
-      <div class="item"><b>U.S. Federal Measures</b><span><b>Heat.gov (NIHHIS)</b> &amp; the <b>CDC–NWS HeatRisk</b> index forecast heat danger, while <b>HRSA Telestroke Grants</b> fund 24/7 video neurology links into rural ERs.</span></div>
-      <div class="item" style="grid-column:1 / -1;border-left-color:#e4572e"><b>Though Government Programs &amp; Funding Exist, a Last-Mile Gap Remains</b><span>Texas and federal agencies invest significant funding in cooling and telehealth programs (CEAP/LIHEAP, 2-1-1, HeatRisk, HRSA Telestroke), yet a last-mile gap persists. National heat alerts do not account for neurologist deserts or stroke-center drive times, and telestroke operates only after a patient reaches an ER—leaving car-free households, long out-of-county ER drives (such as Van Zandt's 42.3-minute average), and daily heat-medication safety unaddressed.</span></div>
+    <h2>Data Sources and Websites Used</h2>
+    <p class="sub">Every dataset in this project comes from public government or open-mapping sources (weather data uses NOAA and the National Weather Service rather than commercial sites like AccuWeather).</p>
+    <div class="src-grid">
+      <a class="src-card" href="https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily" target="_blank"><b>NOAA NCEI (GHCN-Daily)</b><span>10 years of daily maximum temperatures (2015 to 2024) for 24 county stations.</span></a>
+      <a class="src-card" href="https://www.weather.gov/documentation/services-web-api" target="_blank"><b>National Weather Service API</b><span>Live county forecasts and active heat advisories in checker.html.</span></a>
+      <a class="src-card" href="https://data.census.gov/" target="_blank"><b>US Census Bureau (ACS &amp; CenPop)</b><span>2019 to 2023 ACS 5-year estimates (age 65+, no vehicle) and 1,885 tract centers.</span></a>
+      <a class="src-card" href="https://www.cdc.gov/places/" target="_blank"><b>CDC PLACES</b><span>County-level age-adjusted stroke prevalence (2023 release).</span></a>
+      <a class="src-card" href="https://data.hrsa.gov/topics/health-workforce/ahrf" target="_blank"><b>HRSA Area Health Resources Files</b><span>2023 county population and physician/neurologist counts.</span></a>
+      <a class="src-card" href="https://data.cms.gov/provider-data/dataset/xubh-q36u" target="_blank"><b>CMS Care Compare</b><span>Texas acute-care and critical-access hospitals with emergency departments.</span></a>
+      <a class="src-card" href="https://www.dshs.texas.gov/dshs-ems-trauma-systems/stroke-system-development/texas-stroke-facilities" target="_blank"><b>Texas DSHS Stroke System</b><span>Official directory of Level I through Level IV designated stroke facilities.</span></a>
+      <a class="src-card" href="https://project-osrm.org/" target="_blank"><b>OpenStreetMap &amp; OSRM</b><span>Road-network driving times and distances across 1,885 Census tracts.</span></a>
+      <a class="src-card" href="https://www.heat.gov/" target="_blank"><b>Heat.gov &amp; CDC Heat Guidance</b><span>Federal HeatRisk context, medication safety, and clinical references.</span></a>
     </div>
   </div>
 
-  <div class="panel">
-    <h2>Actionable Solutions: Closing the Gap</h2>
-    <p class="sub">Practical steps that pair personal/caregiver preparation with targeted local and state action.</p>
-    <div class="grid2">
-      <div class="item"><b>What Individuals &amp; Caregivers Can Do</b><span>Request an annual pre-summer medication review (flagging diuretics, ACE inhibitors, anticholinergics), store medicines away from heat, run twice-daily buddy checks on older adults (65+), pre-save <b>2-1-1</b> cooling/ride numbers, and call <b>911</b> fast for confusion or slurred speech.</span></div>
-      <div class="item"><b>What Local &amp; State Policy Can Do</b><span>Pair NWS HeatRisk alerts with county care-access scores, expand routine tele-neurology into the 12 neurologist-desert counties, fund free 2-1-1 cooling rides for car-free seniors, equip rural EMS for active cooling, and prioritize CEAP/LIHEAP AC aid for neurological patients.</span></div>
-    </div>
-  </div>
-
-  <footer>Folder: ~/Dev/ai-learning/heat-and-brain/ · Informational only, not medical advice.</footer>
+  <footer>Informational only, not medical advice.</footer>
 </div>
 </body>
 </html>

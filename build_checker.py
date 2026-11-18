@@ -1,4 +1,4 @@
-"""Build checker.html — Live NWS Heat-Risk & Care-Access Lookup Tool for 24 North & East Texas counties.
+"""Build checker.html: Live NWS Heat-Risk & Care-Access Lookup Tool for 24 North & East Texas counties.
 
 Usage: python3 build_checker.py
 """
@@ -36,7 +36,7 @@ html_out = f"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Live Heat-Risk &amp; Care-Access Lookup — North &amp; East Texas</title>
+<title>Live Heat-Risk &amp; Care-Access Lookup: North &amp; East Texas</title>
 <style>
 *{{box-sizing:border-box}}
 body{{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f4f5fa;color:#2b2f42;line-height:1.5}}
@@ -115,33 +115,33 @@ footer{{color:#8a8fa3;font-size:12px;padding:6px 0 36px}}
     <div id="guidance"></div>
   </div>
 
-  <footer>Live weather from National Weather Service (api.weather.gov). County metrics from NOAA, US Census ACS, CDC PLACES, HRSA AHRF, CMS, and Texas DSHS. <b>Informational only — not medical advice. In an emergency, call 911.</b></footer>
+  <footer>Live weather from National Weather Service (api.weather.gov). County metrics from NOAA, US Census ACS, CDC PLACES, HRSA AHRF, CMS, and Texas DSHS. <b>Informational only: not medical advice. In an emergency, call 911.</b></footer>
 </div>
 
 <script>
 const COUNTIES = {json.dumps(rows)};
 const GUIDANCE = {{
   epilepsy: {{
-    title: "Epilepsy & Seizures — Heat Guidance",
+    title: "Epilepsy & Seizures: Heat Guidance",
     tips: [
       "Heat, dehydration, and electrolyte shifts can lower seizure thresholds.",
       "Stay in air conditioning during peak afternoon heat and drink water regularly.",
-      "Store anti-seizure medications in a cool, dry place—high heat can degrade effectiveness.",
+      "Store anti-seizure medications in a cool, dry place, high heat can degrade effectiveness.",
       "Use extra caution around open water or swimming pools."
     ],
     source: "Epilepsy Society UK (epilepsysociety.org.uk/how-stay-cool-heat); CDC Heat & Medications"
   }},
   ms: {{
-    title: "Multiple Sclerosis (MS) — Heat Guidance",
+    title: "Multiple Sclerosis (MS): Heat Guidance",
     tips: [
       "Even small rises in body temperature can trigger Uhthoff's phenomenon (temporary worsening of fatigue, vision, or weakness).",
-      "Symptoms usually ease once cooled and do not indicate a true relapse—contact your doctor if new symptoms persist after cooling.",
+      "Symptoms usually ease once cooled and do not indicate a true relapse, contact your doctor if new symptoms persist after cooling.",
       "Use cooling vests, chilled neck wraps, cold drinks, or cool showers, and schedule outdoor errands early or late."
     ],
     source: "National Multiple Sclerosis Society (nationalmssociety.org)"
   }},
   migraine: {{
-    title: "Migraine — Heat Guidance",
+    title: "Migraine: Heat Guidance",
     tips: [
       "High heat and humidity speed up fluid loss; dehydration is a primary migraine trigger.",
       "Hydrate proactively with water or electrolytes and limit alcohol or excess caffeine.",
@@ -150,7 +150,7 @@ const GUIDANCE = {{
     source: "American Migraine Foundation (americanmigrainefoundation.org/resource-library/weather-and-migraine/)"
   }},
   stroke: {{
-    title: "Stroke & High Blood Pressure — Heat Guidance",
+    title: "Stroke & High Blood Pressure: Heat Guidance",
     tips: [
       "Extreme heat forces the heart to pump harder while vasodilation and dehydration alter blood pressure and blood thickness.",
       "Avoid outdoor exertion between noon and 3 p.m. and review diuretics or blood-pressure drugs with your clinician.",
@@ -159,19 +159,19 @@ const GUIDANCE = {{
     source: "American Heart Association / ASA; CDC Heat & Medications"
   }},
   dementia: {{
-    title: "Dementia & Memory Loss — Heat Guidance",
+    title: "Dementia & Memory Loss: Heat Guidance",
     tips: [
       "Cognitive changes can mask thirst or overheating; offer cool water and water-rich foods (fruit, soups) throughout the day.",
       "Keep indoor spaces air-conditioned (fans alone are not enough above the 90s) and check on older relatives twice daily.",
-      "Wandering outdoors during heat waves is dangerous—secure exits and keep medical ID on hand."
+      "Wandering outdoors during heat waves is dangerous, secure exits and keep medical ID on hand."
     ],
     source: "Alzheimer's Association (alz.org/help-support/caregiving/safety/wandering); CDC Older Adults"
   }},
   parkinsons: {{
-    title: "Parkinson's Disease — Heat Guidance",
+    title: "Parkinson's Disease: Heat Guidance",
     tips: [
       "Autonomic changes and anticholinergic medications can impair sweating and blood pressure regulation, raising overheating and dizziness risk.",
-      "Never stop prescribed medications on your own—ask your doctor or pharmacist for a summer heat-medication plan.",
+      "Never stop prescribed medications on your own, ask your doctor or pharmacist for a summer heat-medication plan.",
       "Consider telehealth appointments during extreme-heat advisories if your neurology clinic is far away."
     ],
     source: "Michael J. Fox Foundation (michaeljfox.org); CDC Heat & Medications"
@@ -182,7 +182,7 @@ const sel = document.getElementById("county");
 COUNTIES.forEach(c => {{
   const opt = document.createElement("option");
   opt.value = c.county;
-  opt.textContent = `${{c.county}} County (${{c.type}}) — Score ${{c.score_total}}/24`;
+  opt.textContent = `${{c.county}} County (${{c.type}}): Score ${{c.score_total}}/24`;
   if (c.county === "Hill") opt.selected = true;
   sel.appendChild(opt);
 }});

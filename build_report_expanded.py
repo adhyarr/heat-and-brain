@@ -247,7 +247,7 @@ links = [
 
 page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Heat and the Brain — 24-County Expanded Analysis</title>
+<title>Heat and the Brain: 24-County Expanded Analysis</title>
 <style>
 *{{box-sizing:border-box}} body{{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f4f5fa;color:#2b2f42;line-height:1.5}}
 header{{background:linear-gradient(135deg,#2b2f42 0%,#6a4c93 55%,#e4572e 120%);color:#fff;padding:48px 24px 58px}}
@@ -308,7 +308,7 @@ footer{{color:#8a8fa3;font-size:12px;padding:10px 0 40px}}
 </section>
 
 <section><h2>10-year heat trend (2015–2024)</h2>
-<p class="sub">Extreme-heat days surged across all 24 counties in 2022 (39.3-day average) and 2023 (43.1-day average)—nearly four times the 2015–2016 baseline.</p>
+<p class="sub">Extreme-heat days surged across all 24 counties in 2022 (39.3-day average) and 2023 (43.1-day average), nearly four times the 2015–2016 baseline.</p>
 <div class="card">{trend_chart()}<p class="note">Only years with ≥90% daily station observations are plotted (Hood 2024 omitted for missing days). In 2023, Hood reached 62 days and Hill reached 55 days ≥100°F.</p></div>
 </section>
 
