@@ -12,6 +12,7 @@ An independent public-health and neuroscience research project mapping where **e
 |---|---|---|
 | **Project Home** | Overview, 5-step data flow, and key findings | [index.html](https://adhyarr.github.io/heat-and-brain/) |
 | **Interactive County & Tract Map** | Color 24 counties by risk score, heat days, or drive time; toggle all 1,885 Census tracts, ERs, and neurology hubs | [map.html](https://adhyarr.github.io/heat-and-brain/map.html) |
+| **Live Heat-Risk Lookup** | Pick a county + neurological condition to see live National Weather Service forecasts, active heat alerts, and care access | [checker.html](https://adhyarr.github.io/heat-and-brain/checker.html) |
 | **24-County Visual Report** | Extreme-heat bar chart, ER vs. neurology-hub scatter plot, stacked risk scores, and full 24-county heatmap | [report_expanded.html](https://adhyarr.github.io/heat-and-brain/report_expanded.html) |
 | **1-Page Resident Heat-Safety Guide** | Printable safety handout covering 6 neurological conditions, CDC medication guidance, 911 signs, and 2-1-1 cooling help | [resident_guide.html](https://adhyarr.github.io/heat-and-brain/resident_guide.html) ([PDF](resident_guide.pdf)) |
 | **5-County Pilot Report** | Initial 5-county comparison (Dallas, Navarro, Henderson, Hunt, Wise) | [report.html](https://adhyarr.github.io/heat-and-brain/report.html) |
