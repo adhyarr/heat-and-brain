@@ -36,7 +36,7 @@ html_out = f"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Live Heat-Risk &amp; Care-Access Lookup: North &amp; East Texas</title>
+<title>Too Hot, Too Far: Live Heat-Risk &amp; Care-Access Lookup</title>
 <style>
 *{{box-sizing:border-box}}
 body{{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f4f5fa;color:#2b2f42;line-height:1.5}}

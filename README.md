@@ -1,4 +1,4 @@
-# Heat and the Brain — North & East Texas
+# Too Hot, Too Far: Extreme Heat and Neurological Care Access in Texas
 
 An independent public-health and neuroscience research project mapping where **extreme summer heat** overlaps with **older/vulnerable populations** and **limited access to emergency and neurological care** across **24 North and East Texas counties** (4 urban DFW core counties and 20 surrounding rural/exurban counties) and **1,885 Census tracts**.
 

@@ -74,7 +74,7 @@ html_out = f"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Heat and the Brain: Interactive County &amp; Tract Map</title>
+<title>Too Hot, Too Far: Interactive County &amp; Tract Map</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
@@ -102,7 +102,7 @@ select{{width:100%;padding:8px 10px;border-radius:8px;border:1px solid #cfd4e4;f
 <body>
 <header>
   <div>
-    <h1>Heat and the Brain: 24-County &amp; Tract Map</h1>
+    <h1>Too Hot, Too Far: 24-County &amp; Tract Map</h1>
     <p>North &amp; East Texas · 24 counties · 1,885 Census tracts · Population-weighted ER &amp; neurology-hub drive times</p>
   </div>
   <div class="nav">
