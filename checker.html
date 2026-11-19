@@ -8,14 +8,19 @@
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f4f5fa;color:#2b2f42;line-height:1.5}
 header{background:linear-gradient(135deg,#2b2f42 0%,#6a4c93 55%,#e4572e 120%);color:#fff;padding:28px 24px 36px}
-.wrap{max-width:980px;margin:0 auto;padding:0 20px} header .wrap{padding:0;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px} header .wrap{padding:0;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px}
 h1{margin:0 0 4px;font-size:26px} header p{margin:0;opacity:.92;font-size:14px;max-width:650px}
 .nav a{color:#fff;text-decoration:none;background:rgba(255,255,255,.18);padding:7px 13px;border-radius:8px;font-size:13px;margin-left:6px;display:inline-block}
-.controls{background:#fff;border-radius:14px;padding:20px;box-shadow:0 6px 22px rgba(43,47,66,.09);margin:-20px auto 20px;display:grid;grid-template-columns:1fr 1fr auto;gap:14px;align-items:end}
-label.lbl{display:block;font-size:11.5px;font-weight:700;text-transform:uppercase;color:#6b7088;letter-spacing:.4px;margin-bottom:6px}
-select,button{width:100%;padding:10px 12px;border-radius:9px;border:1px solid #cfd4e4;font-size:14.5px;background:#fff;color:#2b2f42}
-button{background:#6a4c93;color:#fff;border:none;font-weight:600;cursor:pointer;padding:10px 20px}
+.controls{background:#fff;border-radius:14px;padding:20px;box-shadow:0 6px 22px rgba(43,47,66,.09);margin:-20px auto 20px;display:flex;flex-direction:column;gap:12px}
+.row{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;align-items:end}
+.loc-bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+label.lbl{display:block;font-size:11.5px;font-weight:700;text-transform:uppercase;color:#6b7088;letter-spacing:.4px;margin-bottom:5px}
+select,input,button{padding:9px 12px;border-radius:9px;border:1px solid #cfd4e4;font-size:14px;background:#fff;color:#2b2f42}
+select,input{width:100%}
+button{background:#6a4c93;color:#fff;border:none;font-weight:600;cursor:pointer;white-space:nowrap}
 button:hover{background:#573b7d}
+button.gps{background:#e4572e} button.gps:hover{background:#c9451f}
+.loc-status{font-size:12.5px;color:#5b6075}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
 .card{background:#fff;border-radius:14px;padding:20px;box-shadow:0 4px 16px rgba(43,47,66,.07)}
 .card h2{margin:0 0 8px;font-size:17px}
@@ -30,14 +35,14 @@ button:hover{background:#573b7d}
 .tip-list{margin:8px 0 0 18px;padding:0;font-size:13.5px} .tip-list li{margin:5px 0}
 .src{font-size:12px;color:#6b7088;margin-top:10px}
 footer{color:#8a8fa3;font-size:12px;padding:6px 0 36px}
-@media(max-width:780px){.controls,.grid{grid-template-columns:1fr}}
+@media(max-width:820px){.row,.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
   <div>
     <h1>Live Heat-Risk &amp; Care-Access Lookup</h1>
-    <p>Combines live National Weather Service forecasts and alerts with each county's 24-county baseline risk and stroke-center drive times.</p>
+    <p>Uses your present location (or any US city/ZIP) for live National Weather Service forecasts and calculates driving time to the nearest ER and Texas DSHS stroke center.</p>
   </div>
   <div class="nav">
     <a href="index.html">Home</a>
@@ -49,31 +54,41 @@ footer{color:#8a8fa3;font-size:12px;padding:6px 0 36px}
 
 <div class="wrap">
   <div class="controls">
-    <div>
-      <label class="lbl" for="county">1. Select Texas County</label>
-      <select id="county"></select>
+    <div class="row">
+      <div>
+        <label class="lbl">1. Present Location or US City / ZIP</label>
+        <div class="loc-bar">
+          <button id="use-gps" class="gps" type="button">Use My Location</button>
+          <input id="place" type="text" placeholder="Or enter City, State or ZIP (e.g. Hillsboro, TX)" style="flex:1;min-width:160px">
+          <button id="find-place" type="button">Go</button>
+        </div>
+      </div>
+      <div>
+        <label class="lbl" for="county">Or Jump to Study County</label>
+        <select id="county"></select>
+      </div>
+      <div>
+        <label class="lbl" for="cond">2. Neurological Condition</label>
+        <select id="cond">
+          <option value="epilepsy">Epilepsy / Seizures</option>
+          <option value="ms">Multiple Sclerosis (MS)</option>
+          <option value="migraine">Migraine</option>
+          <option value="stroke">Stroke / High Blood Pressure</option>
+          <option value="dementia">Dementia / Memory Loss</option>
+          <option value="parkinsons">Parkinson's Disease</option>
+        </select>
+      </div>
     </div>
-    <div>
-      <label class="lbl" for="cond">2. Select Neurological Condition</label>
-      <select id="cond">
-        <option value="epilepsy">Epilepsy / Seizures</option>
-        <option value="ms">Multiple Sclerosis (MS)</option>
-        <option value="migraine">Migraine</option>
-        <option value="stroke">Stroke / High Blood Pressure</option>
-        <option value="dementia">Dementia / Memory Loss</option>
-        <option value="parkinsons">Parkinson's Disease</option>
-      </select>
-    </div>
-    <div><button id="go">Check Today's Risk</button></div>
+    <div id="loc-status" class="loc-status">Tip: Click <b>Use My Location</b> for live weather and nearest-hospital drive times from where you are right now.</div>
   </div>
 
   <div class="grid">
     <div class="card">
       <h2>Live National Weather Service Forecast</h2>
-      <div id="wx"><p class="src">Loading live forecast from api.weather.gov...</p></div>
+      <div id="wx"><p class="src">Waiting for location...</p></div>
     </div>
     <div class="card">
-      <h2>County Care-Access &amp; Vulnerability Baseline</h2>
+      <h2>Nearest Care &amp; County Baseline</h2>
       <div id="access"></div>
     </div>
   </div>
@@ -83,18 +98,20 @@ footer{color:#8a8fa3;font-size:12px;padding:6px 0 36px}
     <div id="guidance"></div>
   </div>
 
-  <footer>Live weather from National Weather Service (api.weather.gov). County metrics from NOAA, US Census ACS, CDC PLACES, HRSA AHRF, CMS, and Texas DSHS. <b>Informational only: not medical advice. In an emergency, call 911.</b></footer>
+  <footer>Live weather from National Weather Service (api.weather.gov). Texas ERs from CMS Care Compare; stroke centers from Texas DSHS; road routing via OSRM/OpenStreetMap. <b>Informational only, not medical advice. In an emergency, call 911.</b></footer>
 </div>
 
 <script>
 const COUNTIES = [{"county_fips": "48001", "county": "Anderson", "type": "rural", "population": 57736.0, "days_over_100F": 11.1, "pct_age_65_plus": 15.0, "pct_no_vehicle": 6.3, "stroke_rate": 3.7, "neurologists": 1.0, "neurologists_per_100k": 1.7, "er_drive_min_popw": 23.6, "er_drive_mi_popw": 13.8, "pct_pop_er_over_15min": 53.2, "neuro_hub_drive_min_popw": 68.2, "neuro_hub_drive_mi_popw": 51.9, "pct_pop_hub_over_30min": 100.0, "pct_pop_hub_over_45min": 92.0, "stroke_l1_l2_min_popw": 69.6, "stroke_l1_l2_mi_popw": 52.9, "pct_pop_stroke_l1_l2_over_45min": 92.0, "pct_pop_stroke_l1_l2_over_60min": 70.5, "stroke_l1_l3_min_popw": 69.6, "source_notes": "heat: NOAA USW00093983 (PALESTINE MUNI AP, 8.0 km from center, 98.1% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (1 / 57736); drive: OSRM tract pop-weighted (12 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 31.8413, "lon": -95.6617, "score_total": 12.78}, {"county_fips": "48085", "county": "Collin", "type": "urban", "population": 1195359.0, "days_over_100F": 11.8, "pct_age_65_plus": 11.4, "pct_no_vehicle": 3.1, "stroke_rate": 2.3, "neurologists": 68.0, "neurologists_per_100k": 5.7, "er_drive_min_popw": 9.1, "er_drive_mi_popw": 4.6, "pct_pop_er_over_15min": 14.3, "neuro_hub_drive_min_popw": 9.2, "neuro_hub_drive_mi_popw": 4.6, "pct_pop_hub_over_30min": 1.4, "pct_pop_hub_over_45min": 0.0, "stroke_l1_l2_min_popw": 18.0, "stroke_l1_l2_mi_popw": 11.0, "pct_pop_stroke_l1_l2_over_45min": 0.7, "pct_pop_stroke_l1_l2_over_60min": 0.0, "stroke_l1_l3_min_popw": 9.7, "source_notes": "heat: NOAA USW00053914 (MCKINNEY MUNI AP, 1.6 km from center, 100.0% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (68 / 1195359); drive: OSRM tract pop-weighted (220 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 33.1945, "lon": -96.5794, "score_total": 4.78}, {"county_fips": "48097", "county": "Cooke", "type": "rural", "population": 43782.0, "days_over_100F": 13.8, "pct_age_65_plus": 18.6, "pct_no_vehicle": 4.8, "stroke_rate": 3.1, "neurologists": 0.0, "neurologists_per_100k": 0.0, "er_drive_min_popw": 15.2, "er_drive_mi_popw": 8.0, "pct_pop_er_over_15min": 46.1, "neuro_hub_drive_min_popw": 40.6, "neuro_hub_drive_mi_popw": 31.1, "pct_pop_hub_over_30min": 100.0, "pct_pop_hub_over_45min": 30.3, "stroke_l1_l2_min_popw": 73.6, "stroke_l1_l2_mi_popw": 57.5, "pct_pop_stroke_l1_l2_over_45min": 100.0, "pct_pop_stroke_l1_l2_over_60min": 100.0, "stroke_l1_l3_min_popw": 40.3, "source_notes": "heat: NOAA USC00413420 (GAINESVILLE 5 ENE, 14.0 km from center, 100.0% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (0 / 43782); drive: OSRM tract pop-weighted (9 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 33.6392, "lon": -97.2103, "score_total": 13.94}, {"county_fips": "48113", "county": "Dallas", "type": "urban", "population": 2606358.0, "days_over_100F": 23.7, "pct_age_65_plus": 11.5, "pct_no_vehicle": 6.8, "stroke_rate": 3.3, "neurologists": 261.0, "neurologists_per_100k": 10.0, "er_drive_min_popw": 9.1, "er_drive_mi_popw": 4.4, "pct_pop_er_over_15min": 7.0, "neuro_hub_drive_min_popw": 9.1, "neuro_hub_drive_mi_popw": 4.4, "pct_pop_hub_over_30min": 0.0, "pct_pop_hub_over_45min": 0.0, "stroke_l1_l2_min_popw": 13.4, "stroke_l1_l2_mi_popw": 7.9, "pct_pop_stroke_l1_l2_over_45min": 0.0, "pct_pop_stroke_l1_l2_over_60min": 0.0, "stroke_l1_l3_min_popw": 9.8, "source_notes": "heat: NOAA USW00013960 (DALLAS FAA AP, 9.6 km from center, 100.0% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (261 / 2606358); drive: OSRM tract pop-weighted (645 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.767, "lon": -96.7784, "score_total": 13.22}, {"county_fips": "48121", "county": "Denton", "type": "urban", "population": 1007703.0, "days_over_100F": 17.2, "pct_age_65_plus": 11.2, "pct_no_vehicle": 3.4, "stroke_rate": 2.4, "neurologists": 17.0, "neurologists_per_100k": 1.7, "er_drive_min_popw": 9.0, "er_drive_mi_popw": 4.5, "pct_pop_er_over_15min": 12.2, "neuro_hub_drive_min_popw": 9.0, "neuro_hub_drive_mi_popw": 4.5, "pct_pop_hub_over_30min": 0.0, "pct_pop_hub_over_45min": 0.0, "stroke_l1_l2_min_popw": 23.5, "stroke_l1_l2_mi_popw": 15.5, "pct_pop_stroke_l1_l2_over_45min": 3.6, "pct_pop_stroke_l1_l2_over_60min": 0.0, "stroke_l1_l3_min_popw": 10.8, "source_notes": "heat: NOAA USC00412404 (DENTON 2 SE, 1.6 km from center, 99.8% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (17 / 1007703); drive: OSRM tract pop-weighted (193 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 33.2051, "lon": -97.1211, "score_total": 9.11}, {"county_fips": "48139", "county": "Ellis", "type": "rural", "population": 222829.0, "days_over_100F": 17.7, "pct_age_65_plus": 12.9, "pct_no_vehicle": 3.2, "stroke_rate": 2.9, "neurologists": 1.0, "neurologists_per_100k": 0.4, "er_drive_min_popw": 13.4, "er_drive_mi_popw": 6.4, "pct_pop_er_over_15min": 33.3, "neuro_hub_drive_min_popw": 26.3, "neuro_hub_drive_mi_popw": 16.9, "pct_pop_hub_over_30min": 29.9, "pct_pop_hub_over_45min": 3.8, "stroke_l1_l2_min_popw": 38.7, "stroke_l1_l2_mi_popw": 28.2, "pct_pop_stroke_l1_l2_over_45min": 24.1, "pct_pop_stroke_l1_l2_over_60min": 1.1, "stroke_l1_l3_min_popw": 17.6, "source_notes": "heat: NOAA USW00053966 (MID WAY RGNL AP, 16.3 km from center, 96.7% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (1 / 222829); drive: OSRM tract pop-weighted (36 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.3469, "lon": -96.7969, "score_total": 11.83}, {"county_fips": "48143", "county": "Erath", "type": "rural", "population": 44195.0, "days_over_100F": 21.3, "pct_age_65_plus": 14.5, "pct_no_vehicle": 4.6, "stroke_rate": 3.1, "neurologists": 0.0, "neurologists_per_100k": 0.0, "er_drive_min_popw": 11.1, "er_drive_mi_popw": 6.0, "pct_pop_er_over_15min": 33.4, "neuro_hub_drive_min_popw": 84.8, "neuro_hub_drive_mi_popw": 65.2, "pct_pop_hub_over_30min": 100.0, "pct_pop_hub_over_45min": 100.0, "stroke_l1_l2_min_popw": 90.6, "stroke_l1_l2_mi_popw": 70.7, "pct_pop_stroke_l1_l2_over_45min": 100.0, "pct_pop_stroke_l1_l2_over_60min": 100.0, "stroke_l1_l3_min_popw": 50.0, "source_notes": "heat: NOAA USW00003969 (STEPHENVILLE CLARK FLD, 4.7 km from center, 99.3% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (0 / 44195); drive: OSRM tract pop-weighted (12 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.2367, "lon": -98.2205, "score_total": 16.72}, {"county_fips": "48147", "county": "Fannin", "type": "rural", "population": 37571.0, "days_over_100F": 15.2, "pct_age_65_plus": 17.8, "pct_no_vehicle": 3.3, "stroke_rate": 3.3, "neurologists": 0.0, "neurologists_per_100k": 0.0, "er_drive_min_popw": 16.5, "er_drive_mi_popw": 10.2, "pct_pop_er_over_15min": 61.5, "neuro_hub_drive_min_popw": 42.0, "neuro_hub_drive_mi_popw": 33.3, "pct_pop_hub_over_30min": 100.0, "pct_pop_hub_over_45min": 28.1, "stroke_l1_l2_min_popw": 71.8, "stroke_l1_l2_mi_popw": 59.0, "pct_pop_stroke_l1_l2_over_45min": 100.0, "pct_pop_stroke_l1_l2_over_60min": 88.4, "stroke_l1_l3_min_popw": 37.8, "source_notes": "heat: NOAA USC00410923 (BONHAM 3NNE, 7.9 km from center, 97.9% complete, 9 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (0 / 37571); drive: OSRM tract pop-weighted (9 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 33.5912, "lon": -96.105, "score_total": 14.78}, {"county_fips": "48161", "county": "Freestone", "type": "rural", "population": 20441.0, "days_over_100F": 11.4, "pct_age_65_plus": 20.0, "pct_no_vehicle": 3.1, "stroke_rate": 3.4, "neurologists": 0.0, "neurologists_per_100k": 0.0, "er_drive_min_popw": 16.8, "er_drive_mi_popw": 8.9, "pct_pop_er_over_15min": 59.6, "neuro_hub_drive_min_popw": 108.8, "neuro_hub_drive_mi_popw": 85.1, "pct_pop_hub_over_30min": 100.0, "pct_pop_hub_over_45min": 100.0, "stroke_l1_l2_min_popw": 112.3, "stroke_l1_l2_mi_popw": 86.7, "pct_pop_stroke_l1_l2_over_45min": 100.0, "pct_pop_stroke_l1_l2_over_60min": 100.0, "stroke_l1_l3_min_popw": 93.3, "source_notes": "heat: NOAA USW00053968 (PALESTINE 6 WNW, 40.8 km from center, 99.6% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (0 / 20441); drive: OSRM tract pop-weighted (8 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 31.7017, "lon": -96.145, "score_total": 13.56}, {"county_fips": "48181", "county": "Grayson", "type": "rural", "population": 146907.0, "days_over_100F": 6.4, "pct_age_65_plus": 17.9, "pct_no_vehicle": 3.9, "stroke_rate": 3.0, "neurologists": 10.0, "neurologists_per_100k": 6.8, "er_drive_min_popw": 15.3, "er_drive_mi_popw": 9.2, "pct_pop_er_over_15min": 45.5, "neuro_hub_drive_min_popw": 15.3, "neuro_hub_drive_mi_popw": 9.2, "pct_pop_hub_over_30min": 12.7, "pct_pop_hub_over_45min": 0.0, "stroke_l1_l2_min_popw": 63.1, "stroke_l1_l2_mi_popw": 51.5, "pct_pop_stroke_l1_l2_over_45min": 94.5, "pct_pop_stroke_l1_l2_over_60min": 52.9, "stroke_l1_l3_min_popw": 19.0, "source_notes": "heat: NOAA USC00418274 (SHERMAN, 9.3 km from center, 98.7% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (10 / 146907); drive: OSRM tract pop-weighted (30 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 33.6245, "lon": -96.6758, "score_total": 7.89}, {"county_fips": "48213", "county": "Henderson", "type": "rural", "population": 86158.0, "days_over_100F": 10.6, "pct_age_65_plus": 22.4, "pct_no_vehicle": 5.3, "stroke_rate": 3.3, "neurologists": 2.0, "neurologists_per_100k": 2.3, "er_drive_min_popw": 22.7, "er_drive_mi_popw": 15.4, "pct_pop_er_over_15min": 74.1, "neuro_hub_drive_min_popw": 52.6, "neuro_hub_drive_mi_popw": 40.1, "pct_pop_hub_over_30min": 86.6, "pct_pop_hub_over_45min": 74.5, "stroke_l1_l2_min_popw": 53.2, "stroke_l1_l2_mi_popw": 41.2, "pct_pop_stroke_l1_l2_over_45min": 74.5, "pct_pop_stroke_l1_l2_over_60min": 37.2, "stroke_l1_l3_min_popw": 53.1, "source_notes": "heat: NOAA USC00410404 (ATHENS, 5.8 km from center, 98.5% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (2 / 86158); drive: OSRM tract pop-weighted (28 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.2116, "lon": -95.8534, "score_total": 12.06}, {"county_fips": "48217", "county": "Hill", "type": "rural", "population": 38101.0, "days_over_100F": 19.4, "pct_age_65_plus": 20.3, "pct_no_vehicle": 6.2, "stroke_rate": 3.2, "neurologists": 0.0, "neurologists_per_100k": 0.0, "er_drive_min_popw": 22.3, "er_drive_mi_popw": 13.8, "pct_pop_er_over_15min": 69.1, "neuro_hub_drive_min_popw": 70.8, "neuro_hub_drive_mi_popw": 52.5, "pct_pop_hub_over_30min": 100.0, "pct_pop_hub_over_45min": 100.0, "stroke_l1_l2_min_popw": 80.9, "stroke_l1_l2_mi_popw": 67.2, "pct_pop_stroke_l1_l2_over_45min": 100.0, "pct_pop_stroke_l1_l2_over_60min": 100.0, "stroke_l1_l3_min_popw": 54.7, "source_notes": "heat: NOAA USC00414182 (HILLSBORO, 4.2 km from center, 99.3% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (0 / 38101); drive: OSRM tract pop-weighted (12 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 31.9827, "lon": -97.1307, "score_total": 19.89}, {"county_fips": "48221", "county": "Hood", "type": "rural", "population": 67774.0, "days_over_100F": 34.2, "pct_age_65_plus": 25.4, "pct_no_vehicle": 2.2, "stroke_rate": 2.6, "neurologists": 1.0, "neurologists_per_100k": 1.5, "er_drive_min_popw": 19.7, "er_drive_mi_popw": 8.5, "pct_pop_er_over_15min": 61.4, "neuro_hub_drive_min_popw": 49.4, "neuro_hub_drive_mi_popw": 33.4, "pct_pop_hub_over_30min": 100.0, "pct_pop_hub_over_45min": 57.6, "stroke_l1_l2_min_popw": 55.7, "stroke_l1_l2_mi_popw": 38.8, "pct_pop_stroke_l1_l2_over_45min": 100.0, "pct_pop_stroke_l1_l2_over_60min": 22.8, "stroke_l1_l3_min_popw": 19.7, "source_notes": "heat: NOAA USW00053977 (GRANBURY MUNI AP, 2.1 km from center, 95.7% complete, 9 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (1 / 67774); drive: OSRM tract pop-weighted (14 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.4301, "lon": -97.8317, "score_total": 15.78}, {"county_fips": "48223", "county": "Hopkins", "type": "rural", "population": 38172.0, "days_over_100F": 11.5, "pct_age_65_plus": 18.4, "pct_no_vehicle": 3.9, "stroke_rate": 3.2, "neurologists": 0.0, "neurologists_per_100k": 0.0, "er_drive_min_popw": 12.4, "er_drive_mi_popw": 7.3, "pct_pop_er_over_15min": 41.8, "neuro_hub_drive_min_popw": 74.4, "neuro_hub_drive_mi_popw": 60.9, "pct_pop_hub_over_30min": 100.0, "pct_pop_hub_over_45min": 100.0, "stroke_l1_l2_min_popw": 90.9, "stroke_l1_l2_mi_popw": 64.9, "pct_pop_stroke_l1_l2_over_45min": 100.0, "pct_pop_stroke_l1_l2_over_60min": 100.0, "stroke_l1_l3_min_popw": 13.7, "source_notes": "heat: NOAA USC00418743 (SULPHUR SPRINGS, 5.7 km from center, 98.9% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (0 / 38172); drive: OSRM tract pop-weighted (10 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 33.149, "lon": -95.5654, "score_total": 12.83}, {"county_fips": "48231", "county": "Hunt", "type": "rural", "population": 113347.0, "days_over_100F": 15.4, "pct_age_65_plus": 15.6, "pct_no_vehicle": 4.0, "stroke_rate": 3.2, "neurologists": 0.0, "neurologists_per_100k": 0.0, "er_drive_min_popw": 19.0, "er_drive_mi_popw": 11.9, "pct_pop_er_over_15min": 63.9, "neuro_hub_drive_min_popw": 45.1, "neuro_hub_drive_mi_popw": 32.5, "pct_pop_hub_over_30min": 100.0, "pct_pop_hub_over_45min": 37.6, "stroke_l1_l2_min_popw": 60.5, "stroke_l1_l2_mi_popw": 48.7, "pct_pop_stroke_l1_l2_over_45min": 100.0, "pct_pop_stroke_l1_l2_over_60min": 37.6, "stroke_l1_l3_min_popw": 19.1, "source_notes": "heat: NOAA USW00013926 (GREENVILLE MUNI AP MAJORS FLD, 6.4 km from center, 98.1% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (0 / 113347); drive: OSRM tract pop-weighted (21 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 33.1233, "lon": -96.0842, "score_total": 14.78}, {"county_fips": "48251", "county": "Johnson", "type": "rural", "population": 202906.0, "days_over_100F": 14.7, "pct_age_65_plus": 14.0, "pct_no_vehicle": 2.6, "stroke_rate": 3.0, "neurologists": 2.0, "neurologists_per_100k": 1.0, "er_drive_min_popw": 15.0, "er_drive_mi_popw": 8.3, "pct_pop_er_over_15min": 44.1, "neuro_hub_drive_min_popw": 23.6, "neuro_hub_drive_mi_popw": 13.7, "pct_pop_hub_over_30min": 25.2, "pct_pop_hub_over_45min": 5.6, "stroke_l1_l2_min_popw": 35.2, "stroke_l1_l2_mi_popw": 24.6, "pct_pop_stroke_l1_l2_over_45min": 11.5, "pct_pop_stroke_l1_l2_over_60min": 2.4, "stroke_l1_l3_min_popw": 21.8, "source_notes": "heat: NOAA USC00411246 (BURLESON, 14.3 km from center, 97.9% complete, 9 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (2 / 202906); drive: OSRM tract pop-weighted (39 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.3797, "lon": -97.3649, "score_total": 9.17}, {"county_fips": "48257", "county": "Kaufman", "type": "rural", "population": 185690.0, "days_over_100F": 16.4, "pct_age_65_plus": 10.9, "pct_no_vehicle": 3.1, "stroke_rate": 3.1, "neurologists": 0.0, "neurologists_per_100k": 0.0, "er_drive_min_popw": 18.3, "er_drive_mi_popw": 11.1, "pct_pop_er_over_15min": 71.4, "neuro_hub_drive_min_popw": 28.6, "neuro_hub_drive_mi_popw": 20.0, "pct_pop_hub_over_30min": 38.4, "pct_pop_hub_over_45min": 13.3, "stroke_l1_l2_min_popw": 42.4, "stroke_l1_l2_mi_popw": 32.2, "pct_pop_stroke_l1_l2_over_45min": 39.3, "pct_pop_stroke_l1_l2_over_60min": 9.8, "stroke_l1_l3_min_popw": 28.6, "source_notes": "heat: NOAA USW00053911 (TERRELL MUNI AP, 12.8 km from center, 99.7% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (0 / 185690); drive: OSRM tract pop-weighted (27 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.5989, "lon": -96.2884, "score_total": 12.56}, {"county_fips": "48349", "county": "Navarro", "type": "rural", "population": 55635.0, "days_over_100F": 16.0, "pct_age_65_plus": 16.7, "pct_no_vehicle": 5.1, "stroke_rate": 3.7, "neurologists": 0.0, "neurologists_per_100k": 0.0, "er_drive_min_popw": 16.2, "er_drive_mi_popw": 8.0, "pct_pop_er_over_15min": 43.5, "neuro_hub_drive_min_popw": 69.1, "neuro_hub_drive_mi_popw": 52.6, "pct_pop_hub_over_30min": 100.0, "pct_pop_hub_over_45min": 100.0, "stroke_l1_l2_min_popw": 75.2, "stroke_l1_l2_mi_popw": 61.7, "pct_pop_stroke_l1_l2_over_45min": 100.0, "pct_pop_stroke_l1_l2_over_60min": 100.0, "stroke_l1_l3_min_popw": 56.0, "source_notes": "heat: NOAA USW00053912 (CORSICANA CAMPBELL FLD, 7.5 km from center, 99.4% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (0 / 55635); drive: OSRM tract pop-weighted (12 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.0484, "lon": -96.4769, "score_total": 16.72}, {"county_fips": "48367", "county": "Parker", "type": "rural", "population": 173494.0, "days_over_100F": 28.7, "pct_age_65_plus": 15.8, "pct_no_vehicle": 2.3, "stroke_rate": 2.7, "neurologists": 2.0, "neurologists_per_100k": 1.2, "er_drive_min_popw": 19.4, "er_drive_mi_popw": 9.6, "pct_pop_er_over_15min": 75.1, "neuro_hub_drive_min_popw": 35.9, "neuro_hub_drive_mi_popw": 20.5, "pct_pop_hub_over_30min": 64.7, "pct_pop_hub_over_45min": 19.2, "stroke_l1_l2_min_popw": 41.4, "stroke_l1_l2_mi_popw": 28.1, "pct_pop_stroke_l1_l2_over_45min": 31.8, "pct_pop_stroke_l1_l2_over_60min": 10.5, "stroke_l1_l3_min_popw": 23.8, "source_notes": "heat: NOAA USW00093985 (MINERAL WELLS AP, 23.8 km from center, 99.8% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (2 / 173494); drive: OSRM tract pop-weighted (29 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.7771, "lon": -97.8059, "score_total": 14.11}, {"county_fips": "48379", "county": "Rains", "type": "rural", "population": 12986.0, "days_over_100F": 8.5, "pct_age_65_plus": 24.2, "pct_no_vehicle": 3.0, "stroke_rate": 3.0, "neurologists": 0.0, "neurologists_per_100k": 0.0, "er_drive_min_popw": 33.1, "er_drive_mi_popw": 22.8, "pct_pop_er_over_15min": 100.0, "neuro_hub_drive_min_popw": 66.8, "neuro_hub_drive_mi_popw": 49.5, "pct_pop_hub_over_30min": 100.0, "pct_pop_hub_over_45min": 100.0, "stroke_l1_l2_min_popw": 70.1, "stroke_l1_l2_mi_popw": 51.9, "pct_pop_stroke_l1_l2_over_45min": 100.0, "pct_pop_stroke_l1_l2_over_60min": 100.0, "stroke_l1_l3_min_popw": 34.8, "source_notes": "heat: NOAA USC00414980 (LAKE TAWAKONI, 8.7 km from center, 99.6% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (0 / 12986); drive: OSRM tract pop-weighted (3 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.8705, "lon": -95.7956, "score_total": 11.56}, {"county_fips": "48397", "county": "Rockwall", "type": "rural", "population": 131307.0, "days_over_100F": 16.4, "pct_age_65_plus": 12.5, "pct_no_vehicle": 1.7, "stroke_rate": 2.4, "neurologists": 3.0, "neurologists_per_100k": 2.3, "er_drive_min_popw": 10.2, "er_drive_mi_popw": 5.6, "pct_pop_er_over_15min": 16.9, "neuro_hub_drive_min_popw": 14.7, "neuro_hub_drive_mi_popw": 7.8, "pct_pop_hub_over_30min": 0.0, "pct_pop_hub_over_45min": 0.0, "stroke_l1_l2_min_popw": 29.8, "stroke_l1_l2_mi_popw": 22.1, "pct_pop_stroke_l1_l2_over_45min": 0.0, "pct_pop_stroke_l1_l2_over_60min": 0.0, "stroke_l1_l3_min_popw": 14.7, "source_notes": "heat: NOAA USW00053911 (TERRELL MUNI AP, 24.7 km from center, 99.7% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (3 / 131307); drive: OSRM tract pop-weighted (29 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.8999, "lon": -96.412, "score_total": 8.17}, {"county_fips": "48439", "county": "Tarrant", "type": "urban", "population": 2182947.0, "days_over_100F": 13.0, "pct_age_65_plus": 12.0, "pct_no_vehicle": 4.4, "stroke_rate": 3.0, "neurologists": 85.0, "neurologists_per_100k": 3.9, "er_drive_min_popw": 9.1, "er_drive_mi_popw": 4.5, "pct_pop_er_over_15min": 8.8, "neuro_hub_drive_min_popw": 9.1, "neuro_hub_drive_mi_popw": 4.5, "pct_pop_hub_over_30min": 0.2, "pct_pop_hub_over_45min": 0.0, "stroke_l1_l2_min_popw": 14.7, "stroke_l1_l2_mi_popw": 8.2, "pct_pop_stroke_l1_l2_over_45min": 0.0, "pct_pop_stroke_l1_l2_over_60min": 0.0, "stroke_l1_l3_min_popw": 9.6, "source_notes": "heat: NOAA USC00413285 (FT WORTH WSFO, 6.9 km from center, 100.0% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (85 / 2182947); drive: OSRM tract pop-weighted (449 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.7721, "lon": -97.2912, "score_total": 7.17}, {"county_fips": "48467", "county": "Van Zandt", "type": "rural", "population": 64000.0, "days_over_100F": 14.4, "pct_age_65_plus": 20.2, "pct_no_vehicle": 3.0, "stroke_rate": 3.1, "neurologists": 0.0, "neurologists_per_100k": 0.0, "er_drive_min_popw": 42.3, "er_drive_mi_popw": 28.0, "pct_pop_er_over_15min": 100.0, "neuro_hub_drive_min_popw": 55.1, "neuro_hub_drive_mi_popw": 38.8, "pct_pop_hub_over_30min": 100.0, "pct_pop_hub_over_45min": 84.3, "stroke_l1_l2_min_popw": 57.8, "stroke_l1_l2_mi_popw": 43.8, "pct_pop_stroke_l1_l2_over_45min": 84.3, "pct_pop_stroke_l1_l2_over_60min": 38.9, "stroke_l1_l3_min_popw": 53.8, "source_notes": "heat: NOAA USC00419800 (WILLS PT, 23.1 km from center, 99.8% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (0 / 64000); drive: OSRM tract pop-weighted (14 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 32.5588, "lon": -95.8369, "score_total": 14.0}, {"county_fips": "48497", "county": "Wise", "type": "rural", "population": 78097.0, "days_over_100F": 18.3, "pct_age_65_plus": 15.4, "pct_no_vehicle": 1.6, "stroke_rate": 2.9, "neurologists": 2.0, "neurologists_per_100k": 2.6, "er_drive_min_popw": 23.2, "er_drive_mi_popw": 12.9, "pct_pop_er_over_15min": 85.6, "neuro_hub_drive_min_popw": 41.6, "neuro_hub_drive_mi_popw": 26.3, "pct_pop_hub_over_30min": 79.6, "pct_pop_hub_over_45min": 37.8, "stroke_l1_l2_min_popw": 57.1, "stroke_l1_l2_mi_popw": 42.0, "pct_pop_stroke_l1_l2_over_45min": 81.4, "pct_pop_stroke_l1_l2_over_60min": 45.2, "stroke_l1_l3_min_popw": 22.3, "source_notes": "heat: NOAA USW00053964 (DECATUR MUNI AP, 7.9 km from center, 98.5% complete, 10 yrs); 65+ & no-vehicle: Census ACS 2019-2023; stroke: CDC PLACES 2023; neuro: HRSA AHRF 2023 (2 / 78097); drive: OSRM tract pop-weighted (16 tracts, CMS ER + TX DSHS Stroke L1-L2 & L1-L3)", "lat": 33.2191, "lon": -97.654, "score_total": 12.61}];
+const ERS = [["THE HOSPITALS OF PROVIDENCE - MEMORIAL CAMPUS", "EL PASO", 31.7713, -106.4996], ["PETERSON REGIONAL MEDICAL CENTER", "KERR", 30.0434, -99.1508], ["UNITED REGIONAL HEALTH CARE SYSTEM", "WICHITA", 33.903, -98.5004], ["CHI ST JOSEPH HEALTH REGIONAL HOSPITAL", "BRAZOS", 30.6556, -96.3473], ["PARKLAND HEALTH & HOSPITAL SYSTEM", "DALLAS", 32.8116, -96.8368], ["UNIVERSITY OF TEXAS MEDICAL BRANCH GALVESTON", "GALVESTON", 29.3104, -94.7745], ["BAYLOR UNIVERSITY MEDICAL CENTER", "DALLAS", 32.7905, -96.7809], ["CITIZENS MEDICAL CENTER", "VICTORIA", 28.8132, -96.9767], ["UNIVERSITY MEDICAL CENTER OF EL PASO", "EL PASO", 31.7707, -106.4343], ["VALLEY BAPTIST MEDICAL CENTER- BROWNSVILLE", "CAMERON", 25.9175, -97.5114], ["LAREDO MEDICAL CENTER", "WEBB", 27.5306, -99.4794], ["CHRISTUS GOOD SHEPHERD MEDICAL CENTER", "GREGG", 32.5015, -94.7314], ["VHS HARLINGEN HOSPITAL COMPANY LLC", "CAMERON", 26.1745, -97.6715], ["CHRISTUS SOUTHEAST TEXAS- ST ELIZABETH", "JEFFERSON", 30.0857, -94.1313], ["ST JOSEPH MEDICAL CENTER", "HARRIS", 29.7482, -95.3667], ["JPS HEALTH NETWORK", "TARRANT", 32.7281, -97.3265], ["COVENANT MEDICAL CENTER", "LUBBOCK", 33.5778, -101.8922], ["ASCENSION PROVIDENCE", "MC LENNAN", 31.5146, -97.198], ["UT OF TEXAS  SOUTHWESTERN UNIVERSITY HOSPITAL - WILLIAM P. CLEMENTS JR.", "DALLAS", 32.8198, -96.8472], ["CHRISTUS SPOHN HOSPITAL CORPUS CHRISTI", "NUECES", 27.7779, -97.3951], ["METHODIST DALLAS MEDICAL CENTER", "DALLAS", 32.7613, -96.823], ["BAYLOR SCOTT & WHITE MEDICAL CENTER - TEMPLE", "BELL", 31.0787, -97.3659], ["ROLLING PLAINS MEMORIAL HOSPITAL", "NOLAN", 32.4538, -100.3982], ["ASCENSION SETON MEDICAL CENTER AUSTIN", "TRAVIS", 30.306, -97.745], ["BAPTIST MEDICAL CENTER", "BEXAR", 29.433, -98.4926], ["TEXAS HEALTH ARLINGTON MEMORIAL HOSPITAL", "TARRANT", 32.7501, -97.1161], ["MEMORIAL HERMANN - TEXAS MEDICAL CENTER", "HARRIS", 29.7151, -95.3965], ["CHI ST LUKE'S HEALTH BRAZOSPORT", "BRAZORIA", 29.0275, -95.4505], ["TITUS REGIONAL MEDICAL CENTER", "TITUS", 33.1756, -94.9714], ["CHRISTUS SPOHN HOSPITAL BEEVILLE", "BEE", 28.4079, -97.7326], ["UT HEALTH EAST TEXAS TYLER REGIONAL HOSPITAL", "SMITH", 32.3387, -95.2918], ["MEDICAL CITY NORTH HILLS", "TARRANT", 32.8291, -97.2123], ["NORTH TEXAS MEDICAL CENTER", "COOKE", 33.6447, -97.1625], ["FORT DUNCAN MEDICAL CENTER", "MAVERICK", 28.7122, -100.454], ["HCA HOUSTON HEALTHCARE SOUTHEAST", "HARRIS", 29.6651, -95.1823], ["BAYLOR SCOTT & WHITE MEDICAL CENTER HILLCREST", "MC LENNAN", 31.4889, -97.1571], ["CHRISTUS MOTHER FRANCES HOSPITAL", "SMITH", 32.3423, -95.2926], ["GUADALUPE REGIONAL MEDICAL CENTER", "GUADALUPE", 29.569, -97.9473], ["LAS PALMAS MEDICAL CENTER A CAMPUS OF LPDS HEALTHC", "EL PASO", 31.7699, -106.4983], ["CONNALLY MEMORIAL MEDICAL CENTER", "WILSON", 29.1626, -98.1765], ["SOUTH TEXAS HEALTH SYSTEM", "HIDALGO", 26.2633, -98.1831], ["KNAPP MEDICAL CENTER", "HIDALGO", 26.1521, -97.9786], ["MEDICAL CENTER HOSPITAL", "ECTOR", 31.8497, -102.3646], ["MIDLAND MEMORIAL HOSPITAL", "MIDLAND", 31.9971, -102.0996], ["TEXAS HEALTH HARRIS METHODIST FORT WORTH", "TARRANT", 32.7384, -97.3388], ["BAYLOR SCOTT AND WHITE ALL SAINTS MEDICAL CENTER", "TARRANT", 32.7296, -97.3438], ["PERMIAN REGIONAL MEDICAL CENTER ANDREWS COUNTY HO", "ANDREWS", 32.3385, -102.5474], ["DE TAR HOSPITAL NAVARRO", "VICTORIA", 28.8077, -97.008], ["TEXAS HEALTH HARRIS METHODIST HOSPITAL CLEBURNE", "JOHNSON", 32.3327, -97.439], ["ADVENTHEALTH CENTRAL TEXAS", "BELL", 31.1165, -97.7984], ["VAL VERDE REGIONAL MEDICAL CENTER", "VAL VERDE", 29.3741, -100.8925], ["HEREFORD REGIONAL MEDICAL CENTER", "DEAF SMITH", 34.8204, -102.3918], ["CHRISTUS SPOHN HOSPITAL KLEBERG", "KLEBERG", 27.4913, -97.8517], ["METHODIST HOSPITAL ATASCOSA", "ATASCOSA", 28.9209, -98.5776], ["MISSION REGIONAL MEDICAL CENTER", "HIDALGO", 26.1976, -98.3126], ["MEMORIAL HERMANN HOSPITAL SYSTEM", "HARRIS", 29.8123, -95.4295], ["Baylor St Lukes Medical Center", "HARRIS", 29.7086, -95.3991], ["UT HEALTH EAST TEXAS JACKSONVILLE HOSPITAL", "CHEROKEE", 31.9614, -95.2706], ["PARIS REGIONAL MEDICAL CENTER", "LAMAR", 33.6861, -95.5458], ["WADLEY REGIONAL MEDICAL CENTER", "BOWIE", 33.428, -94.0468], ["MEDICAL CITY WEATHERFORD", "PARKER", 32.7476, -97.7871], ["NORTHWEST TEXAS HOSPITAL", "POTTER", 35.1994, -101.9218], ["UT HEALTH EAST TEXAS CARTHAGE HOSPITAL", "PANOLA", 32.167, -94.346], ["CHI ST LUKES HEALTH MEMORIAL LUFKIN", "ANGELINA", 31.3375, -94.7417], ["UNIVERSITY HEALTH SYSTEM", "BEXAR", 29.509, -98.574], ["HCA HOUSTON HEALTHCARE CONROE", "MONTGOMERY", 30.2845, -95.4662], ["HENDRICK MEDICAL CENTER", "TAYLOR", 32.4716, -99.7312], ["BSA HOSPITAL", "POTTER", 35.1949, -101.9198], ["CHRISTUS MOTHER FRANCES HOSPITAL SULPHUR SPRINGS", "HOPKINS", 33.1562, -95.5993], ["CHRISTUS SANTA ROSA MEDICAL CENTER", "BEXAR", 29.5128, -98.5902], ["FAITH COMMUNITY HOSPITAL", "JACK", 33.231, -98.1667], ["BELLVILLE MEDICAL CENTER", "AUSTIN", 29.9504, -96.2617], ["CHRISTUS SANTA ROSA HOSPITAL-SAN MARCOS", "HAYS", 29.8524, -97.9477], ["HARRIS HEALTH", "HARRIS", 29.7126, -95.3938], ["TEXAS HEALTH PRESBYTERIAN HOSPITAL KAUFMAN", "KAUFMAN", 32.5919, -96.3182], ["TEXOMA MEDICAL CENTER", "GRAYSON", 33.7103, -96.5854], ["OAKBEND MEDICAL CENTER", "FORT BEND", 29.5783, -95.7706], ["BAPTIST BEAUMONT HOSPITAL", "JEFFERSON", 30.0685, -94.1201], ["HUNTSVILLE MEMORIAL HOSPITAL", "WALKER", 30.6984, -95.559], ["TEXAS HEALTH HARRIS METHODIST HOSPITAL STEPHENVILL", "ERATH", 32.2223, -98.2042], ["HUNT REGIONAL MEDICAL CENTER", "HUNT", 33.123, -96.1221], ["HOUSTON METHODIST HOSPITAL", "HARRIS", 29.7113, -95.3995], ["CHILDRESS REGIONAL MEDICAL CENTER", "CHILDRESS", 34.4392, -100.2274], ["COLUMBUS COMMUNITY HOSPITAL", "COLORADO", 29.6947, -96.5409], ["BAYLOR SCOTT & WHITE MEDICAL CENTER- WAXAHACHIE", "ELLIS", 32.4273, -96.858], ["DALLAS MEDICAL CENTER", "DALLAS", 32.9148, -96.8712], ["METHODIST HOSPITAL", "BEXAR", 29.5074, -98.5734], ["UT HEALTH EAST TEXAS ATHENS HOSPITAL", "HENDERSON", 32.1713, -95.844], ["BROWNFIELD REGIONAL MEDICAL CENTER", "TERRY", 33.1871, -102.2682], ["PARKVIEW REGIONAL HOSPITAL", "LIMESTONE", 31.6731, -96.4798], ["MEDICAL CENTER OF MCKINNEY", "COLLIN", 33.1615, -96.6355], ["TEXAS HEALTH HARRIS METHODIST HOSPITAL AZLE", "TARRANT", 32.8807, -97.5344], ["BAYLOR SCOTT AND WHITE MEDICAL CENTER UPTOWN", "DALLAS", 32.8041, -96.7944], ["HOUSTON METHODIST BAYTOWN HOSPITAL", "HARRIS", 29.769, -94.9776], ["ST DAVID'S MEDICAL CENTER", "TRAVIS", 30.2908, -97.7267], ["NAVARRO REGIONAL HOSPITAL", "NAVARRO", 32.0838, -96.5036], ["GLEN ROSE MEDICAL CENTER", "SOMERVELL", 32.2412, -97.7475], ["TYLER COUNTY HOSPITAL", "TYLER", 30.7754, -94.4282], ["TEXAS HEALTH PRESBYTERIAN HOSPITAL  DALLAS", "DALLAS", 32.8832, -96.7623], ["MATAGORDA REGIONAL MEDICAL CENTER", "MATAGORDA", 28.8342, -95.9384], ["WILSON N JONES REGIONAL MEDICAL CENTER", "GRAYSON", 33.6378, -96.6236], ["UT HEALTH EAST TEXAS HENDERSON HOSPITAL", "RUSK", 32.1616, -94.7964], ["WOODLAND HEIGHTS MEDICAL CENTER", "ANGELINA", 31.3284, -94.754], ["MEDICAL ARTS HOSPITAL", "DAWSON", 32.7497, -101.968], ["NACOGDOCHES MEMORIAL HOSPITAL", "NACOGDOCHES", 31.6134, -94.6494], ["THE MEDICAL CENTER OF SOUTHEAST TEXAS", "JEFFERSON", 29.9356, -93.9889], ["METHODIST RICHARDSON MEDICAL CENTER", "COLLIN", 32.9953, -96.6685], ["COVENANT HOSPITAL PLAINVIEW", "HALE", 34.2067, -101.7309], ["BAYLOR SCOTT & WHITE MEDICAL CENTER  GRAPEVINE", "TARRANT", 32.9339, -97.0941], ["PALO PINTO GENERAL HOSPITAL", "PALO PINTO", 32.7891, -98.1155], ["SHANNON MEDICAL CENTER", "TOM GREEN", 31.4645, -100.4352], ["CHRISTUS JASPER MEMORIAL HOSPITAL", "JASPER", 30.9142, -94.0082], ["WILBARGER GENERAL HOSPITAL", "WILBARGER", 34.1596, -99.3134], ["HENDRICK MEDICAL CENTER BROWNWOOD", "BROWN", 31.6803, -98.9883], ["LAKE GRANBURY MEDICAL CENTER", "HOOD", 32.4137, -97.8017], ["CUERO REGIONAL HOSPITAL", "DE WITT", 29.1127, -97.2817], ["METHODIST HOSPITAL HILL COUNTRY", "GILLESPIE", 30.2621, -98.8808], ["VA AMARILLO HEALTHCARE SYSTEM", "POTTER", 35.2028, -101.9057], ["MEMORIAL HERMANN MEMORIAL CITY HOSPITAL", "HARRIS", 29.7801, -95.5446], ["HCA HOUSTON HEALTHCARE CLEAR LAKE", "HARRIS", 29.541, -95.1279], ["MEDICAL CITY DENTON", "DENTON", 33.1758, -97.0924], ["TEXAS HEALTH HARRIS METHODIST HURST-EULESS-BEDFORD", "TARRANT", 32.8328, -97.1252], ["NOCONA GENERAL HOSPITAL", "MONTAGUE", 33.7777, -97.7316], ["DOCTORS HOSPITAL OF LAREDO", "WEBB", 27.6042, -99.4771], ["HCA HOUSTON HEALTHCARE WEST", "HARRIS", 29.7307, -95.593], ["MEDICAL CITY DALLAS HOSPITAL", "DALLAS", 32.9095, -96.7722], ["MEDICAL CITY PLANO", "COLLIN", 33.0194, -96.7658], ["SHANNON MEDICAL CENTER", "HOWARD", 32.24, -101.4921], ["STARR COUNTY MEMORIAL HOSPITAL", "STARR", 26.3762, -98.8601], ["NACOGDOCHES MEDICAL CENTER", "NACOGDOCHES", 31.6521, -94.6549], ["FREESTONE MEDICAL CENTER", "FREESTONE", 31.7251, -96.1697], ["HCA HOUSTON HEALTHCARE MEDICAL CENTER", "HARRIS", 29.7225, -95.3881], ["ODESSA REGIONAL MEDICAL CENTER", "ECTOR", 31.8512, -102.3663], ["VALLEY REGIONAL MEDICAL CENTER", "CAMERON", 25.979, -97.5161], ["SIERRA MEDICAL CENTER", "EL PASO", 31.7772, -106.4797], ["MEDICAL CITY LEWISVILLE", "DENTON", 33.0463, -97.0042], ["DALLAS VA MEDICAL CENTER (VA NORTH TEXAS HEALTHCARE SYSTEM)", "DALLAS", 32.6917, -96.7919], ["HCA HOUSTON HEALTHCARE TOMBALL", "HARRIS", 30.0893, -95.624], ["MEDICAL CITY FORT WORTH", "TARRANT", 32.7355, -97.3437], ["WOMANS HOSPITAL OF TEXAS,THE", "HARRIS", 29.6923, -95.4018], ["MEDICAL CITY ARLINGTON", "TARRANT", 32.6927, -97.1147], ["TEXAS HEALTH HUGULEY HOSPITAL FORT WORTH SOUTH", "TARRANT", 32.5862, -97.3166], ["WHITE ROCK MEDICAL CENTER", "DALLAS", 32.8355, -96.7049], ["MEMORIAL HERMANN NORTHEAST HOSPITAL", "HARRIS", 29.9963, -95.2748], ["UNIVERSITY MEDICAL CENTER", "LUBBOCK", 33.5908, -101.8881], ["DALLAS REGIONAL MEDICAL CENTER", "DALLAS", 32.7783, -96.6], ["EL CAMPO MEMORIAL HOSPITAL", "WHARTON", 29.2201, -96.2902], ["LAMB HEALTHCARE CENTER", "LAMB", 33.9125, -102.3454], ["Brooke Army Medical Center (FT Sam Houston)", "BEXAR", 29.4595, -98.417], ["LONGVIEW REGIONAL MEDICAL CENTER", "GREGG", 32.5321, -94.7289], ["HOUSTON METHODIST CLEAR LAKE HOSPITAL", "HARRIS", 29.5506, -95.0856], ["RIO GRANDE REGIONAL HOSPITAL", "HIDALGO", 26.1859, -98.2238], ["ST DAVID'S SOUTH AUSTIN MEDICAL CENTER", "TRAVIS", 30.2273, -97.7735], ["ROUND ROCK MEDICAL CENTER", "WILLIAMSON", 30.5096, -97.7118], ["METHODIST CHARLTON MEDICAL CENTER", "DALLAS", 32.6474, -96.8763], ["CARROLLTON REGIONAL MEDICAL CENTER", "DENTON", 33.0283, -96.8844], ["BAYLOR SCOTT AND WHITE MEDICAL CENTER LAKE POINTE", "DALLAS", 32.9232, -96.5093], ["TEXAS HEALTH PRESBYTERIAN HOSPITAL DENTON", "DENTON", 33.2174, -97.1654], ["PALESTINE REGIONAL MEDICAL CENTER", "ANDERSON", 31.734, -95.6276], ["HOUSTON VA MEDICAL CENTER", "HARRIS", 29.7059, -95.3901], ["COVENANT HOSPITAL LEVELLAND", "HOCKLEY", 33.5731, -102.3678], ["TEXAS HEALTH PRESBYTERIAN HOSPITAL PLANO", "COLLIN", 33.0451, -96.8359], ["HCA HOUSTON HEALTHCARE KINGWOOD", "HARRIS", 30.0505, -95.253], ["TEXAS HEALTH HARRIS METHODIST HOSPITAL SOUTHWEST F", "TARRANT", 32.66, -97.4203], ["CORPUS CHRISTI MEDICAL CENTER,THE", "NUECES", 27.7523, -97.387], ["CHRISTUS ST MICHAEL HEALTH SYSTEM", "BOWIE", 33.462, -94.0761], ["NORTH AUSTIN MEDICAL CENTER", "TRAVIS", 30.4126, -97.7076], ["MEDICAL CITY LAS COLINAS", "DALLAS", 32.902, -96.9586], ["CORNERSTONE REGIONAL HOSPITAL", "HIDALGO", 26.2645, -98.1986], ["CHRISTUS SPOHN HOSPITAL ALICE", "JIM WELLS", 27.7642, -98.0417], ["ENNIS REGIONAL MEDICAL CENTER", "ELLIS", 32.3085, -96.642], ["PHYSICIANS CENTRE,THE", "BRAZOS", 30.6484, -96.298], ["TEXAS HEALTH PRESBYTERIAN HOSPITAL ALLEN", "COLLIN", 33.0806, -96.6839], ["HOUSTON METHODIST WILLOWBROOK HOSPITAL", "HARRIS", 29.9671, -95.5511], ["MEMORIAL HERMANN KATY HOSPITAL", "FORT BEND", 29.7875, -95.7852], ["MEMORIAL HERMANN SUGAR LAND HOSPITAL", "FORT BEND", 29.5666, -95.6877], ["BAYLOR SCOTT & WHITE MEDICAL CENTER - FRISCO", "DENTON", 33.1067, -96.8387], ["HARLINGEN MEDICAL CENTER", "CAMERON", 26.1575, -97.6753], ["ST LUKE'S THE WOODLANDS HOSPITAL", "MONTGOMERY", 30.2048, -95.4597], ["BAYLOR SCOTT & WHITE TEXAS SPINE & JOINT HOSPITAL", "SMITH", 32.3297, -95.2994], ["ASCENSION SETON  SOUTHWEST", "HAYS", 30.2283, -97.8887], ["ASCENSION SETON NORTHWEST", "TRAVIS", 30.4049, -97.7449], ["DOCTORS HOSPITAL AT RENAISSANCE", "HIDALGO", 26.2527, -98.2042], ["USMD HOSPITAL AT ARLINGTON L P", "TARRANT", 32.6792, -97.1157], ["BAYLOR MEDICAL CENTER AT TROPHY CLUB", "DENTON", 32.9888, -97.1754], ["BAYLOR SCOTT &  WHITE MEDICAL CENTER - CENTENNIAL", "COLLIN", 33.1158, -96.7716], ["TEXAS HEALTH HARRIS METHODIST HOSPITAL SOUTHLAKE", "TARRANT", 32.9409, -97.1276], ["BAYLOR REGIONAL MEDICAL CENTER AT PLANO", "COLLIN", 33.0143, -96.7915], ["SAN ANTONIO VA MEDICAL CENTER (VA SOUTH TEXAS HEALTHCARE SYSTEM)", "BEXAR", 29.5084, -98.5809], ["PARMER COUNTY COMMUNITY HOSPITAL", "PARMER", 34.6434, -102.7212], ["REAGAN MEMORIAL HOSPITAL", "REAGAN", 31.2023, -101.4614], ["LIMESTONE MEDICAL CENTER", "LIMESTONE", 31.5314, -96.53], ["BURLESON ST JOSEPH HEALTH CENTER", "BURLESON", 30.5208, -96.7158], ["KIMBLE HOSPITAL", "KIMBLE", 30.5001, -99.7825], ["IRAAN GENERAL HOSPITAL", "PECOS", 30.9148, -101.9068], ["YOAKUM COUNTY HOSPITAL", "YOAKUM", 32.9681, -102.8363], ["BALLINGER MEMORIAL HOSPITAL", "RUNNELS", 31.7504, -99.962], ["SWEENY COMMUNITY HOSPITAL", "BRAZORIA", 29.0482, -95.6911], ["RICE MEDICAL CENTER", "COLORADO", 29.5879, -96.346], ["FISHER COUNTY HOSPITAL DISTRICT", "FISHER", 32.8394, -100.4425], ["WINKLER COUNTY MEMORIAL HOSPITAL", "WINKLER", 31.8501, -103.0901], ["NORTH RUNNELS HOSPITAL", "RUNNELS", 31.9497, -99.958], ["MADISON ST JOSEPH HEALTH CENTER", "MADISON", 30.9421, -95.91], ["STONEWALL MEMORIAL HOSPITAL DISTRICT", "STONEWALL", 33.1509, -100.2275], ["CHRISTUS MOTHER FRANCES HOSPITAL- JACKSONVILLE", "CHEROKEE", 31.9374, -95.2489], ["BAYSIDE COMMUNITY HOSPITAL", "CHAMBERS", 29.7521, -94.6868], ["GRIMES ST JOSEPH HEALTH CENTER", "GRIMES", 30.3932, -96.0773], ["ADVENTHEALTH ROLLINS BROOK", "LAMPASAS", 31.0718, -98.1855], ["LILLIAN M HUDSPETH MEMORIAL HOSPITAL", "SUTTON", 30.5638, -100.6347], ["CONCHO COUNTY HOSPITAL", "CONCHO", 31.2214, -99.8482], ["RICELAND MEDICAL CENTER", "CHAMBERS", 29.8205, -94.3764], ["MEDINA REGIONAL HOSPITAL", "MEDINA", 29.3358, -99.1335], ["PALACIOS COMMUNITY MEDICAL CENTER", "MATAGORDA", 28.7174, -96.2129], ["PARKVIEW HOSPITAL", "WHEELER", 35.4398, -100.2708], ["MUENSTER MEMORIAL HOSPITAL", "COOKE", 33.6547, -97.3799], ["W J MANGOLD MEMORIAL HOSPITAL", "FLOYD", 34.1273, -101.4416], ["CULBERSON HOSPITAL", "CULBERSON", 31.0489, -104.8272], ["THROCKMORTON COUNTY MEMORIAL HOSPITAL", "THROCKMORTON", 33.1909, -99.1772], ["SHAMROCK GENERAL HOSPITAL", "WHEELER", 35.1997, -100.2491], ["HASKELL MEMORIAL HOSPITAL", "HASKELL", 33.1569, -99.7442], ["ELECTRA MEMORIAL HOSPITAL", "WICHITA", 34.0198, -98.9241], ["HANSFORD COUNTY HOSPITAL", "HANSFORD", 36.1908, -101.2001], ["YOAKUM COMMUNITY HOSPITAL", "LAVACA", 29.3079, -97.1315], ["COLEMAN COUNTY MEDICAL CENTER COMPANY", "COLEMAN", 31.829, -99.4253], ["LYNN COUNTY HOSPITAL DISTRICT", "LYNN", 33.1666, -101.8152], ["HARDEMAN COUNTY MEMORIAL HOSPITAL", "HARDEMAN", 34.2969, -99.741], ["CRANE COUNTY HOSPITAL DISTRICT", "CRANE", 31.3905, -102.3494], ["HAMILTON HOSPITAL", "YOUNG", 33.369, -98.7642], ["COLLINGSWORTH GENERAL HOSPITAL", "COLLINGSWORTH", 34.849, -100.2119], ["MEMORIAL MEDICAL CENTER", "CALHOUN", 28.61, -96.6219], ["MEMORIAL HOSPITAL", "GAINES", 32.7214, -102.6538], ["OCHILTREE GENERAL HOSPITAL", "OCHILTREE", 36.3703, -100.7997], ["SABINE COUNTY HOSPITAL", "SABINE", 31.3592, -93.8032], ["CLAY COUNTY MEMORIAL HOSPITAL", "CLAY", 33.8139, -98.1975], ["JACKSON HEALTHCARE CENTER", "JACKSON", 28.9701, -96.6361], ["OTTO KAISER MEMORIAL HOSPITAL", "KARNES", 28.8482, -97.8778], ["ASCENSION SETON HIGHLAND LAKES", "BURNET", 30.7332, -98.2361], ["COCHRAN MEMORIAL HOSPITAL", "COCHRAN", 33.7193, -102.758], ["UT HEALTH EAST TEXAS PITTSBURG HOSPITAL", "CAMP", 33.0313, -94.9619], ["GOLDEN PLAINS COMMUNITY HOSPITAL", "HUTCHINSON", 35.6538, -101.409], ["TMC- BONHAM HOSPITAL", "FANNIN", 33.5767, -96.1675], ["ASCENSION SETON EDGAR B DAVIS", "CALDWELL", 29.6726, -97.6539], ["MULESHOE AREA MEDICAL CENTER", "BAILEY", 34.2214, -102.729], ["WARD MEMORIAL HOSPITAL", "WARD", 31.5939, -102.8845], ["BAYLOR SCOTT & WHITE MEDICAL CENTER -TAYLOR", "WILLIAMSON", 30.5925, -97.4133], ["LIBERTY DAYTON REGIONAL MEDICAL CENTER", "LIBERTY", 30.0687, -94.798], ["LAVACA MEDICAL CENTER", "LAVACA", 29.4607, -96.9397], ["REEVES REGIONAL HEALTH", "REEVES", 31.4016, -103.5129], ["BIG BEND REGIONAL MEDICAL CENTER", "BREWSTER", 30.3845, -103.6724], ["CORYELL MEMORIAL HOSPITAL", "CORYELL", 31.4336, -97.7761], ["UT HEALTH EAST TEXAS QUITMAN HOSPITAL", "WOOD", 32.7976, -95.444], ["CHRISTUS MOTHER FRANCES HOSPITAL- WINNSBORO", "WOOD", 32.948, -95.3051], ["COMANCHE COUNTY MEDICAL CENTER", "COMANCHE", 31.9893, -98.5632], ["COGDELL MEMORIAL HOSPITAL", "SCURRY", 32.6885, -100.9177], ["GOODALL WITCHER HOSPITAL", "BOSQUE", 31.7764, -97.5893], ["MEMORIAL HOSPITAL", "MOORE", 35.8643, -101.9714], ["UVALDE MEMORIAL HOSPITAL", "UVALDE", 29.2163, -99.7644], ["PECOS COUNTY MEMORIAL HOSPITAL", "PECOS", 30.9055, -102.8808], ["DIMMIT REGIONAL HOSPITAL", "DIMMIT", 28.52, -99.8615], ["FRIO REGIONAL HOSPITAL", "FRIO", 28.8964, -99.1171], ["HAMILTON GENERAL HOSPITAL", "HAMILTON", 31.7039, -98.1134], ["CROCKETT MEDICAL CENTER", "HOUSTON", 31.322, -95.4371], ["KNOX COUNTY HOSPITAL", "KNOX", 33.414, -99.8118], ["HILL REGIONAL HOSPITAL", "HILL", 32.0128, -97.0992], ["MID COAST MEDICAL CENTER - CENTRAL", "LLANO", 30.7433, -98.6771], ["BAYLOR SCOTT & WHITE HOSPITAL BRENHAM", "WASHINGTON", 30.146, -96.3985], ["PAMPA REGIONAL MEDICAL CENTER", "GRAY", 35.5728, -100.9645], ["SEYMOUR HOSPITAL", "BAYLOR", 33.5922, -99.2477], ["THE HOSPITAL AT WESTLAKE MEDICAL CENTER", "TRAVIS", 30.2942, -97.824], ["MEMORIAL HERMANN HOUSTON PHYSICIANS HOSPITAL", "HARRIS", 29.5344, -95.1254], ["METHODIST MANSFIELD MEDICAL CENTER", "TARRANT", 32.5684, -97.0971], ["ST LUKE'S PATIENTS MEDICAL CENTER", "HARRIS", 29.6401, -95.1609], ["BAYLOR SCOTT & WHITE MEDICAL CENTER - ROUND ROCK", "WILLIAMSON", 30.5599, -97.6863], ["ASCENSION SETON WILLIAMSON", "WILLIAMSON", 30.5713, -97.6533], ["ASCENSION SETON CEDAR PARK", "WILLIAMSON", 30.5315, -97.814], ["TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWALL", "ROCKWALL", 32.8864, -96.4652], ["THE HOSPITALS OF PROVIDENCE - EAST CAMPUS", "EL PASO", 31.7893, -106.2676], ["ST LUKE'S SUGAR LAND HOSPITAL", "FORT BEND", 29.6054, -95.6213], ["METHODIST HOSPITAL  STONE OAK", "BEXAR", 29.615, -98.4737], ["ASCENSION  SETON HAYS", "HAYS", 30.0098, -97.856], ["CHI ST LUKES LAKESIDE HOSPITAL", "MONTGOMERY", 30.202, -95.4594], ["BAYLOR SCOTT AND WHITE MEDICAL CENTER SUNNYVALE", "DALLAS", 32.7976, -96.5612], ["BAYLOR SCOTT & WHITE EMERGENCY HOSPITAL", "DENTON", 33.2211, -96.9382], ["TEXAS HEALTH PRESBYTERIAN HOSPITAL FLOWER MOUND", "DENTON", 33.0452, -97.0693], ["METHODIST MCKINNEY HOSPITAL", "COLLIN", 33.1753, -96.7222], ["ST LUKE'S HOSPITAL AT THE VINTAGE", "HARRIS", 29.9898, -95.5702], ["HOUSTON METHODIST WEST HOSPITAL", "HARRIS", 29.7856, -95.6949], ["BAPTIST NEIGHBORHOOD HOSPITAL THOUSAND OAKS", "BEXAR", 29.5877, -98.4742], ["SETON MEDICAL CENTER HARKER HEIGHTS", "BELL", 31.0726, -97.6826], ["BAYLOR SCOTT AND WHITE  MEDICAL CENTER  MCKINNEY", "COLLIN", 33.2184, -96.6807], ["TEXAS HEALTH HARRIS METHODIST HOSPITAL ALLIANCE", "TARRANT", 32.9313, -97.3092], ["CRESCENT MEDICAL CENTER LANCASTER", "DALLAS", 32.6024, -96.8127], ["RESOLUTE HEALTH HOSPITAL", "COMAL", 29.7199, -98.072], ["AD HOSPITAL EAST, LLC", "HARRIS", 29.7711, -95.2015], ["MEDICAL CITY ALLIANCE", "TARRANT", 32.8983, -97.3128], ["BAYLOR SCOTT AND WHITE EMERGENCY HOSPITAL", "JOHNSON", 32.5764, -97.3212], ["BAYLOR SCOTT & WHITE MEDICAL CENTER - MARBLE FALLS", "BURNET", 30.5117, -98.3056], ["BAYTOWN MEDICAL CENTER LP", "HARRIS", 29.7699, -94.9809], ["CLEVELAND EMERGENCY HOSPITAL", "HARRIS", 30.0051, -95.2827], ["THE HOSPITALS OF PROVIDENCE TRANSMOUNTAIN CAMPUS", "EL PASO", 31.9049, -106.5643], ["SAINT CAMILLUS MEDICAL CENTER", "TARRANT", 32.8415, -97.1885], ["HOUSTON METHODIST THE WOODLANDS HOSPITAL", "MONTGOMERY", 30.2056, -95.4521], ["THE HOSPITALS OF PROVIDENCE HORIZON CITY CAMPUS", "EL PASO", 31.6827, -106.2085], ["BAYLOR SCOTT & WHITE MEDICAL CENTER PFLUGERVILLE", "TRAVIS", 30.4512, -97.593], ["BAYLOR SCOTT & WHITE MEDICAL CENTER - BUDA", "HAYS", 30.0767, -97.8201], ["METHODIST SOUTHLAKE MEDICAL CENTER", "TARRANT", 32.9575, -97.1452], ["ALTUS LUMBERTON HOSPITAL", "HARDIN", 30.262, -94.2214], ["ALTUS HOUSTON HOSPITAL, LP", "HARRIS", 29.8119, -95.1641], ["TEXAS HEALTH HOSPITAL FRISCO", "DENTON", 33.1804, -96.8389], ["TOWNSEN MEMORIAL HOSPITAL", "HARRIS", 30.0047, -95.254], ["THE WOODLANDS SPECIALTY HOSPITAL", "MONTGOMERY", 30.1307, -95.4434], ["METHODIST MIDLOTHIAN MEDICAL CENTER", "ELLIS", 32.469, -96.982], ["TEXAS HEALTH HOSPITAL MANSFIELD", "TARRANT", 32.5375, -97.0996], ["EAST HOUSTON MEDICAL CENTER", "HARRIS", 29.8069, -95.1709], ["MID COAST MEDICAL CENTER-TRINITY", "TRINITY", 30.9549, -95.3795], ["WESTOVER HILLS BAPTIST HOSPITAL", "BEXAR", 29.4634, -98.7136], ["BANDERA FAMILY HOSPITAL", "BEXAR", 29.5241, -98.6396], ["METHODIST CELINA MEDICAL CENTER", "COLLIN", 33.3059, -96.81], ["HOUSTON METHODIST CYPRESS HOSPITAL", "HARRIS", 29.9621, -95.6825], ["BAYLOR SCOTT & WHITE HOSPITAL BRENHAM", "WASHINGTON", 30.146, -96.3985], ["CORALVITA RICHARDSON", "DALLAS", 32.9753, -96.7273], ["GRAHAM REGIONAL MEDICAL CENTER", "YOUNG", 33.0893, -98.5836], ["HEMPHILL COUNTY HOSPITAL", "HEMPHILL", 35.9027, -100.3875], ["STEPHENS MEMORIAL HOSPITAL", "STEPHENS", 32.7546, -98.8877], ["EASTLAND MEMORIAL HOSPITAL", "EASTLAND", 32.4002, -98.8215], ["ASCENSION SETON SMITHVILLE", "BASTROP", 30.0035, -97.1349], ["MEDICAL CITY DECATUR (added by hand; missing from CMS list)", "WISE", 33.2185, -97.5945]];
+const STROKE_L12 = [["BAYLOR SCOTT & WHITE MEDICAL CENTER - GRAPEVINE", "GRAPEVINE", "Level I - Comprehensive", 32.9339, -97.0941], ["BAYLOR SCOTT & WHITE MEDICAL CENTER - PLANO", "PLANO", "Level I - Comprehensive", 33.0143, -96.7915], ["BAYLOR SCOTT & WHITE MEDICAL CENTER - TEMPLE", "TEMPLE", "Level I - Comprehensive", 31.0787, -97.3659], ["BAYLOR UNIVERSITY MEDICAL CENTER", "DALLAS", "Level I - Comprehensive", 32.7905, -96.7809], ["CHI ST LUKES HEALTH BAYLOR COLLEGE OF MEDICINE MEDICAL CENTER", "HOUSTON", "Level I - Comprehensive", 29.7086, -95.3991], ["CHRISTUS MOTHER FRANCES HOSPITAL - TYLER", "TYLER", "Level I - Comprehensive", 32.3423, -95.2926], ["CHRISTUS SANTA ROSA HOSPITAL - WESTOVER HILLS", "SAN ANTONIO", "Level I - Comprehensive", 29.5128, -98.5902], ["CHRISTUS SPOHN HOSPITAL CORPUS CHRISTI SHORELINE", "CORPUS CHRISTI", "Level I - Comprehensive", 27.7779, -97.3951], ["COVENANT MEDICAL CENTER", "LUBBOCK", "Level I - Comprehensive", 33.5778, -101.8922], ["DELL SETON MEDICAL CENTER AT THE UNIVERSITY OF TEXAS", "AUSTIN", "Level I - Comprehensive", 30.2764, -97.734], ["DOCTORS HOSPITAL AT RENAISSANCE", "EDINBURG", "Level I - Comprehensive", 26.2527, -98.2042], ["HARRIS HEALTH BEN TAUB HOSPITAL", "HOUSTON", "Level I - Comprehensive", 29.7126, -95.3938], ["HCA HOUSTON HEALTHCARE CLEAR LAKE", "WEBSTER", "Level I - Comprehensive", 29.541, -95.1279], ["HCA HOUSTON HEALTHCARE CONROE", "CONROE", "Level I - Comprehensive", 30.2845, -95.4662], ["HCA HOUSTON HEALTHCARE KINGWOOD", "KINGWOOD", "Level I - Comprehensive", 30.0495, -95.2549], ["HCA HOUSTON HEALTHCARE NORTH CYPRESS", "CYPRESS", "Level I - Comprehensive", 29.9621, -95.6825], ["HCA HOUSTON HEALTHCARE NORTHWEST", "HOUSTON", "Level I - Comprehensive", 29.7589, -95.3677], ["HOUSTON METHODIST HOSPITAL", "HOUSTON", "Level I - Comprehensive", 29.7113, -95.3995], ["HOUSTON METHODIST SUGAR LAND HOSPITAL", "SUGAR LAND", "Level I - Comprehensive", 29.5666, -95.6877], ["HOUSTON METHODIST THE WOODLANDS HOSPITAL", "THE WOODLANDS", "Level I - Comprehensive", 30.2056, -95.4521], ["HOUSTON METHODIST WILLOWBROOK HOSPITAL", "HOUSTON", "Level I - Comprehensive", 29.9671, -95.5511], ["JOHN PETER SMITH HOSPITAL", "FORT WORTH", "Level I - Comprehensive", 32.727, -97.328], ["MEDICAL CITY ARLINGTON", "ARLINGTON", "Level I - Comprehensive", 32.6927, -97.1147], ["MEDICAL CITY DALLAS HOSPITAL", "DALLAS", "Level I - Comprehensive", 32.9095, -96.7722], ["MEDICAL CITY FORT WORTH", "FORT WORTH", "Level I - Comprehensive", 32.7355, -97.3437], ["MEDICAL CITY PLANO", "PLANO", "Level I - Comprehensive", 33.0194, -96.7658], ["MEMORIAL HERMANN - TEXAS MEDICAL CENTER", "HOUSTON", "Level I - Comprehensive", 29.7151, -95.3965], ["MEMORIAL HERMANN MEMORIAL CITY MEDICAL CENTER", "HOUSTON", "Level I - Comprehensive", 29.7801, -95.5446], ["MEMORIAL HERMANN SOUTHWEST HOSPITAL", "HOUSTON", "Level I - Comprehensive", 29.6939, -95.5222], ["MEMORIAL HERMANN THE WOODLANDS MEDICAL CENTER", "SHENANDOAH", "Level I - Comprehensive", 30.1748, -95.4541], ["METHODIST DALLAS MEDICAL CENTER", "DALLAS", "Level I - Comprehensive", 32.7613, -96.823], ["METHODIST HOSPITAL", "SAN ANTONIO", "Level I - Comprehensive", 29.5074, -98.5734], ["METHODIST RICHARDSON MEDICAL CENTER", "RICHARDSON", "Level I - Comprehensive", 32.9953, -96.6685], ["MICHAEL E DEBAKEY VA MEDICAL CENTER", "HOUSTON", "Level I - Comprehensive", 29.7151, -95.3965], ["PARKLAND MEMORIAL HOSPITAL", "DALLAS", "Level I - Comprehensive", 32.8116, -96.8368], ["SOUTH TEXAS HEALTH SYSTEM MCALLEN", "MCALLEN", "Level I - Comprehensive", 26.1859, -98.2238], ["ST DAVIDS MEDICAL CENTER", "AUSTIN", "Level I - Comprehensive", 30.2908, -97.7267], ["ST LUKES BAPTIST HOSPITAL", "SAN ANTONIO", "Level I - Comprehensive", 29.5074, -98.5734], ["ST LUKES THE WOODLANDS HOSPITAL", "CONROE", "Level I - Comprehensive", 30.2048, -95.4597], ["TEXAS HEALTH HARRIS METHODIST HOSPITAL FORT WORTH", "FORT WORTH", "Level I - Comprehensive", 32.7384, -97.3388], ["TEXAS HEALTH PRESBYTERIAN HOSPITAL DALLAS", "DALLAS", "Level I - Comprehensive", 32.8832, -96.7623], ["TEXAS HEALTH PRESBYTERIAN HOSPITAL PLANO", "PLANO", "Level I - Comprehensive", 33.0451, -96.8359], ["THE HOSPITALS OF PROVIDENCE SIERRA CAMPUS", "EL PASO", "Level I - Comprehensive", 31.7713, -106.4996], ["UNIVERSITY HOSPITAL", "SAN ANTONIO", "Level I - Comprehensive", 29.509, -98.574], ["UNIVERSITY MEDICAL CENTER OF EL PASO", "EL PASO", "Level I - Comprehensive", 31.7707, -106.4343], ["UNIVERSITY OF TEXAS MEDICAL BRANCH", "GALVESTON", "Level I - Comprehensive", 29.3104, -94.7745], ["UNIVERSITY OF TEXAS MEDICAL BRANCH - CLEAR LAKE CAMPUS", "WEBSTER", "Level I - Comprehensive", 29.5352, -95.1162], ["UT HEALTH EAST TEXAS TYLER REGIONAL HOSPITAL", "TYLER", "Level I - Comprehensive", 32.3387, -95.2918], ["VALLEY BAPTIST MEDICAL CENTER", "HARLINGEN", "Level I - Comprehensive", 26.1575, -97.6753], ["VALLEY REGIONAL MEDICAL CENTER", "BROWNSVILLE", "Level I - Comprehensive", 25.979, -97.5161], ["WILLIAM P CLEMENTS UNIVERSITY HOSPITAL", "DALLAS", "Level I - Comprehensive", 32.8198, -96.8472], ["ASCENSION SETON MEDICAL CENTER AUSTIN", "AUSTIN", "Level II - Advanced", 30.306, -97.745], ["ASCENSION SETON WILLIAMSON", "ROUND ROCK", "Level II - Advanced", 30.5086, -97.6788], ["BSA HOSPITAL LLC", "AMARILLO", "Level II - Advanced", 35.1949, -101.9198], ["HENDRICK MEDICAL CENTER", "ABILENE", "Level II - Advanced", 32.4716, -99.7312], ["NORTHEAST BAPTIST HOSPITAL", "SAN ANTONIO", "Level II - Advanced", 29.5198, -98.4289]];
 const GUIDANCE = {
   epilepsy: {
-    title: "Epilepsy & Seizures: Heat Guidance",
+    title: "Epilepsy and Seizures: Heat Guidance",
     tips: [
       "Heat, dehydration, and electrolyte shifts can lower seizure thresholds.",
       "Stay in air conditioning during peak afternoon heat and drink water regularly.",
-      "Store anti-seizure medications in a cool, dry place, high heat can degrade effectiveness.",
+      "Store anti-seizure medications in a cool, dry place; high heat can degrade effectiveness.",
       "Use extra caution around open water or swimming pools."
     ],
     source: "Epilepsy Society UK (epilepsysociety.org.uk/how-stay-cool-heat); CDC Heat & Medications"
@@ -103,7 +120,7 @@ const GUIDANCE = {
     title: "Multiple Sclerosis (MS): Heat Guidance",
     tips: [
       "Even small rises in body temperature can trigger Uhthoff's phenomenon (temporary worsening of fatigue, vision, or weakness).",
-      "Symptoms usually ease once cooled and do not indicate a true relapse, contact your doctor if new symptoms persist after cooling.",
+      "Symptoms usually ease once cooled and do not indicate a true relapse; contact your doctor if new symptoms persist after cooling.",
       "Use cooling vests, chilled neck wraps, cold drinks, or cool showers, and schedule outdoor errands early or late."
     ],
     source: "National Multiple Sclerosis Society (nationalmssociety.org)"
@@ -118,7 +135,7 @@ const GUIDANCE = {
     source: "American Migraine Foundation (americanmigrainefoundation.org/resource-library/weather-and-migraine/)"
   },
   stroke: {
-    title: "Stroke & High Blood Pressure: Heat Guidance",
+    title: "Stroke and High Blood Pressure: Heat Guidance",
     tips: [
       "Extreme heat forces the heart to pump harder while vasodilation and dehydration alter blood pressure and blood thickness.",
       "Avoid outdoor exertion between noon and 3 p.m. and review diuretics or blood-pressure drugs with your clinician.",
@@ -127,11 +144,11 @@ const GUIDANCE = {
     source: "American Heart Association / ASA; CDC Heat & Medications"
   },
   dementia: {
-    title: "Dementia & Memory Loss: Heat Guidance",
+    title: "Dementia and Memory Loss: Heat Guidance",
     tips: [
       "Cognitive changes can mask thirst or overheating; offer cool water and water-rich foods (fruit, soups) throughout the day.",
       "Keep indoor spaces air-conditioned (fans alone are not enough above the 90s) and check on older relatives twice daily.",
-      "Wandering outdoors during heat waves is dangerous, secure exits and keep medical ID on hand."
+      "Wandering outdoors during heat waves is dangerous; secure exits and keep medical ID on hand."
     ],
     source: "Alzheimer's Association (alz.org/help-support/caregiving/safety/wandering); CDC Older Adults"
   },
@@ -139,90 +156,188 @@ const GUIDANCE = {
     title: "Parkinson's Disease: Heat Guidance",
     tips: [
       "Autonomic changes and anticholinergic medications can impair sweating and blood pressure regulation, raising overheating and dizziness risk.",
-      "Never stop prescribed medications on your own, ask your doctor or pharmacist for a summer heat-medication plan.",
-      "Consider telehealth appointments during extreme-heat advisories if your neurology clinic is far away."
+      "Never stop prescribed medications on your own; ask your doctor or pharmacist for a summer heat-medication plan.",
+      "Consider telehealth appointments during extreme-heat advisories if your clinic is far away."
     ],
     source: "Michael J. Fox Foundation (michaeljfox.org); CDC Heat & Medications"
   }
 };
 
+let curLat = 32.0484, curLon = -96.4769, curLabel = "Navarro County";
 const sel = document.getElementById("county");
 COUNTIES.forEach(c => {
   const opt = document.createElement("option");
   opt.value = c.county;
-  opt.textContent = `${c.county} County (${c.type}): Score ${c.score_total}/24`;
+  opt.textContent = `${c.county} County (${c.type})`;
   if (c.county === "Hill") opt.selected = true;
   sel.appendChild(opt);
 });
 
+function havKm(aLat, aLon, bLat, bLon) {
+  const R = 6371, rad = d => d * Math.PI / 180;
+  const dp = rad(bLat - aLat), dl = rad(bLon - aLon);
+  const x = Math.sin(dp/2)**2 + Math.cos(rad(aLat))*Math.cos(rad(bLat))*Math.sin(dl/2)**2;
+  return 2 * R * Math.asin(Math.sqrt(x));
+}
+
 function heatBand(tempF, hasAlert) {
   if (hasAlert || tempF >= 100) return ["high", "High Heat Risk (≥100°F or Active Advisory)"];
-  if (tempF >= 90) return ["mod", "Moderate Heat Caution (90–99°F)"];
+  if (tempF >= 90) return ["mod", "Moderate Heat Caution (90 to 99°F)"];
   return ["low", "Lower Heat Risk (<90°F)"];
 }
 
-function renderStatic() {
-  const c = COUNTIES.find(x => x.county === sel.value);
+function renderGuidance() {
   const g = GUIDANCE[document.getElementById("cond").value];
-  document.getElementById("access").innerHTML = `
-    <div class="kv">
-      <span>24-County Risk Score</span><b>${c.score_total} / 24 (${c.type})</b>
-      <span>Historical ≥100°F days/yr</span><b>${c.days_over_100F} days</b>
-      <span>Residents age 65+</span><b>${c.pct_age_65_plus}%</b>
-      <span>No-vehicle households</span><b>${c.pct_no_vehicle}%</b>
-      <span>Neurologists on record</span><b>${Math.round(c.neurologists)} (${c.neurologists_per_100k}/100k)</b>
-      <span>Pop-weighted ER drive</span><b>${c.er_drive_min_popw} min (${c.er_drive_mi_popw} mi)</b>
-      <span>Pop-weighted DSHS L1–L2 Stroke</span><b>${c.stroke_l1_l2_min_popw} min (${c.stroke_l1_l2_mi_popw} mi)</b>
-      <span>Pop-weighted DSHS L1–L3 Stroke</span><b>${c.stroke_l1_l3_min_popw} min</b>
-    </div>
-    <p class="src">Need a cooling center or transit help in ${c.county} County? Dial <b>2-1-1</b> (Texas Health and Human Services).</p>`;
-
   document.getElementById("cond-title").textContent = g.title;
   document.getElementById("guidance").innerHTML = `
     <ul class="tip-list">${g.tips.map(t => `<li>${t}</li>`).join("")}</ul>
     <p class="src">Source: ${g.source}</p>`;
 }
 
-async function loadWeather() {
-  const c = COUNTIES.find(x => x.county === sel.value);
-  const wxEl = document.getElementById("wx");
-  wxEl.innerHTML = `<p class="src">Fetching live NWS forecast for ${c.county} County (${c.lat}, ${c.lon})...</p>`;
+async function routeDrive(lat1, lon1, lat2, lon2) {
   try {
-    const [ptRes, alRes] = await Promise.all([
-      fetch(`https://api.weather.gov/points/${c.lat},${c.lon}`),
-      fetch(`https://api.weather.gov/alerts/active?point=${c.lat},${c.lon}`)
-    ]);
-    const pt = await ptRes.json();
-    const al = await alRes.json();
-    const fcRes = await fetch(pt.properties.forecast);
-    const fc = await fcRes.json();
-    const periods = fc.properties.periods || [];
-    const daytime = periods.find(p => p.isDaytime) || periods[0];
-    const nextPeriods = periods.slice(0, 4);
-    const heatAlerts = (al.features || []).filter(f => /heat|excessive/i.test(f.properties.event || ""));
-    const [cls, label] = heatBand(daytime ? daytime.temperature : 0, heatAlerts.length > 0);
-    wxEl.innerHTML = `
-      <span class="pill ${cls}">${label}</span>
-      <div class="temp-row">
-        <div class="temp-big">${daytime ? daytime.temperature + "°" + daytime.temperatureUnit : "N/A"}</div>
-        <div><b>${daytime ? daytime.name : "Forecast"}</b><br><span style="font-size:13px;color:#5b6075">${daytime ? daytime.shortForecast : ""}</span></div>
-      </div>
-      ${heatAlerts.length
-        ? `<div class="alert-box"><b>Active NWS Alert:</b> ${heatAlerts.map(a => a.properties.headline || a.properties.event).join("<br>")}</div>`
-        : `<div class="ok-box">No active NWS heat advisories or warnings for ${c.county} County right now.</div>`}
-      <div class="kv" style="margin-top:10px">
-        ${nextPeriods.map(p => `<span>${p.name}</span><b>${p.temperature}°${p.temperatureUnit} · ${p.shortForecast}</b>`).join("")}
-      </div>`;
-  } catch (err) {
-    wxEl.innerHTML = `<div class="alert-box">Could not reach live NWS API (api.weather.gov). Check your internet connection or try again.</div>`;
-  }
+    const r = await fetch(`https://router.project-osrm.org/route/v1/driving/${lon1},${lat1};${lon2},${lat2}?overview=false`);
+    const j = await r.json();
+    if (j.code === "Ok" && j.routes.length) {
+      return `${Math.round(j.routes[0].duration / 60)} min (${(j.routes[0].distance / 1609.344).toFixed(1)} mi)`;
+    }
+  } catch (e) {}
+  const mi = havKm(lat1, lon1, lat2, lon2) * 0.621371;
+  return `~${mi.toFixed(1)} mi straight-line`;
 }
 
-function refreshAll() { renderStatic(); loadWeather(); }
-document.getElementById("go").addEventListener("click", refreshAll);
-sel.addEventListener("change", refreshAll);
-document.getElementById("cond").addEventListener("change", renderStatic);
-refreshAll();
+async function updateForCoords(lat, lon, label, matchedCountyName) {
+  curLat = lat; curLon = lon; curLabel = label;
+  document.getElementById("loc-status").innerHTML = `Showing live results for <b>${label}</b> (${lat.toFixed(3)}, ${lon.toFixed(3)}).`;
+
+  // 1. Live NWS Forecast & Alerts
+  const wxEl = document.getElementById("wx");
+  wxEl.innerHTML = `<p class="src">Fetching live NWS forecast for ${label}...</p>`;
+  fetch(`https://api.weather.gov/points/${lat.toFixed(4)},${lon.toFixed(4)}`)
+    .then(r => r.json())
+    .then(async pt => {
+      const [fc, al] = await Promise.all([
+        fetch(pt.properties.forecast).then(r => r.json()),
+        fetch(`https://api.weather.gov/alerts/active?point=${lat.toFixed(4)},${lon.toFixed(4)}`).then(r => r.json())
+      ]);
+      const periods = fc.properties.periods || [];
+      const daytime = periods.find(p => p.isDaytime) || periods[0];
+      const nextPeriods = periods.slice(0, 4);
+      const heatAlerts = (al.features || []).filter(f => /heat|excessive/i.test(f.properties.event || ""));
+      const [cls, bandLabel] = heatBand(daytime ? daytime.temperature : 0, heatAlerts.length > 0);
+      const city = pt.properties.relativeLocation?.properties?.city;
+      const st = pt.properties.relativeLocation?.properties?.state;
+      const locNote = city && st ? ` (${city}, ${st})` : "";
+      wxEl.innerHTML = `
+        <span class="pill ${cls}">${bandLabel}</span>
+        <div class="temp-row">
+          <div class="temp-big">${daytime ? daytime.temperature + "°" + daytime.temperatureUnit : "N/A"}</div>
+          <div><b>${daytime ? daytime.name : "Forecast"}${locNote}</b><br><span style="font-size:13px;color:#5b6075">${daytime ? daytime.shortForecast : ""}</span></div>
+        </div>
+        ${heatAlerts.length
+          ? `<div class="alert-box"><b>Active NWS Alert:</b> ${heatAlerts.map(a => a.properties.headline || a.properties.event).join("<br>")}</div>`
+          : `<div class="ok-box">No active NWS heat advisories or warnings at this location right now.</div>`}
+        <div class="kv" style="margin-top:10px">
+          ${nextPeriods.map(p => `<span>${p.name}</span><b>${p.temperature}°${p.temperatureUnit} · ${p.shortForecast}</b>`).join("")}
+        </div>`;
+    })
+    .catch(() => {
+      wxEl.innerHTML = `<div class="alert-box">Could not load live NWS forecast (api.weather.gov covers US locations).</div>`;
+    });
+
+  // 2. Nearest Texas ER & DSHS Stroke Center + County Baseline (if in study area)
+  const nearER = ERS.map(e => ({e, d: havKm(lat, lon, e[2], e[3])})).sort((a,b) => a.d - b.d)[0];
+  const nearSt = STROKE_L12.map(s => ({s, d: havKm(lat, lon, s[3], s[4])})).sort((a,b) => a.d - b.d)[0];
+  const nearStudy = COUNTIES.map(c => ({c, d: havKm(lat, lon, c.lat, c.lon)})).sort((a,b) => a.d - b.d)[0];
+  const studyC = matchedCountyName
+    ? COUNTIES.find(c => c.county === matchedCountyName)
+    : (nearStudy.d <= 55 ? nearStudy.c : null);
+
+  const accEl = document.getElementById("access");
+  accEl.innerHTML = `<p class="src">Calculating driving time to nearest Texas ER and DSHS stroke center...</p>`;
+  const inTXRange = nearER.d < 160;
+  let erDrive = "Outside Texas dataset", stDrive = "Outside Texas dataset";
+  if (inTXRange) {
+    [erDrive, stDrive] = await Promise.all([
+      routeDrive(lat, lon, nearER.e[2], nearER.e[3]),
+      routeDrive(lat, lon, nearSt.s[3], nearSt.s[4])
+    ]);
+  }
+
+  let html = `<div class="kv">`;
+  if (inTXRange) {
+    html += `
+      <span>Nearest Texas ER</span><b>${nearER.e[0]}</b>
+      <span>Drive to nearest ER</span><b>${erDrive}</b>
+      <span>Nearest DSHS L1/L2 Stroke Center</span><b>${nearSt.s[0]}</b>
+      <span>Drive to Stroke Center</span><b>${stDrive}</b>`;
+  } else {
+    html += `<span>Nearest ER / Stroke routing</span><b>Available for Texas locations</b>`;
+  }
+  if (studyC) {
+    html += `
+      <span>Study County Baseline</span><b>${studyC.county} (${studyC.score_total} / 24, ${studyC.type})</b>
+      <span>Historical &ge;100°F days/yr</span><b>${studyC.days_over_100F} days</b>
+      <span>Residents age 65+ / No vehicle</span><b>${studyC.pct_age_65_plus}% / ${studyC.pct_no_vehicle}%</b>
+      <span>Neurologists on record</span><b>${Math.round(studyC.neurologists)} (${studyC.neurologists_per_100k}/100k)</b>`;
+  }
+  html += `</div><p class="src">Need a cooling center or ride? Dial <b>2-1-1</b> (or local 211) for open cooling centers and transit assistance.</p>`;
+  accEl.innerHTML = html;
+}
+
+document.getElementById("use-gps").addEventListener("click", () => {
+  if (!navigator.geolocation) {
+    document.getElementById("loc-status").textContent = "Geolocation is not supported by this browser. Enter a City/ZIP or pick a county.";
+    return;
+  }
+  document.getElementById("loc-status").textContent = "Requesting browser location permission...";
+  navigator.geolocation.getCurrentPosition(
+    pos => updateForCoords(pos.coords.latitude, pos.coords.longitude, "Your Current Location", null),
+    () => { document.getElementById("loc-status").textContent = "Location permission declined. Enter a City/ZIP or pick a county below."; },
+    {enableHighAccuracy: true, timeout: 10000}
+  );
+});
+
+document.getElementById("find-place").addEventListener("click", async () => {
+  const q = document.getElementById("place").value.trim();
+  if (!q) return;
+  document.getElementById("loc-status").textContent = `Looking up "${q}"...`;
+  try {
+    const r = await fetch("https://nominatim.openstreetmap.org/search?" + new URLSearchParams({q, format: "json", limit: 1, countrycodes: "us"}));
+    const j = await r.json();
+    if (!j.length) {
+      document.getElementById("loc-status").textContent = `Could not find "${q}" in the US. Try "City, TX" or a 5-digit ZIP.`;
+      return;
+    }
+    updateForCoords(parseFloat(j[0].lat), parseFloat(j[0].lon), j[0].display_name.split(",").slice(0,2).join(","), null);
+  } catch (e) {
+    document.getElementById("loc-status").textContent = "Lookup failed. Please check your internet connection.";
+  }
+});
+
+sel.addEventListener("change", () => {
+  const c = COUNTIES.find(x => x.county === sel.value);
+  updateForCoords(c.lat, c.lon, `${c.county} County center`, c.county);
+});
+document.getElementById("cond").addEventListener("change", renderGuidance);
+
+renderGuidance();
+// Try GPS automatically on load if already granted, else default to Hill County
+const hill = COUNTIES.find(x => x.county === "Hill");
+if (navigator.permissions && navigator.permissions.query) {
+  navigator.permissions.query({name: "geolocation"}).then(p => {
+    if (p.state === "granted") {
+      navigator.geolocation.getCurrentPosition(
+        pos => updateForCoords(pos.coords.latitude, pos.coords.longitude, "Your Current Location", null),
+        () => updateForCoords(hill.lat, hill.lon, "Hill County center", "Hill")
+      );
+    } else {
+      updateForCoords(hill.lat, hill.lon, "Hill County center", "Hill");
+    }
+  }).catch(() => updateForCoords(hill.lat, hill.lon, "Hill County center", "Hill"));
+} else {
+  updateForCoords(hill.lat, hill.lon, "Hill County center", "Hill");
+}
 </script>
 </body>
 </html>
