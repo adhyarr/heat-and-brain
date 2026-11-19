@@ -67,6 +67,7 @@ button{{background:#6a4c93;color:#fff;border:none;font-weight:600;cursor:pointer
 button:hover{{background:#573b7d}}
 button.gps{{background:#e4572e}} button.gps:hover{{background:#c9451f}}
 .loc-status{{font-size:12.5px;color:#5b6075}}
+.verdict{{background:#eef2fa;border-left:4px solid #6a4c93;padding:12px 16px;border-radius:10px;font-size:13.5px;margin-bottom:16px;color:#2b2f42}}
 .grid{{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}}
 .card{{background:#fff;border-radius:14px;padding:20px;box-shadow:0 4px 16px rgba(43,47,66,.07)}}
 .card h2{{margin:0 0 8px;font-size:17px}}
@@ -127,6 +128,8 @@ footer{{color:#8a8fa3;font-size:12px;padding:6px 0 36px}}
     </div>
     <div id="loc-status" class="loc-status">Tip: Click <b>Use My Location</b> for live weather and nearest-hospital drive times from where you are right now.</div>
   </div>
+
+  <div id="verdict" class="verdict" style="display:none"></div>
 
   <div class="grid">
     <div class="card">
@@ -258,8 +261,11 @@ async function updateForCoords(lat, lon, label, matchedCountyName) {{
 
   // 1. Live NWS Forecast & Alerts
   const wxEl = document.getElementById("wx");
+  const vEl = document.getElementById("verdict");
+  vEl.style.display = "none";
+  let liveTemp = null, liveAlert = false;
   wxEl.innerHTML = `<p class="src">Fetching live NWS forecast for ${{label}}...</p>`;
-  fetch(`https://api.weather.gov/points/${{lat.toFixed(4)}},${{lon.toFixed(4)}}`)
+  const wxPromise = fetch(`https://api.weather.gov/points/${{lat.toFixed(4)}},${{lon.toFixed(4)}}`)
     .then(r => r.json())
     .then(async pt => {{
       const [fc, al] = await Promise.all([
@@ -270,7 +276,9 @@ async function updateForCoords(lat, lon, label, matchedCountyName) {{
       const daytime = periods.find(p => p.isDaytime) || periods[0];
       const nextPeriods = periods.slice(0, 4);
       const heatAlerts = (al.features || []).filter(f => /heat|excessive/i.test(f.properties.event || ""));
-      const [cls, bandLabel] = heatBand(daytime ? daytime.temperature : 0, heatAlerts.length > 0);
+      liveTemp = daytime ? daytime.temperature : null;
+      liveAlert = heatAlerts.length > 0;
+      const [cls, bandLabel] = heatBand(liveTemp || 0, liveAlert);
       const city = pt.properties.relativeLocation?.properties?.city;
       const st = pt.properties.relativeLocation?.properties?.state;
       const locNote = city && st ? ` (${{city}}, ${{st}})` : "";
@@ -329,6 +337,20 @@ async function updateForCoords(lat, lon, label, matchedCountyName) {{
   }}
   html += `</div><p class="src">Need a cooling center or ride? Dial <b>2-1-1</b> (or local 211) for open cooling centers and transit assistance.</p>`;
   accEl.innerHTML = html;
+
+  await wxPromise;
+  if (liveTemp !== null) {{
+    const heatTxt = liveAlert || liveTemp >= 100
+      ? `Today's forecast (${{liveTemp}}°F${{liveAlert ? " with an active heat alert" : ""}}) is high-risk.`
+      : liveTemp >= 90
+      ? `Today's forecast (${{liveTemp}}°F) calls for moderate heat caution.`
+      : `Today's weather (${{liveTemp}}°F) is mild.`;
+    const careTxt = inTXRange
+      ? ` Nearest Texas ER is <b>${{erDrive}}</b> away and nearest DSHS Level I/II stroke center is <b>${{stDrive}}</b> away${{studyC ? ` (${{studyC.county}} averages ${{studyC.days_over_100F}} days ≥100°F/yr)` : ""}}.`
+      : ` Review the condition-specific checklist below and plan ahead before summer heat waves arrive.`;
+    vEl.innerHTML = `<b>Combined Summary:</b> ${{heatTxt}}${{careTxt}}`;
+    vEl.style.display = "block";
+  }}
 }}
 
 document.getElementById("use-gps").addEventListener("click", () => {{

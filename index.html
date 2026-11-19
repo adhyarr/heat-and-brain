@@ -13,7 +13,7 @@ header .wrap{padding:0}
 .tag{display:inline-block;background:rgba(255,255,255,.16);padding:4px 12px;border-radius:99px;font-size:12px;margin-bottom:10px;letter-spacing:.5px}
 h1{margin:0 0 8px;font-size:34px;letter-spacing:-.5px}
 header p{margin:0;max-width:740px;opacity:.92;font-size:16px}
-.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:-28px auto 26px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:12px;margin:-28px auto 26px}
 .hero-card{background:#fff;border-radius:14px;padding:16px 16px;box-shadow:0 6px 22px rgba(43,47,66,.1);text-decoration:none;color:#2b2f42;border-top:4px solid #6a4c93;display:block}
 .hero-card.map{border-top-color:#e4572e}
 .hero-card.tool{border-top-color:#f29e4c}
@@ -78,6 +78,7 @@ footer{color:#8a8fa3;font-size:12.5px;padding:4px 0 40px}
 
   <div class="panel">
     <h2>What This Project Is About</h2>
+    <p class="sub" style="margin-bottom:10px">Built as an independent high school student research project exploring the intersection of <b>neuroscience, climate, and rural health equity</b> in North and East Texas.</p>
     <p class="sub" style="margin-bottom:10px">Extreme summer heat is not just uncomfortable. For older adults and people living with neurological or chronic conditions (such as epilepsy, migraine, multiple sclerosis, stroke, dementia, and Parkinson's disease), high temperatures can trigger symptoms or interfere with how common medications regulate sweating and hydration.</p>
     <p class="sub" style="margin-bottom:0">Using public climate, Census, health, and hospital data across <b>24 North and East Texas counties</b> (4 urban DFW core counties and 20 surrounding rural counties) and <b>1,885 Census tracts</b>, this project examines where frequent 100&deg;F+ heat overlaps with vulnerable populations and long driving times to emergency rooms, primary/EMS care, and specialized stroke centers. Each county is scored, mapped, and paired with a live forecast tool and a 1-page resident safety guide.</p>
   </div>
@@ -151,6 +152,14 @@ footer{color:#8a8fa3;font-size:12.5px;padding:4px 0 40px}
       <a class="src-card" href="https://www.dshs.texas.gov/dshs-ems-trauma-systems/stroke-system-development/texas-stroke-facilities" target="_blank"><b>Texas DSHS Stroke System</b><span>Official directory of Level I through Level IV designated stroke facilities.</span></a>
       <a class="src-card" href="https://project-osrm.org/" target="_blank"><b>OpenStreetMap &amp; OSRM</b><span>Road-network driving times and distances across 1,885 Census tracts.</span></a>
       <a class="src-card" href="https://www.heat.gov/" target="_blank"><b>Heat.gov &amp; CDC Heat Guidance</b><span>Federal HeatRisk context, medication safety, and clinical references.</span></a>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Peer-Reviewed Evidence and Study Limitations</h2>
+    <div class="grid2">
+      <div class="item"><b>Supporting Studies</b><span>Longitudinal research links extreme outdoor heat (&ge;103&deg;F heat index) to higher dementia incidence in neighborhoods with low AC access (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13688717/" target="_blank">Alzheimer's &amp; Dementia, PMC13688717</a>), faster cognitive decline in lower-income older adults (<a href="https://jech.bmj.com/content/77/11/728" target="_blank">BMJ JECH 2023</a>), and attention drops from warm indoor home temperatures (<a href="https://www.hebrewseniorlife.org/blog/how-home-temperature-affects-cognitive-function-older-adults" target="_blank">Hebrew SeniorLife 2025</a>).</span></div>
+      <div class="item" style="border-left-color:#e8a33d"><b>Key Limitations</b><span>This is an ecological county-level study: it shows association, not causation. One NOAA weather station stands in for each county (Limestone was excluded for incomplete 10-year data), driving routes use OpenStreetMap roads from Census tract centers, and stroke centers reflect Texas DSHS designations rather than private outpatient clinics.</span></div>
     </div>
   </div>
 
