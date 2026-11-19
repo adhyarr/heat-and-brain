@@ -250,8 +250,9 @@ page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <title>Too Hot, Too Far: 24-County Expanded Analysis</title>
 <style>
 *{{box-sizing:border-box}} body{{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f4f5fa;color:#2b2f42;line-height:1.5}}
-header{{background:linear-gradient(135deg,#2b2f42 0%,#6a4c93 55%,#e4572e 120%);color:#fff;padding:48px 24px 58px}}
-.wrap{{max-width:1160px;margin:0 auto;padding:0 20px}} header .wrap{{padding:0}}
+header{{background:linear-gradient(135deg,#2b2f42 0%,#6a4c93 55%,#e4572e 120%);color:#fff;padding:44px 24px 58px}}
+.wrap{{max-width:1160px;margin:0 auto;padding:0 20px}} header .wrap{{padding:0;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px}}
+.nav a{{color:#fff;text-decoration:none;background:rgba(255,255,255,.18);padding:7px 13px;border-radius:8px;font-size:13px;margin-left:6px;display:inline-block}}
 h1{{margin:0 0 8px;font-size:34px;letter-spacing:-.5px}} header p{{margin:0;max-width:780px;opacity:.92;font-size:16px}}
 .tag{{display:inline-block;background:rgba(255,255,255,.16);padding:4px 12px;border-radius:99px;font-size:12px;margin-bottom:12px;letter-spacing:.5px}}
 .kpis{{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:-30px auto 8px}}
@@ -277,9 +278,17 @@ footer{{color:#8a8fa3;font-size:12px;padding:10px 0 40px}}
 @media(max-width:860px){{.kpis{{grid-template-columns:1fr 1fr}}.grid,.links{{grid-template-columns:1fr}}}}
 </style></head><body>
 <header><div class="wrap">
+<div>
 <div class="tag">NORTH &amp; EAST TEXAS · 24-COUNTY EXPANDED ANALYSIS</div>
 <h1>Too Hot, Too Far: North &amp; East Texas</h1>
 <p>24 counties (4 urban DFW core + 20 surrounding rural/exurban counties), 1,885 Census tracts, and population-weighted driving times to emergency rooms and neurology hubs.</p>
+</div>
+<div class="nav">
+<a href="index.html">Home</a>
+<a href="map.html">Map</a>
+<a href="checker.html">Live Risk Tool</a>
+<a href="solutions.html">Solutions</a>
+</div>
 </div></header>
 
 <div class="wrap">

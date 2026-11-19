@@ -13,9 +13,10 @@ header .wrap{padding:0}
 .tag{display:inline-block;background:rgba(255,255,255,.16);padding:4px 12px;border-radius:99px;font-size:12px;margin-bottom:10px;letter-spacing:.5px}
 h1{margin:0 0 8px;font-size:34px;letter-spacing:-.5px}
 header p{margin:0;max-width:740px;opacity:.92;font-size:16px}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:-28px auto 26px}
-.hero-card{background:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 6px 22px rgba(43,47,66,.1);text-decoration:none;color:#2b2f42;border-top:4px solid #6a4c93;display:block}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:-28px auto 26px}
+.hero-card{background:#fff;border-radius:14px;padding:16px 16px;box-shadow:0 6px 22px rgba(43,47,66,.1);text-decoration:none;color:#2b2f42;border-top:4px solid #6a4c93;display:block}
 .hero-card.map{border-top-color:#e4572e}
+.hero-card.tool{border-top-color:#f29e4c}
 .hero-card.doc{border-top-color:#1982c4}
 .hero-card.sol{border-top-color:#2e8540}
 .hero-card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(43,47,66,.14)}
@@ -55,19 +56,23 @@ footer{color:#8a8fa3;font-size:12.5px;padding:4px 0 40px}
   <div class="cards">
     <a class="hero-card map" href="map.html">
       <b>1. Interactive Map</b>
-      <span>Explore all 24 counties, 1,885 Census tracts, ERs, and stroke centers.</span>
+      <span>Explore 24 counties, 1,885 Census tracts, ERs, and stroke centers.</span>
     </a>
     <a class="hero-card" href="report_expanded.html">
       <b>2. 24-County Report</b>
-      <span>Charts, scatter plot, 10-year heat trend, case studies, and county table.</span>
+      <span>Charts, scatter plot, 10-year heat trend, case studies, and table.</span>
     </a>
-    <a class="hero-card doc" href="https://docs.google.com/document/d/12Vvehx7DZWSoc6yMMl-tF_CJ7IqRWU_9fGOWhPVDKUw/edit?usp=drivesdk">
-      <b>3. Research Write-Up</b>
-      <span>Editable Google Doc with peer-reviewed studies, methods, and sources.</span>
+    <a class="hero-card tool" href="checker.html">
+      <b>3. Live Risk Tool</b>
+      <span>Check live NWS forecasts, heat alerts, and care access by county.</span>
     </a>
     <a class="hero-card sol" href="solutions.html">
-      <b>4. Actionable Solutions</b>
-      <span>What government programs do today, remaining gaps, and practical fixes.</span>
+      <b>4. Solutions</b>
+      <span>Government initiatives, remaining gaps, and practical fixes.</span>
+    </a>
+    <a class="hero-card doc" href="https://docs.google.com/document/d/12Vvehx7DZWSoc6yMMl-tF_CJ7IqRWU_9fGOWhPVDKUw/edit?usp=drivesdk">
+      <b>5. Research Write-Up</b>
+      <span>Editable Google Doc with studies, methods, and sources.</span>
     </a>
   </div>
 

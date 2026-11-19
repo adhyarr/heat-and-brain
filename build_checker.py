@@ -76,6 +76,7 @@ footer{{color:#8a8fa3;font-size:12px;padding:6px 0 36px}}
     <a href="index.html">Home</a>
     <a href="map.html">Map</a>
     <a href="report_expanded.html">24-County Report</a>
+    <a href="solutions.html">Solutions</a>
   </div>
 </div></header>
 
