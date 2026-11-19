@@ -111,6 +111,7 @@ select{{width:100%;padding:8px 10px;border-radius:8px;border:1px solid #cfd4e4;f
     <a href="checker.html">Live Risk Tool</a>
     <a href="report_expanded.html">24-County Report</a>
     <a href="solutions.html">Solutions</a>
+    <a href="about.html">About Me</a>
   </div>
 </header>
 <div class="main">

@@ -96,6 +96,7 @@ footer{{color:#8a8fa3;font-size:12px;padding:6px 0 36px}}
     <a href="map.html">Map</a>
     <a href="report_expanded.html">24-County Report</a>
     <a href="solutions.html">Solutions</a>
+    <a href="about.html">About Me</a>
   </div>
 </div></header>
 

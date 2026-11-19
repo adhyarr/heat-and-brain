@@ -17,6 +17,7 @@ An independent public-health and neuroscience research project mapping where **e
 | **Actionable Solutions** | What Texas &amp; federal programs do today, the remaining gap, and how individuals &amp; policy can improve it | [solutions.html](https://adhyarr.github.io/heat-and-brain/solutions.html) |
 | **1-Page Resident Heat-Safety Guide** | Printable safety handout covering 6 neurological conditions, CDC medication guidance, 911 signs, and 2-1-1 cooling help | [resident_guide.html](https://adhyarr.github.io/heat-and-brain/resident_guide.html) ([PDF](resident_guide.pdf)) |
 | **5-County Pilot Report** | Initial 5-county comparison (Dallas, Navarro, Henderson, Hunt, Wise) | [report.html](https://adhyarr.github.io/heat-and-brain/report.html) |
+| **About the Author** | Bio and interests of Adhya Rodda (medicine, neuroscience, philosophy, activism, debate) | [about.html](https://adhyarr.github.io/heat-and-brain/about.html) |
 | **Full Research Write-Up** | Editable Google Doc with peer-reviewed background studies, verified condition table, and embedded charts | [Google Doc](https://docs.google.com/document/d/12Vvehx7DZWSoc6yMMl-tF_CJ7IqRWU_9fGOWhPVDKUw/edit?usp=drivesdk) |
 
 ---
