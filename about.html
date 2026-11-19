@@ -18,6 +18,8 @@ header p{margin:0;max-width:620px;opacity:.92;font-size:15px}
 .panel{background:#fff;border-radius:14px;padding:26px 28px;box-shadow:0 4px 16px rgba(43,47,66,.07);margin:20px 0}
 .panel:first-of-type{margin-top:-22px}
 h2{margin:0 0 8px;font-size:19.5px;color:#2b2f42}
+.intro{display:grid;grid-template-columns:190px 1fr;gap:24px;align-items:center}
+.avatar{width:190px;height:220px;object-fit:cover;object-position:center top;border-radius:14px;box-shadow:0 6px 18px rgba(43,47,66,.12)}
 p.bio{margin:0 0 12px;font-size:15px;color:#3d4258}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
 .card{background:#f7f8fc;border-radius:11px;padding:16px 18px;border-left:4px solid #6a4c93}
@@ -28,7 +30,7 @@ p.bio{margin:0 0 12px;font-size:15px;color:#3d4258}
 .card span{font-size:13.5px;color:#5b6075}
 .edit-note{background:#fff7ea;border-left:4px solid #e8a33d;padding:12px 16px;border-radius:9px;font-size:13px;color:#5b6075;margin-top:14px}
 footer{color:#8a8fa3;font-size:12.5px;padding:6px 0 40px}
-@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+@media(max-width:760px){.grid2,.intro{grid-template-columns:1fr}.avatar{width:170px;height:200px}}
 </style>
 </head>
 <body>
@@ -49,9 +51,14 @@ footer{color:#8a8fa3;font-size:12.5px;padding:6px 0 40px}
 
 <div class="wrap">
   <div class="panel">
-    <h2>Hi, I'm Adhya</h2>
-    <p class="bio">I'm a 10th-grade student in North Texas passionate about medicine, activism, and debate. I'm especially drawn to everything philosophical and related to the brain, which drives a lot of my research. Exploring how the brain works, and how external conditions shape human health, is what led me to build <b>Too Hot, Too Far</b>.</p>
-    <p class="bio" style="margin-bottom:0">I also love exploring different viewpoints, which is why I'm drawn to debate and public-health policy. Rather than looking at medicine only inside a clinic, this project asks how geography, extreme weather, and transportation shape who can actually reach emergency and medical care when minutes matter.</p>
+    <div class="intro">
+      <img class="avatar" src="images/adhya.jpg" alt="Adhya Rodda">
+      <div>
+        <h2>Hi, I'm Adhya</h2>
+        <p class="bio">I'm a 10th-grade student in North Texas passionate about medicine, activism, and debate. I'm especially drawn to everything philosophical and related to the brain, which drives a lot of my research. Exploring how the brain works, and how external conditions shape human health, is what led me to build <b>Too Hot, Too Far</b>.</p>
+        <p class="bio" style="margin-bottom:0">I also love exploring different viewpoints, which is why I'm drawn to debate and public-health policy. Rather than looking at medicine only inside a clinic, this project asks how geography, extreme weather, and transportation shape who can actually reach emergency and medical care when minutes matter.</p>
+      </div>
+    </div>
   </div>
 
   <div class="panel">
